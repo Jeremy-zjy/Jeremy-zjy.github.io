@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="飞舞伍five">
 <meta property="og:description" content="序  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。 搭建步骤： GitHub创建个人仓库（名称与用户名一致）   git安装，绑定github密钥    git config –global">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:updated_time" content="2019-01-19T12:43:24.928Z">
+<meta property="og:updated_time" content="2019-01-19T13:14:11.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github搭建博客">
 <meta name="twitter:description" content="序  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。 搭建步骤： GitHub创建个人仓库（名称与用户名一致）   git安装，绑定github密钥    git config –global">
@@ -346,6 +346,8 @@
 <p>git config –global –unset http.proxy  </p>
 </blockquote>
 </li>
+<li>ERROR Process failed: about/index.md<br>TypeError: Cannot read property ‘utcOffset’ of null<br>折腾了半天发现原来站点的配置文件的timezone也就是时区必须要和主题的的配置文件一直，把这两个文件下的timezone都设为Asia/Shanghai就解决了</li>
+<li>Cannot GET/xxx<br>查看index.html文件是否还在，可以参考<a href="link" title="https://www.jianshu.com/p/af83fc73e525">这个</a></li>
 </ol>
 <p style="color: #AD5D0F;font-size: 23px; font-family: '宋体';">附加功能：</p>
 
