@@ -303,30 +303,34 @@
       
         
           
-            <p>#前言</p>
-<pre><code>搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来  也作为自己生活学习的一个监督和记录。
-</code></pre><p>#搭建</p>
-<pre><code>遇到了61行  date 的问题  一直没有解决所以我决定重新部署hexo 然后发现只能从头再来
-网站的信息是保存在github库中的   但是当我删除本地文件后 不知道怎么将信息上传的github中去
-步骤：
-    1.GitHub创建个人仓库
-    2.git安装 绑定github密钥（绑定过了 没删除就一直可以用）
-    3.安装node.js npm 
-    4.hexo 安装
-</code></pre><p>npm install hexo -g #安装Hexo<br>npm update hexo -g #升级<br>hexo init #初始化博客</p>
-<p>命令简写<br>hexo n “我的博客” == hexo new “我的博客” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署</p>
-<p>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</p>
-<p>创建一篇博客： hexo n “博客名字”<br>遇到了61行  date 的问题  一直没有解决所以我决定重新部署hexo 然后发现只能从头再来<br>网站的信息是保存在github库中的   但是当我删除本地文件后 不知道怎么将信息上传的github中去<br>步骤：<br>1.GitHub创建个人仓库<br>2.git安装 绑定github密钥（绑定过了 没删除就一直可以用）<br>3.安装node.js npm<br>4.hexo 安装</p>
-<p>1.使用hexo命令显示无效<br>注意需要在blog文件下进行操作<br>还有 congig.yml 文件空格问题其实在刚生成时应该不会出现<br>2.执行npm install 即可<br>3.前面都没有问题  到了hexo d时候连接不上git<br>所以不应用http 应该使用git<br>4.本地命令成功 但是localhost:访问不到网址  有可能是端口占用了<br>(1)<br>(2)<br>5.本地可以访问  但是用户名加github.io无法访问<br>1.注意库名与用户名一致!!!!!      还有我真是。。。  git.io   git-io<br>6.下载主题出现代理的问题</p>
-<p>查询是否使用代理：</p>
+            <h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><p>搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来  也作为自己生活学习的一个监督和记录。</p>
+<h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.GitHub创建个人仓库（名称与用户名一致）<br>2.git安装，绑定github密钥  </p>
 <blockquote>
-<p>git config –global http.proxy </p>
+<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
 </blockquote>
-<p>取消代理：</p>
+<p>生成ssh密钥文件：  </p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p>
+</blockquote>
+<p>打开<a href="link" title="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
+<p>3.安装node.js，npm<br>4.安装hexo：</p>
+<blockquote>
+<p>npm install -g hexo-cli   </p>
+</blockquote>
+<p>博客初始化：</p>
+<blockquote>
+<p>hexo init blog</p>
+</blockquote>
+<p>查看本地localhost是否成功<br>5.修改.yml站点配置文件，绑定github<br>6.绑定域名<br>在blog\source下新建CNAME文件（无文件名）,例如：<br>XXX.top<br>域名解析：建立CNAME解析，主机名分别为@和www，对应值都是你的 Github 个人主页地址<br>7.最后hexo g,hexo d,就ok辣。  </p>
+<h2 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍"></a>命令介绍</h2><p>npm install hexo -g #安装Hexo<br>npm update hexo -g #升级<br>hexo init #初始化博客<br>hexo n “我的博客” == hexo new “我的博客” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署<br>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令  </p>
+<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><p>首先第一次搭建完成后，遇到了61行date的问题 ，一直没有解决，所以我选择了再次搭建，并且将此过程记录了下来。<br>1.使用hexo命令显示无效<br><strong>注意需要在blog文件下进行操作</strong><br><strong>还有congig.yml 空格问题基本新手都会犯</strong><br>2.执行hexo命令出现ERROR<br><strong>npm install 即可</strong><br>3.前面都没有问题到了hexo d时候连接不上git<br><strong>所以不应用http 应该使用git</strong><br>4.本地命令成功 但是localhost:访问不到网址<br><strong>大概率是端口占用了</strong><br>5.本地可以访问但是用户名加github.io无法访问<br><strong>注意库名与用户名一致!!!</strong><br>6.下载主题出现代理的问题<br><strong>查询是否使用代理：</strong></p>
+<blockquote>
+<p>git config –global http.proxy   </p>
+</blockquote>
+<p><strong>取消代理：</strong></p>
 <blockquote>
 <p>git config –global –unset http.proxy</p>
 </blockquote>
-<p>上传修改主题也比较慢</p>
 
           
         
