@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-20T12:31:27.111Z</updated>
+  <updated>2019-01-20T12:50:24.458Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://yoursite.com/2019/01/20/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
     <id>http://yoursite.com/2019/01/20/个人随笔/</id>
     <published>2019-01-20T12:23:42.000Z</published>
-    <updated>2019-01-20T12:31:27.111Z</updated>
+    <updated>2019-01-20T12:50:24.458Z</updated>
     
-    <content type="html"><![CDATA[<p>好久没有写日记了，当初想着</p>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a><p>好久没有写日记了，当初想着</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;好久没有写日记了，当初想着&lt;/p&gt;
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;好久没有写日记了，当初想着&lt;/p&gt;
 
       
     
