@@ -79,7 +79,20 @@
 
 
 
-
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://xxxxxxx.xxx"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
 
 <meta name="description" content="序  a搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。 搭建步骤： GitHub创建个人仓库（名称与用户名一致）   git安装，绑定github密钥    git config –global">
 <meta property="og:type" content="article">
@@ -543,6 +556,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/20/个人随笔/" rel="prev" title="'个人随笔'">
+                '个人随笔' <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -620,14 +649,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -727,7 +774,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共815字</span>
+  <span class="post-count">博客全站共827字</span>
 </div>
         
 <div class="busuanzi-count">
