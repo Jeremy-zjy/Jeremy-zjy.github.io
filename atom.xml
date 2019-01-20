@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-20T12:57:38.925Z</updated>
+  <updated>2019-01-20T14:26:43.828Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>&#39;个人随笔&#39;</title>
+    <title>个人随笔</title>
     <link href="http://yoursite.com/2019/01/20/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
     <id>http://yoursite.com/2019/01/20/个人随笔/</id>
     <published>2019-01-20T12:23:42.000Z</published>
-    <updated>2019-01-20T12:57:38.925Z</updated>
+    <updated>2019-01-20T14:26:43.828Z</updated>
     
-    <content type="html"><![CDATA[<p>hhhh<br><a id="more"></a><br>好久没有写日记了，当初想着</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="1月20记"><a href="#1月20记" class="headerlink" title="1月20记"></a>1月20记</h1><a id="more"></a><p>好久没有写日记了，下午和从小长大的朋友聊了会天，真的感觉时间过的好快。而且似乎到了什么年龄，周围的人就会询问关心你这个年龄应该干的事情做的怎么样。就好像上学期间就是学校的好坏，工作期间就是结婚工资。那么究竟你是变得更好还是会更烂呢？  </p><ol><li>考研信息，结课作业。1.21到1.25  </li><li>英语单词，阅读。寒假每天坚持</li><li>线代复习，真题。寒假每天坚持</li><li>javascrip,斗鱼项目。 1.21到1.27</li><li>python,爬虫项目。 1.28到2.2  </li><li>实验室论文，深度学习。 2.2以后</li><li>小程序项目   1.28到2.2</li><li>java  2.2以后<br>前三个尽量做完，4，5，7完成一二即可，6，8能入门就再好不过了。  <h2 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h2></li></ol><ul><li>旅游（估计难了 555）</li><li>联系一下朋友同学 （加油嗷）</li><li>吃饭，作息规律 （一定可以的）</li><li>读完3本书 (穷爸爸，富爸爸  如何阅读一本书  自控力)</li><li>想到的再继续补充~</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;hhhh&lt;br&gt;
+      &lt;h1 id=&quot;1月20记&quot;&gt;&lt;a href=&quot;#1月20记&quot; class=&quot;headerlink&quot; title=&quot;1月20记&quot;&gt;&lt;/a&gt;1月20记&lt;/h1&gt;
     
     </summary>
     
@@ -43,13 +43,13 @@
     <link href="http://yoursite.com/2019/01/19/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2019/01/19/hexo-github搭建博客/</id>
     <published>2019-01-19T06:59:20.000Z</published>
-    <updated>2019-01-20T12:55:27.708Z</updated>
+    <updated>2019-01-20T13:10:45.247Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  a搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。<br>  <a id="more"></a></p><h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a>搭建步骤：</h2><ol><li>GitHub创建个人仓库（名称与用户名一致）  </li><li><p>git安装，绑定github密钥  </p><blockquote><p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p></blockquote><p> 生成ssh密钥文件：  </p><blockquote><p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p></blockquote><p> 打开<a href="link" title="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p></li></ol><ol start="3"><li>安装node.js，npm   </li><li><p>安装hexo：</p><blockquote><p>npm install -g hexo-cli   </p></blockquote><p> 博客初始化：</p><blockquote><p>hexo init blog</p></blockquote><p> 查看本地localhost是否成功  </p></li><li>修改.yml站点配置文件，绑定github  </li><li>绑定域名<br> 在blog\source下新建CNAME文件（无文件名）,例如：<br> XXX.top<br> 域名解析：建立CNAME解析，主机名分别为@和www，对应值都是你的 Github 个人主页地址  </li><li>最后hexo g,hexo d,就ok辣。  </li></ol><h2 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍"></a>命令介绍</h2><p>npm install hexo -g #安装Hexo<br>npm update hexo -g #升级<br>hexo init #初始化博客<br>hexo n “我的博客” == hexo new “我的博客” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署<br>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令  </p><h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><p>首先第一次搭建完成后，遇到了61行date的问题 ，一直没有解决，所以我选择了再次搭建，并且将此过程记录了下来。</p><ol><li>使用hexo命令显示无效<br><strong>注意需要在blog文件下进行操作</strong><br><strong>还有congig.yml 空格问题基本新手都会犯</strong>  </li><li>执行hexo命令出现ERROR<br><strong>npm install 即可</strong>  </li><li>前面都没有问题到了hexo d时候连接不上git<br><strong>所以不应用http 应该使用git</strong>  </li><li>本地命令成功 但是localhost:访问不到网址<br><strong>大概率是端口占用了</strong>  </li><li>本地可以访问但是用户名加github.io无法访问<br><strong>注意库名与用户名一致!!!</strong>    </li><li><p>下载主题出现代理的问题<br> <strong>查询是否使用代理：</strong></p><blockquote><p>git config –global http.proxy   </p></blockquote><p> <strong>取消代理：</strong>  </p><blockquote><p>git config –global –unset http.proxy  </p></blockquote></li><li>ERROR Process failed: about/index.md<br>TypeError: Cannot read property ‘utcOffset’ of null<br>折腾了半天发现原来站点的配置文件的timezone也就是时区必须要和主题的的配置文件一直，把这两个文件下的timezone都设为Asia/Shanghai就解决了</li><li>Cannot GET/xxx<br>查看index.html文件是否还在，可以参考<a href="link" title="https://www.jianshu.com/p/af83fc73e525">这个</a></li></ol><p style="color: #AD5D0F;font-size: 23px; font-family: '宋体';">附加功能：</p><hr><h3 id="1-打赏"><a href="#1-打赏" class="headerlink" title="1.打赏"></a>1.打赏</h3><ol><li>准备支付宝和微信二维码</li><li>在_config.yml中配置图片  <blockquote><p>reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！<br>wechatpay: /images/wechat.jpg<br>alipay: /images/aipay.png  </p></blockquote></li><li>wechat.jpg、alipay.png图片放入themes/next/source/images(主题配置)中</li><li>（解决文字闪烁问题）修改next/source/css/_common/components/post/post-reward.styl，注释wechat:hover和alipay:hover</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。<br>  <a id="more"></a></p><h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a>搭建步骤：</h2><ol><li>GitHub创建个人仓库（名称与用户名一致）  </li><li><p>git安装，绑定github密钥  </p><blockquote><p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p></blockquote><p> 生成ssh密钥文件：  </p><blockquote><p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p></blockquote><p> 打开<a href="link" title="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p></li></ol><ol start="3"><li>安装node.js，npm   </li><li><p>安装hexo：</p><blockquote><p>npm install -g hexo-cli   </p></blockquote><p> 博客初始化：</p><blockquote><p>hexo init blog</p></blockquote><p> 查看本地localhost是否成功  </p></li><li>修改.yml站点配置文件，绑定github  </li><li>绑定域名<br> 在blog\source下新建CNAME文件（无文件名）,例如：<br> XXX.top<br> 域名解析：建立CNAME解析，主机名分别为@和www，对应值都是你的 Github 个人主页地址  </li><li>最后hexo g,hexo d,就ok辣。  </li></ol><h2 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍"></a>命令介绍</h2><p>npm install hexo -g #安装Hexo<br>npm update hexo -g #升级<br>hexo init #初始化博客<br>hexo n “我的博客” == hexo new “我的博客” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署<br>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令  </p><h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><p>首先第一次搭建完成后，遇到了61行date的问题 ，一直没有解决，所以我选择了再次搭建，并且将此过程记录了下来。</p><ol><li>使用hexo命令显示无效<br><strong>注意需要在blog文件下进行操作</strong><br><strong>还有congig.yml 空格问题基本新手都会犯</strong>  </li><li>执行hexo命令出现ERROR<br><strong>npm install 即可</strong>  </li><li>前面都没有问题到了hexo d时候连接不上git<br><strong>所以不应用http 应该使用git</strong>  </li><li>本地命令成功 但是localhost:访问不到网址<br><strong>大概率是端口占用了</strong>  </li><li>本地可以访问但是用户名加github.io无法访问<br><strong>注意库名与用户名一致!!!</strong>    </li><li><p>下载主题出现代理的问题<br> <strong>查询是否使用代理：</strong></p><blockquote><p>git config –global http.proxy   </p></blockquote><p> <strong>取消代理：</strong>  </p><blockquote><p>git config –global –unset http.proxy  </p></blockquote></li><li>ERROR Process failed: about/index.md<br>TypeError: Cannot read property ‘utcOffset’ of null<br>折腾了半天发现原来站点的配置文件的timezone也就是时区必须要和主题的的配置文件一直，把这两个文件下的timezone都设为Asia/Shanghai就解决了</li><li>Cannot GET/xxx<br>查看index.html文件是否还在，可以参考<a href="link" title="https://www.jianshu.com/p/af83fc73e525">这个</a></li></ol><p style="color: #AD5D0F;font-size: 23px; font-family: '宋体';">附加功能：</p><hr><h3 id="1-打赏"><a href="#1-打赏" class="headerlink" title="1.打赏"></a>1.打赏</h3><ol><li>准备支付宝和微信二维码</li><li>在_config.yml中配置图片  <blockquote><p>reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！<br>wechatpay: /images/wechat.jpg<br>alipay: /images/aipay.png  </p></blockquote></li><li>wechat.jpg、alipay.png图片放入themes/next/source/images(主题配置)中</li><li>（解决文字闪烁问题）修改next/source/css/_common/components/post/post-reward.styl，注释wechat:hover和alipay:hover</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;  a搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。&lt;br&gt;
+      &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。&lt;br&gt;
     
     </summary>
     
