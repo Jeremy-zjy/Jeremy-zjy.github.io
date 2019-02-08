@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java学习笔记]]></title>
+    <url>%2F2019%2F02%2F08%2FJava%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[环境搭建]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[2019.2.7]]></title>
+    <url>%2F2019%2F02%2F07%2F2019-2-7%2F</url>
+    <content type="text"><![CDATA[关于亲戚的问题，想了一下发现自己也是一个比较冷漠的人，长辈对于自己的关爱，自己还是一定要去维护，一定要懂得感恩。同时，最重要的是父母，其次是关心或者曾经对自己好的人，做一个人不容易，做一个能人更是不容易啊！更多的是，希望自己能更加包容别人，更加主动的关心，做什么事情都要认真，付出就会有收获，所以维系好人之间的情感也是一件需要自己去花时间的事情。 和父母日常联系，多交流日常情况，健康情况，打开话题。 姐，工作学习上的问题。 关于亲戚：响亮姐：不时的问候，以及自己学习上的问题；舅：微信先联系，偶尔可以打电话。（尽自己的一份心意，尽自己的能力让关系缓和）其他（父母两边）：微信上必要的联系也是要有的。 关于老师：一定要多去主动联系！积极完成任务，获取信息。 关于朋友：有时间就主动联系，尤其是离得近的时候。]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript学习笔记]]></title>
+    <url>%2F2019%2F01%2F21%2Fjavascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[参考菜鸟教程进行学习 javascript用法：HTML 中的脚本必须位于 与 标签之间。脚本可被放置在 HTML 页面的 和 部分中，也可以保存在外部文件中（则不需要加标签）。 输出： 使用 window.alert() 弹出警告框。 使用 document.write() 方法将内容写到 HTML 文档中。 使用 innerHTML 写入到 HTML 元素。 使用 console.log() 写入到浏览器的控制台。 var y; var z; var d; x=document.getElementsByClassName("Barrage-listItem"); y=document.getElementById(x[0].id); d=y.getElementsByTagName("div"); var reg = /Barrage-userEnter/i; console.log(reg.test(d[0].className)); console.log(d[0].className); if(reg.test(d[0].className)) { z=y.getElementsByTagName("span"); console.log(z[2].title); d[0].className="b"; }]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[个人随笔]]></title>
     <url>%2F2019%2F01%2F20%2F%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94%2F</url>
-    <content type="text"><![CDATA[1月20记 好久没有写日记了，下午和从小长大的朋友聊了会天，真的感觉时间过的好快。而且似乎到了什么年龄，周围的人就会询问关心你这个年龄应该干的事情做的怎么样。就好像上学期间就是学校的好坏，工作期间就是结婚工资。那么究竟你是变得更好还是会更烂呢？ 考研信息，结课作业。1.21到1.25 英语单词，阅读。寒假每天坚持 线代复习，真题。寒假每天坚持 javascrip,斗鱼项目。 1.21到1.27 python,爬虫项目。 1.28到2.2 实验室论文，深度学习。 2.2以后 小程序项目 1.28到2.2 java 2.2以后前三个尽量做完，4，5，7完成一二即可，6，8能入门就再好不过了。 其他： 旅游（估计难了 555） 联系一下朋友同学 （加油嗷） 吃饭，作息规律 （一定可以的） 读完3本书 (穷爸爸，富爸爸 如何阅读一本书 自控力) 想到的再继续补充~]]></content>
+    <content type="text"><![CDATA[1月20记 好久没有写日记了，下午和从小长大的朋友聊了会天，真的感觉时间过的好快。而且似乎到了什么年龄，周围的人就会询问关心你这个年龄应该干的事情做的怎么样。就好像上学期间就是学校的好坏，工作期间就是结婚工资。那么究竟你是变得更好还是会更烂呢？ 考研信息，结课作业。1.21到1.25 英语单词，阅读。寒假每天坚持 线代复习，真题。寒假每天坚持视频每天3个，加看辅导书。 javascrip,css,html。 python,爬虫项目。 1.28到2.2 实验室论文，深度学习。 2.2以后 小程序项目 1.28到2.2 java 2.2以后前三个尽量做完，4，5，7完成一二即可，6，8能入门就再好不过了。 其他： 旅游（估计难了 555） 联系一下朋友同学 （加油嗷） 吃饭，作息规律 （一定可以的） 读完3本书 (穷爸爸，富爸爸 如何阅读一本书 自控力) 想到的再继续补充~ 2.8到2.20（11天） 线代每天两个视频，辅导讲义写完 3 英语一个单元 2.5（课听完） 看书1个小时 查考研信息 问问问 健身刷牙 python斗鱼的项目 小程序的项目 写博客抛弃浮躁，脚踏实地。7点起来 洗漱，吃饭。8点到9点背单词和句子（注意复习和预习）9点到11点看英语视频11点到12点 英语阅读暂定下午2点到5点看线代视频加做辅导讲义5点到6点 英语视频7点半到10点半 写代码1个小时看书]]></content>
       <categories>
         <category>随笔</category>
       </categories>
