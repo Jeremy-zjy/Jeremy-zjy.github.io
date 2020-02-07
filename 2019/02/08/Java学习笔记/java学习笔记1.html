@@ -1,0 +1,107 @@
+<ol>
+<li>类的概念：<br> 一堆 具有共同的成员变量、属性和成员方法、功能对象集合</li>
+<li><p>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型</p>
+<p> 问题：接口能创建对象吗？不能</p>
+<pre><code>接口作用：天生作为“父接口”
+</code></pre></li>
+<li><p>接口的定义：<br> 定义接口用关键字：interface<br> 定义枚举用关键字：enum</p>
+<p> 格式：<br> public interface 接口名字{</p>
+<pre><code>//成员变量，不能定义普通的成员变量
+//成员方法：必须都是抽象
+public abstract 返回值类型 方法名();
+</code></pre><p> }</p>
+<p> 类和接口的本质区别不大，他们的源码都是.java文件<br> 编译后都是.class文件</p>
+</li>
+<li><p>类与类之间：继承，而且是单继承，一个子类，只能有一个直接父类<br> 接口和接口之间:继承，但是可以多继承，一个子接口 可以有多个直接父接口</p>
+<p> 面试题：Java到底支不支持多继承？</p>
+<pre><code>如果是类与类  不支持多继承  只支持多层继承
+如果是接口和接口  支持多继承  也支持多层继承
+</code></pre><p> 类和接口之间：不叫继承(extends),叫实现(implements),可以多实现</p>
+<pre><code>只有类 实现接口
+</code></pre></li>
+<li>接口中成员的特点<br> 5.1成员变量，但是必须有固定修饰符public static final 数据类型 变量 = 值<br> 5.2成员方法，必须是固定修饰符public abstract 即抽象方法<br> 5.3接口不可以创建对象(抽象类也是)<br> 5.4实现类 实现类接口，那么必须重写接口中所有的抽象方法，然后才能创建对象<pre><code>否则 这个实现类 还是一个抽象类，是不能创建对象的
+在开发中最常用的模式：
+    public class A extends AbstractClassB implements 接口A，接口B{
+        注意：
+        A中必须重写 抽象类中的抽象方法，以及所有接口中的抽象方法
+    } 
+</code></pre></li>
+<li>接口和抽象类的异同：<br>1.相同点：<br> a.都不能创建对象<br> b.都是作为父类/父接口<br> c.子类/实现类 都必须重写抽象方法，然后才能创建对象<br>2.不同点：<br> a.抽象类用关键字abstract  接口用关键字interface<br> b.接口中只要有方法，必须都是抽象的<br> c.抽象类可以定义任意成员变量  接口的成员变量必须public static final修饰<br> d.类和抽象类之间关系是单继承，类和接口之间关系是多实现<br> e.思想上的区别<br> 1.抽象类中必须定义整个继承体系中的共性内容<br> 2.接口中定义 整个继承体系之外的 额外扩展的功能。</li>
+</ol>
+<p>7.面向对象3大特征：封装(安全性)，继承(扩展性)，多态(灵活性)<br>    多态：<br>    前提1.必须有子父类关系<br>        2.必须有方法的重写<br>    多态在Java中的表现形式：<br>        父类类型  变量名 = new 子类类型();<br>        接口类型  变量名 = new 实现类();<br>        Animal an = new Cat();<br>        父类类型的变量指向了子类的对象<br>    注意：<br>        1.使用多态调用成员变量<br>            编译时，看父类<br>            运行时，看父类<br>        2.使用多态调用成员方法<br>            编译时，看父类<br>            运行时，看子类<br>总结：<br>    弊端：多态只能调用子父类共有的方法，不能调用子类特有的方法<br>    好处：提高灵活性<br>    父类类型的变量，可以接收任何一个子类的对象<br>    调用方法的时候，编译是看父类，运行时运行的传递过来的子类对象的方法<br>    弊端的解决方案：<br>        向下转型：强制类型转换<br>        向上转型：自动类型转换 (就是多态)<br>    向下转型也有弊端：<br>        把父类的变量 转成任何子类类型时候，编译器直接通过<br>        可以转成cat,本质是dog 所以出错<br>    Java中解决向下转型弊端的方法：<br>        一个关键字Instanceof 运算符<br>        作用：判断某一个变量 不是 该类的类型<br>        格式：<br>            boolean b = an instanceof 类名<br>    多态提高程序的灵活性，扩展性，复用性。</p>
+<ol start="7">
+<li>static的介绍:<br> static的作用用来修饰类中的成员<br> 1.如果一个类的成员被static修饰了，怎么访问？ 类名.成员变量名<br> 存在方法区中的静态区，只有一个空间  优先于对象存在<br> 2.类名.成员变量(推荐)   对象.成员变量   都可以<br> 3.所有对象共有的，被staic修饰的成员属于类，不属于单个对象<br> 4.静态没有多态性 静态不属于对象，属于类<br> 5.静态代码块：<pre><code>在类的成员位置
+    static{
+        代码
+    }
+</code></pre> 特点：<br> 使用到这个类时，JVM会自动执行静态代码块<br> 只会第一次使用时执行<br> 优先级比构造方法高，比main方法高<br> 作用：用来初始化类的,myswl数据(静态代码块来加载驱动)</li>
+<li><p>final可以修饰<br> 类，成员变量，成员方法，局部变量(基本类型，引用类型)<br> 1.修饰类(太监类)，不能被继承<br> 2.final修饰成员变量: </p>
+<pre><code>2.1必须在创建对象之前有却确定的值
+2.3只能赋值一次
+</code></pre><p> 3.修饰方法:</p>
+<pre><code>不能被子类重写
+</code></pre><p> 4.修饰基本类型局部变量</p>
+<pre><code>被final修饰的基本类型局部变量  只能赋值一次
+</code></pre><p> 5.修饰引用类型局部变量</p>
+<pre><code>被final修饰的引用类型局部变量  只能赋值一次
+但是引用类型所指向的对象中内容是可以改变的
+</code></pre></li>
+<li><p>匿名内部类：是一种特殊的语法，用来快速创建抽象类的子类对象</p>
+<pre><code>用来快速创建 接口的实现类对象
+</code></pre><p> AbstractAnimal an1 = new AbstractAnimal(){</p>
+<pre><code>重写
+</code></pre><p> }<br> 多态</p>
+</li>
+<li>引用数据类型<br>a.类作为方法的参数或者返回值(我们需要传递或返回的是该类的对象)<br>b.抽象类作为方法的参数和返回值  (和9结合起来)我们需要传递或返回的是该抽象类的子类的对象<br>c.接口作为方法的参数和返回值   (我们需要传递或返回的是该接口的实现类的对象)</li>
+<li>链式编程</li>
+<li>权限修饰符<br>如果一个成员只想在本类中使用 用private修饰<br>如果一个成员想在本类和本包的其它类中使用 不写 default<br>如果一个成员想在本类，本包，其他包的子类中使用 用protected修饰<br>如果一个成员想在所有类中使用 用public修饰</li>
+<li><p>Object类：<br>类Object是类层次结构的根类<br>所有类都必须直接或者间接的继承object</p>
+<ol>
+<li>boolean equals(Object obj);<br>p1.equals(p2);<br>//比较两个对象是否相等,在Object类中定义equals方法比较是 两个对象的地址<br>在String类中 重写了object父类中的equals方法，<br> 本来在object类中比较的是两个对象的地址<br> 在String重写后变成比较两个字符串的内容</li>
+</ol>
+<p>我们程序员 通常自定义一个类 也会重写equals</p>
+<ol start="2">
+<li>toString(); //返回该对象的字符串表示<br> Object类中的默认的返回值：包名.类名@地址<br> 实际开发中toString的使用，重写toString 返回对象中的成员变量</li>
+</ol>
+</li>
+<li><p>异常:是java代码编译或者运行过程中<br>异常的继承体系:<br>Throwable(异常和错误的超类):可以抛出去的东西</p>
+<pre><code>--Exception:异常(普通问题) 
+--编译时异常:
+  指的是Exception 以及Exception子类  (除了RuntimeException)
+--运行时异常:
+  RuntimeException以及其子类
+--Error:错误(严重问题) 
+比如:OutOfMemoryError:超出内存错误
+如果程序出现了错误，只能改代码
+</code></pre><p>创建异常对象，对异常的基本操作：<br>1.抛出异常 2.处理异常(捕获异常，将异常获取，使用try/catch做分支处理)<br>JVM默认处理异常的方式:(中断处理)<br>处理异常的方式：<br>1.不处理</p>
+<pre><code>public 返回值类型 方法名(参数)throws xxxException{
+
+}
+</code></pre><p>2.捕获处理</p>
+<pre><code>try{
+    可能出现的异常的代码
+}catch(Exception e){
+    //处理异常
+}finally{
+    //写上必须要执行的代码
+    //释放资源的代码
+}
+</code></pre><p>3.其他的处理方式</p>
+<pre><code>多个异常分别处理
+多个个异常一次捕获多次处理
+多个异常一次捕获一次处理
+</code></pre><p>父类方法没有抛出异常，子类覆盖父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理。<br>打印异常信息:printStackTrace<br>1.RuntimeException<br>2.ClassCastException   类型转换异常(向下转型的时候)<br>3.ArrayIndexOutOfBoundsException  数组下标越界<br>4.StringIndexOutOfBoundsException  字符串下标越界<br>自定义异常类：<br>1.创建一个类，这个类必须用Exception结尾<br>2.必须继承Exception 或者  RumtimeException<br>3.自定义的异常 至少有两个构造</p>
+<pre><code>a.空参数构造
+b.带有String类型参数构造
+</code></pre></li>
+<li><p>Object类:是所有类的根类<br>boolean equals(Object obj)<br>a.Object类中equals方法,比较是两个对象的地址，就是==号的作用<br>b.重写  比较两个字符串的内容   比较两个对象的成员变量的值<br>String toString();//返回该对象的字符串表示   hashCode()返回该对象的数字表示</p>
+</li>
+<li>什么叫设计模式？<br>把解决问题的方案 总结出一个套路<br>1.代理设计模式<br>1.1静态代理设计模式<br>1.2动态代理设计模式</li>
+<li>date类:日期类<pre><code>表示特定的瞬间，精确到毫秒
+</code></pre>public Date(); //无参构造<br>public Date(long time);<br>1.DateFormat是一个抽象类 我们不能用它<br>2.我们使用它的一个子类：SimpleDateFormat<br>SimpleDateFormat:简单的日期格式化类<br>1.构造<pre><code>public SimpleDateFormat(String pattern);//以指定的模式 创建一个日期格式化对象
+</code></pre>2.成员方法<pre><code>public String format(Date d);//格式化一个日期对象，返回格式化后的一个字符串
+public Date parse(String s);//把一个字符串形式的日期，解析成Date对象
+</code></pre></li>
+<li>Calender类<br>获取Calendar的子类对象<br>获取Calender对象的某个字段 (get)</li>
+<li>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值</li>
+</ol>
