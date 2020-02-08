@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-08T01:17:26.195Z</updated>
+  <updated>2020-02-08T01:39:36.453Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>剑指offer(2)</title>
+    <link href="http://yoursite.com/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/"/>
+    <id>http://yoursite.com/2020/01/22/Java学习笔记/剑指offer(2)/</id>
+    <published>2020-01-22T13:35:42.000Z</published>
+    <updated>2020-02-08T01:39:36.453Z</updated>
+    
+    <content type="html"><![CDATA[<hr><ul><li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li></ul><hr><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&apos; &apos;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&apos; &apos;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&apos;%&apos;;</span><br><span class="line">                newstrArray[i+2*count+1]=&apos;2&apos;;</span><br><span class="line">                newstrArray[i+2*count+2]=&apos;0&apos;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p><ol><li>charAt(),deleteCharAt()   <blockquote><p>s1.charAt(3);<br> s1.deleteCharAt(3); </p></blockquote></li><li>setCharAt();<br>替换所引出的char值<blockquote><p>str.setCharAt(indexnew, ‘0’);</p></blockquote></li><li>append();  <blockquote><p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p></blockquote></li><li>replace两种用法：  <blockquote><p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p></blockquote></li><li>toString()  toCharArray()  <blockquote><p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p></blockquote></li><li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote><p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p></blockquote></li><li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li></ol><ol start="6"><li>一.java数据类型<br>1.基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)<br>2.引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型<br>3.引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：<br>1.相对路径：<pre><code>相对于当前项目而言的</code></pre>2.绝对路径：<pre><code>以盘符开头</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础学习1</title>
+    <link href="http://yoursite.com/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
+    <id>http://yoursite.com/2020/01/04/Java学习笔记/java学习笔记1/</id>
+    <published>2020-01-04T03:20:24.000Z</published>
+    <updated>2020-02-08T01:39:39.092Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>类的概念：<br> 一堆具有共同的成员变量、属性和成员方法、功能对象集合</li><li>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型<a id="more"></a> 问题：接口能创建对象吗？不能<pre><code>接口作用：天生作为“父接口”</code></pre></li><li><p>接口的定义：<br> 定义接口用关键字：interface<br> 定义枚举用关键字：enum</p><p> 格式：<br> public interface 接口名字{</p><pre><code>//成员变量，不能定义普通的成员变量//成员方法：必须都是抽象public abstract 返回值类型 方法名();</code></pre><p> }</p><p> 类和接口的本质区别不大，他们的源码都是.java文件<br> 编译后都是.class文件</p></li><li><p>类与类之间：继承，而且是单继承，一个子类，只能有一个直接父类<br> 接口和接口之间:继承，但是可以多继承，一个子接口 可以有多个直接父接口</p><p> 面试题：Java到底支不支持多继承？</p><pre><code>如果是类与类  不支持多继承  只支持多层继承如果是接口和接口  支持多继承  也支持多层继承</code></pre><p> 类和接口之间：不叫继承(extends),叫实现(implements),可以多实现</p><pre><code>只有类 实现接口</code></pre></li><li>接口中成员的特点<br> 5.1成员变量，但是必须有固定修饰符public static final 数据类型 变量 = 值<br> 5.2成员方法，必须是固定修饰符public abstract 即抽象方法<br> 5.3接口不可以创建对象(抽象类也是)<br> 5.4实现类 实现类接口，那么必须重写接口中所有的抽象方法，然后才能创建对象<pre><code>否则 这个实现类 还是一个抽象类，是不能创建对象的在开发中最常用的模式：    public class A extends AbstractClassB implements 接口A，接口B{        注意：        A中必须重写 抽象类中的抽象方法，以及所有接口中的抽象方法    } </code></pre></li><li>接口和抽象类的异同：<br>1.相同点：<br> a.都不能创建对象<br> b.都是作为父类/父接口<br> c.子类/实现类 都必须重写抽象方法，然后才能创建对象<br>2.不同点：<br> a.抽象类用关键字abstract  接口用关键字interface<br> b.接口中只要有方法，必须都是抽象的<br> c.抽象类可以定义任意成员变量  接口的成员变量必须public static final修饰<br> d.类和抽象类之间关系是单继承，类和接口之间关系是多实现<br> e.思想上的区别<br> 1.抽象类中必须定义整个继承体系中的共性内容<br> 2.接口中定义 整个继承体系之外的 额外扩展的功能。</li></ol><p>7.面向对象3大特征：封装(安全性)，继承(扩展性)，多态(灵活性)<br>    多态：<br>    前提1.必须有子父类关系<br>        2.必须有方法的重写<br>    多态在Java中的表现形式：<br>        父类类型  变量名 = new 子类类型();<br>        接口类型  变量名 = new 实现类();<br>        Animal an = new Cat();<br>        父类类型的变量指向了子类的对象<br>    注意：<br>        1.使用多态调用成员变量<br>            编译时，看父类<br>            运行时，看父类<br>        2.使用多态调用成员方法<br>            编译时，看父类<br>            运行时，看子类<br>总结：<br>    弊端：多态只能调用子父类共有的方法，不能调用子类特有的方法<br>    好处：提高灵活性<br>    父类类型的变量，可以接收任何一个子类的对象<br>    调用方法的时候，编译是看父类，运行时运行的传递过来的子类对象的方法<br>    弊端的解决方案：<br>        向下转型：强制类型转换<br>        向上转型：自动类型转换 (就是多态)<br>    向下转型也有弊端：<br>        把父类的变量 转成任何子类类型时候，编译器直接通过<br>        可以转成cat,本质是dog 所以出错<br>    Java中解决向下转型弊端的方法：<br>        一个关键字Instanceof 运算符<br>        作用：判断某一个变量 不是 该类的类型<br>        格式：<br>            boolean b = an instanceof 类名<br>    多态提高程序的灵活性，扩展性，复用性。</p><ol start="7"><li>static的介绍:<br> static的作用用来修饰类中的成员<br> 1.如果一个类的成员被static修饰了，怎么访问？ 类名.成员变量名<br> 存在方法区中的静态区，只有一个空间  优先于对象存在<br> 2.类名.成员变量(推荐)   对象.成员变量   都可以<br> 3.所有对象共有的，被staic修饰的成员属于类，不属于单个对象<br> 4.静态没有多态性 静态不属于对象，属于类<br> 5.静态代码块：<pre><code>在类的成员位置    static{        代码    }</code></pre> 特点：<br> 使用到这个类时，JVM会自动执行静态代码块<br> 只会第一次使用时执行<br> 优先级比构造方法高，比main方法高<br> 作用：用来初始化类的,myswl数据(静态代码块来加载驱动)</li><li><p>final可以修饰<br> 类，成员变量，成员方法，局部变量(基本类型，引用类型)<br> 1.修饰类(太监类)，不能被继承<br> 2.final修饰成员变量: </p><pre><code>2.1必须在创建对象之前有却确定的值2.3只能赋值一次</code></pre><p> 3.修饰方法:</p><pre><code>不能被子类重写</code></pre><p> 4.修饰基本类型局部变量</p><pre><code>被final修饰的基本类型局部变量  只能赋值一次</code></pre><p> 5.修饰引用类型局部变量</p><pre><code>被final修饰的引用类型局部变量  只能赋值一次但是引用类型所指向的对象中内容是可以改变的</code></pre></li><li><p>匿名内部类：是一种特殊的语法，用来快速创建抽象类的子类对象</p><pre><code>用来快速创建 接口的实现类对象</code></pre><p> AbstractAnimal an1 = new AbstractAnimal(){</p><pre><code>重写</code></pre><p> }<br> 多态</p></li><li>引用数据类型<br>a.类作为方法的参数或者返回值(我们需要传递或返回的是该类的对象)<br>b.抽象类作为方法的参数和返回值  (和9结合起来)我们需要传递或返回的是该抽象类的子类的对象<br>c.接口作为方法的参数和返回值   (我们需要传递或返回的是该接口的实现类的对象)</li><li>链式编程</li><li>权限修饰符<br>如果一个成员只想在本类中使用 用private修饰<br>如果一个成员想在本类和本包的其它类中使用 不写 default<br>如果一个成员想在本类，本包，其他包的子类中使用 用protected修饰<br>如果一个成员想在所有类中使用 用public修饰</li><li><p>Object类：<br>类Object是类层次结构的根类<br>所有类都必须直接或者间接的继承object</p><ol><li>boolean equals(Object obj);<br>p1.equals(p2);<br>//比较两个对象是否相等,在Object类中定义equals方法比较是 两个对象的地址<br>在String类中 重写了object父类中的equals方法，<br> 本来在object类中比较的是两个对象的地址<br> 在String重写后变成比较两个字符串的内容</li></ol><p>我们程序员 通常自定义一个类 也会重写equals</p><ol start="2"><li>toString(); //返回该对象的字符串表示<br> Object类中的默认的返回值：包名.类名@地址<br> 实际开发中toString的使用，重写toString 返回对象中的成员变量</li></ol></li><li><p>异常:是java代码编译或者运行过程中<br>异常的继承体系:<br>Throwable(异常和错误的超类):可以抛出去的东西</p><pre><code>--Exception:异常(普通问题) --编译时异常:  指的是Exception 以及Exception子类  (除了RuntimeException)--运行时异常:  RuntimeException以及其子类--Error:错误(严重问题) 比如:OutOfMemoryError:超出内存错误如果程序出现了错误，只能改代码</code></pre><p>创建异常对象，对异常的基本操作：<br>1.抛出异常 2.处理异常(捕获异常，将异常获取，使用try/catch做分支处理)<br>JVM默认处理异常的方式:(中断处理)<br>处理异常的方式：<br>1.不处理</p><pre><code>public 返回值类型 方法名(参数)throws xxxException{}</code></pre><p>2.捕获处理</p><pre><code>try{    可能出现的异常的代码}catch(Exception e){    //处理异常}finally{    //写上必须要执行的代码    //释放资源的代码}</code></pre><p>3.其他的处理方式</p><pre><code>多个异常分别处理多个个异常一次捕获多次处理多个异常一次捕获一次处理</code></pre><p>父类方法没有抛出异常，子类覆盖父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理。<br>打印异常信息:printStackTrace<br>1.RuntimeException<br>2.ClassCastException   类型转换异常(向下转型的时候)<br>3.ArrayIndexOutOfBoundsException  数组下标越界<br>4.StringIndexOutOfBoundsException  字符串下标越界<br>自定义异常类：<br>1.创建一个类，这个类必须用Exception结尾<br>2.必须继承Exception 或者  RumtimeException<br>3.自定义的异常 至少有两个构造</p><pre><code>a.空参数构造b.带有String类型参数构造</code></pre></li><li><p>Object类:是所有类的根类<br>boolean equals(Object obj)<br>a.Object类中equals方法,比较是两个对象的地址，就是==号的作用<br>b.重写  比较两个字符串的内容   比较两个对象的成员变量的值<br>String toString();//返回该对象的字符串表示   hashCode()返回该对象的数字表示</p></li><li>什么叫设计模式？<br>把解决问题的方案 总结出一个套路<br>1.代理设计模式<br>1.1静态代理设计模式<br>1.2动态代理设计模式</li><li>date类:日期类<pre><code>表示特定的瞬间，精确到毫秒</code></pre>public Date(); //无参构造<br>public Date(long time);<br>1.DateFormat是一个抽象类 我们不能用它<br>2.我们使用它的一个子类：SimpleDateFormat<br>SimpleDateFormat:简单的日期格式化类<br>1.构造<pre><code>public SimpleDateFormat(String pattern);//以指定的模式 创建一个日期格式化对象</code></pre>2.成员方法<pre><code>public String format(Date d);//格式化一个日期对象，返回格式化后的一个字符串public Date parse(String s);//把一个字符串形式的日期，解析成Date对象</code></pre></li><li>Calender类<br>获取Calendar的子类对象<br>获取Calender对象的某个字段 (get)</li><li>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值<br>public static long currentTimeMillis();//获取当前系统的毫秒值</li><li>String(不可变)  StringBuilder(可变)<br>//当出现大量的字符串拼接运算 时 用StringBuilder</li><li>基本数据类型 对应的引用类型<br>int Integer<br>拆箱：包装类型—&gt;基本类型<br>装箱：基本类型—&gt;包装类型</li><li>正则表达式：</li><li></li><li>javac 生成编译文件</li><li>java 执行类文件，出错原因java程序运行class文件,对于有包名的类,java把包名当成文件夹处理.”包名+类名”相当于”文件夹目录+类名”来寻找类。</li><li>b = a++ a先赋值，再自增。  </li><li>mysql Orcale DB2(银行系统)  SQLite(手机端) SQLServer SyBase(建模工具PowerDesigner) </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;类的概念：&lt;br&gt; 一堆具有共同的成员变量、属性和成员方法、功能对象集合&lt;/li&gt;
+&lt;li&gt;接口的概念：&lt;br&gt; 接口是功能的集合，就是方法的集合&lt;br&gt; 也就是说 接口中只能定义方法，不能定义普通的成员变量&lt;br&gt; 而且接口中的成员方法，必须都是抽象的&lt;br&gt; 接口是比抽象类还要抽象的一种类型
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>考研</title>
     <link href="http://yoursite.com/2019/03/24/%E8%80%83%E7%A0%94/"/>
     <id>http://yoursite.com/2019/03/24/考研/</id>
     <published>2019-03-24T02:09:24.000Z</published>
-    <updated>2020-02-08T01:17:26.195Z</updated>
+    <updated>2020-02-08T01:40:44.413Z</updated>
     
-    <content type="html"><![CDATA[<p>失败不是终点。<br><a id="more"></a><br>    找好工作再说8</p>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a><pre><code>失败不是终点，找好工作再说8</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;失败不是终点。&lt;br&gt;
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;pre&gt;&lt;code&gt;失败不是终点，找好工作再说8
+&lt;/code&gt;&lt;/pre&gt;
+      
     
     </summary>
     
@@ -43,15 +98,16 @@
     <link href="http://yoursite.com/2019/02/25/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
     <id>http://yoursite.com/2019/02/25/汇编语言/</id>
     <published>2019-02-25T03:00:32.000Z</published>
-    <updated>2019-05-23T03:25:00.265Z</updated>
+    <updated>2020-02-08T01:28:25.647Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><h3 id="数据寻址方式"><a href="#数据寻址方式" class="headerlink" title="数据寻址方式:"></a>数据寻址方式:</h3><ul><li>CPU:</li></ul><ol><li>立即寻址方式</li><li>寄存器寻址方式</li></ol><ul><li>存储器：</li></ul><ol><li>直接寻址方式</li><li>间接寻址方式</li><li>相对寻址方式</li></ol>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a><h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><h3 id="数据寻址方式"><a href="#数据寻址方式" class="headerlink" title="数据寻址方式:"></a>数据寻址方式:</h3><ul><li>CPU:</li></ul><ol><li>立即寻址方式</li><li>寄存器寻址方式</li></ol><ul><li>存储器：</li></ul><ol><li>直接寻址方式</li><li>间接寻址方式</li><li>相对寻址方式</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;指令系统&quot;&gt;&lt;a href=&quot;#指令系统&quot; class=&quot;headerlink&quot; title=&quot;指令系统&quot;&gt;&lt;/a&gt;指令系统&lt;/h2&gt;&lt;h3 id=&quot;数据寻址方式&quot;&gt;&lt;a href=&quot;#数据寻址方式&quot; class=&quot;headerlink&quot; title=&quot;数据寻址方
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;指令系统&quot;&gt;&lt;a href=&quot;#指令系统&quot; class=&quot;headerlink&quot; title=&quot;指令系统&quot;&gt;&lt;/a&gt;指令系统&lt;/h2&gt;&lt;h3 id=&quot;数据寻址方式&quot;&gt;&lt;a href=&quot;#数据寻址方式&quot; class=&quot;header
       
     
     </summary>
@@ -82,67 +138,13 @@
     <link href="http://yoursite.com/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/02/08/Java学习笔记/</id>
     <published>2019-02-08T13:35:42.000Z</published>
-    <updated>2020-02-08T01:17:22.444Z</updated>
+    <updated>2020-02-08T01:26:34.770Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="项目（秒杀系统）"><a href="#项目（秒杀系统）" class="headerlink" title="项目（秒杀系统）"></a>项目（秒杀系统）</h1><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<h1 id="项目（秒杀系统）"><a href="#项目（秒杀系统）" class="headerlink" title="项目（秒杀系统）"></a>项目（秒杀系统）</h1><a id="more"></a><ol><li>集合：<br> 数组的长度是固定的，集合的长度是可变的。<br> 每一个容器的数据结构不一样<br> Collection接口定义着集合框架中最最共性的内容</li></ol>]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;项目（秒杀系统）&quot;&gt;&lt;a href=&quot;#项目（秒杀系统）&quot; class=&quot;headerlink&quot; title=&quot;项目（秒杀系统）&quot;&gt;&lt;/a&gt;项目（秒杀系统）&lt;/h1&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>剑指offer(2)</title>
-    <link href="http://yoursite.com/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/"/>
-    <id>http://yoursite.com/2019/02/08/Java学习笔记/剑指offer(2)/</id>
-    <published>2019-02-08T13:35:42.000Z</published>
-    <updated>2020-02-08T01:19:11.940Z</updated>
-    
-    <content type="html"><![CDATA[<hr><ul><li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li></ul><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&apos; &apos;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&apos; &apos;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&apos;%&apos;;</span><br><span class="line">                newstrArray[i+2*count+1]=&apos;2&apos;;</span><br><span class="line">                newstrArray[i+2*count+2]=&apos;0&apos;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p><ol><li>charAt(),deleteCharAt()   <blockquote><p>s1.charAt(3);<br> s1.deleteCharAt(3); </p></blockquote></li><li>setCharAt();<br>替换所引出的char值<blockquote><p>str.setCharAt(indexnew, ‘0’);</p></blockquote></li><li>append();  <blockquote><p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p></blockquote></li><li>replace两种用法：  <blockquote><p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p></blockquote></li><li>toString()  toCharArray()  <blockquote><p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p></blockquote></li><li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote><p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p></blockquote></li><li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li></ol><ol start="6"><li>一.java数据类型<br>1.基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)<br>2.引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型<br>3.引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：<br>1.相对路径：<pre><code>相对于当前项目而言的</code></pre>2.绝对路径：<pre><code>以盘符开头</code></pre></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;figure class=&quot;highlight pla
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java基础学习1</title>
-    <link href="http://yoursite.com/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
-    <id>http://yoursite.com/2019/02/08/Java学习笔记/java学习笔记1/</id>
-    <published>2019-02-08T13:35:42.000Z</published>
-    <updated>2020-02-08T01:16:00.561Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>类的概念：<br> 一堆具有共同的成员变量、属性和成员方法、功能对象集合</li><li>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型<a id="more"></a> 问题：接口能创建对象吗？不能<pre><code>接口作用：天生作为“父接口”</code></pre></li><li><p>接口的定义：<br> 定义接口用关键字：interface<br> 定义枚举用关键字：enum</p><p> 格式：<br> public interface 接口名字{</p><pre><code>//成员变量，不能定义普通的成员变量//成员方法：必须都是抽象public abstract 返回值类型 方法名();</code></pre><p> }</p><p> 类和接口的本质区别不大，他们的源码都是.java文件<br> 编译后都是.class文件</p></li><li><p>类与类之间：继承，而且是单继承，一个子类，只能有一个直接父类<br> 接口和接口之间:继承，但是可以多继承，一个子接口 可以有多个直接父接口</p><p> 面试题：Java到底支不支持多继承？</p><pre><code>如果是类与类  不支持多继承  只支持多层继承如果是接口和接口  支持多继承  也支持多层继承</code></pre><p> 类和接口之间：不叫继承(extends),叫实现(implements),可以多实现</p><pre><code>只有类 实现接口</code></pre></li><li>接口中成员的特点<br> 5.1成员变量，但是必须有固定修饰符public static final 数据类型 变量 = 值<br> 5.2成员方法，必须是固定修饰符public abstract 即抽象方法<br> 5.3接口不可以创建对象(抽象类也是)<br> 5.4实现类 实现类接口，那么必须重写接口中所有的抽象方法，然后才能创建对象<pre><code>否则 这个实现类 还是一个抽象类，是不能创建对象的在开发中最常用的模式：    public class A extends AbstractClassB implements 接口A，接口B{        注意：        A中必须重写 抽象类中的抽象方法，以及所有接口中的抽象方法    } </code></pre></li><li>接口和抽象类的异同：<br>1.相同点：<br> a.都不能创建对象<br> b.都是作为父类/父接口<br> c.子类/实现类 都必须重写抽象方法，然后才能创建对象<br>2.不同点：<br> a.抽象类用关键字abstract  接口用关键字interface<br> b.接口中只要有方法，必须都是抽象的<br> c.抽象类可以定义任意成员变量  接口的成员变量必须public static final修饰<br> d.类和抽象类之间关系是单继承，类和接口之间关系是多实现<br> e.思想上的区别<br> 1.抽象类中必须定义整个继承体系中的共性内容<br> 2.接口中定义 整个继承体系之外的 额外扩展的功能。</li></ol><p>7.面向对象3大特征：封装(安全性)，继承(扩展性)，多态(灵活性)<br>    多态：<br>    前提1.必须有子父类关系<br>        2.必须有方法的重写<br>    多态在Java中的表现形式：<br>        父类类型  变量名 = new 子类类型();<br>        接口类型  变量名 = new 实现类();<br>        Animal an = new Cat();<br>        父类类型的变量指向了子类的对象<br>    注意：<br>        1.使用多态调用成员变量<br>            编译时，看父类<br>            运行时，看父类<br>        2.使用多态调用成员方法<br>            编译时，看父类<br>            运行时，看子类<br>总结：<br>    弊端：多态只能调用子父类共有的方法，不能调用子类特有的方法<br>    好处：提高灵活性<br>    父类类型的变量，可以接收任何一个子类的对象<br>    调用方法的时候，编译是看父类，运行时运行的传递过来的子类对象的方法<br>    弊端的解决方案：<br>        向下转型：强制类型转换<br>        向上转型：自动类型转换 (就是多态)<br>    向下转型也有弊端：<br>        把父类的变量 转成任何子类类型时候，编译器直接通过<br>        可以转成cat,本质是dog 所以出错<br>    Java中解决向下转型弊端的方法：<br>        一个关键字Instanceof 运算符<br>        作用：判断某一个变量 不是 该类的类型<br>        格式：<br>            boolean b = an instanceof 类名<br>    多态提高程序的灵活性，扩展性，复用性。</p><ol start="7"><li>static的介绍:<br> static的作用用来修饰类中的成员<br> 1.如果一个类的成员被static修饰了，怎么访问？ 类名.成员变量名<br> 存在方法区中的静态区，只有一个空间  优先于对象存在<br> 2.类名.成员变量(推荐)   对象.成员变量   都可以<br> 3.所有对象共有的，被staic修饰的成员属于类，不属于单个对象<br> 4.静态没有多态性 静态不属于对象，属于类<br> 5.静态代码块：<pre><code>在类的成员位置    static{        代码    }</code></pre> 特点：<br> 使用到这个类时，JVM会自动执行静态代码块<br> 只会第一次使用时执行<br> 优先级比构造方法高，比main方法高<br> 作用：用来初始化类的,myswl数据(静态代码块来加载驱动)</li><li><p>final可以修饰<br> 类，成员变量，成员方法，局部变量(基本类型，引用类型)<br> 1.修饰类(太监类)，不能被继承<br> 2.final修饰成员变量: </p><pre><code>2.1必须在创建对象之前有却确定的值2.3只能赋值一次</code></pre><p> 3.修饰方法:</p><pre><code>不能被子类重写</code></pre><p> 4.修饰基本类型局部变量</p><pre><code>被final修饰的基本类型局部变量  只能赋值一次</code></pre><p> 5.修饰引用类型局部变量</p><pre><code>被final修饰的引用类型局部变量  只能赋值一次但是引用类型所指向的对象中内容是可以改变的</code></pre></li><li><p>匿名内部类：是一种特殊的语法，用来快速创建抽象类的子类对象</p><pre><code>用来快速创建 接口的实现类对象</code></pre><p> AbstractAnimal an1 = new AbstractAnimal(){</p><pre><code>重写</code></pre><p> }<br> 多态</p></li><li>引用数据类型<br>a.类作为方法的参数或者返回值(我们需要传递或返回的是该类的对象)<br>b.抽象类作为方法的参数和返回值  (和9结合起来)我们需要传递或返回的是该抽象类的子类的对象<br>c.接口作为方法的参数和返回值   (我们需要传递或返回的是该接口的实现类的对象)</li><li>链式编程</li><li>权限修饰符<br>如果一个成员只想在本类中使用 用private修饰<br>如果一个成员想在本类和本包的其它类中使用 不写 default<br>如果一个成员想在本类，本包，其他包的子类中使用 用protected修饰<br>如果一个成员想在所有类中使用 用public修饰</li><li><p>Object类：<br>类Object是类层次结构的根类<br>所有类都必须直接或者间接的继承object</p><ol><li>boolean equals(Object obj);<br>p1.equals(p2);<br>//比较两个对象是否相等,在Object类中定义equals方法比较是 两个对象的地址<br>在String类中 重写了object父类中的equals方法，<br> 本来在object类中比较的是两个对象的地址<br> 在String重写后变成比较两个字符串的内容</li></ol><p>我们程序员 通常自定义一个类 也会重写equals</p><ol start="2"><li>toString(); //返回该对象的字符串表示<br> Object类中的默认的返回值：包名.类名@地址<br> 实际开发中toString的使用，重写toString 返回对象中的成员变量</li></ol></li><li><p>异常:是java代码编译或者运行过程中<br>异常的继承体系:<br>Throwable(异常和错误的超类):可以抛出去的东西</p><pre><code>--Exception:异常(普通问题) --编译时异常:  指的是Exception 以及Exception子类  (除了RuntimeException)--运行时异常:  RuntimeException以及其子类--Error:错误(严重问题) 比如:OutOfMemoryError:超出内存错误如果程序出现了错误，只能改代码</code></pre><p>创建异常对象，对异常的基本操作：<br>1.抛出异常 2.处理异常(捕获异常，将异常获取，使用try/catch做分支处理)<br>JVM默认处理异常的方式:(中断处理)<br>处理异常的方式：<br>1.不处理</p><pre><code>public 返回值类型 方法名(参数)throws xxxException{}</code></pre><p>2.捕获处理</p><pre><code>try{    可能出现的异常的代码}catch(Exception e){    //处理异常}finally{    //写上必须要执行的代码    //释放资源的代码}</code></pre><p>3.其他的处理方式</p><pre><code>多个异常分别处理多个个异常一次捕获多次处理多个异常一次捕获一次处理</code></pre><p>父类方法没有抛出异常，子类覆盖父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理。<br>打印异常信息:printStackTrace<br>1.RuntimeException<br>2.ClassCastException   类型转换异常(向下转型的时候)<br>3.ArrayIndexOutOfBoundsException  数组下标越界<br>4.StringIndexOutOfBoundsException  字符串下标越界<br>自定义异常类：<br>1.创建一个类，这个类必须用Exception结尾<br>2.必须继承Exception 或者  RumtimeException<br>3.自定义的异常 至少有两个构造</p><pre><code>a.空参数构造b.带有String类型参数构造</code></pre></li><li><p>Object类:是所有类的根类<br>boolean equals(Object obj)<br>a.Object类中equals方法,比较是两个对象的地址，就是==号的作用<br>b.重写  比较两个字符串的内容   比较两个对象的成员变量的值<br>String toString();//返回该对象的字符串表示   hashCode()返回该对象的数字表示</p></li><li>什么叫设计模式？<br>把解决问题的方案 总结出一个套路<br>1.代理设计模式<br>1.1静态代理设计模式<br>1.2动态代理设计模式</li><li>date类:日期类<pre><code>表示特定的瞬间，精确到毫秒</code></pre>public Date(); //无参构造<br>public Date(long time);<br>1.DateFormat是一个抽象类 我们不能用它<br>2.我们使用它的一个子类：SimpleDateFormat<br>SimpleDateFormat:简单的日期格式化类<br>1.构造<pre><code>public SimpleDateFormat(String pattern);//以指定的模式 创建一个日期格式化对象</code></pre>2.成员方法<pre><code>public String format(Date d);//格式化一个日期对象，返回格式化后的一个字符串public Date parse(String s);//把一个字符串形式的日期，解析成Date对象</code></pre></li><li>Calender类<br>获取Calendar的子类对象<br>获取Calender对象的某个字段 (get)</li><li>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值<br>public static long currentTimeMillis();//获取当前系统的毫秒值</li><li>String(不可变)  StringBuilder(可变)<br>//当出现大量的字符串拼接运算 时 用StringBuilder</li><li>基本数据类型 对应的引用类型<br>int Integer<br>拆箱：包装类型—&gt;基本类型<br>装箱：基本类型—&gt;包装类型</li><li>正则表达式：</li><li></li><li>javac 生成编译文件</li><li>java 执行类文件，出错原因java程序运行class文件,对于有包名的类,java把包名当成文件夹处理.”包名+类名”相当于”文件夹目录+类名”来寻找类。</li><li>b = a++ a先赋值，再自增。  </li><li>mysql Orcale DB2(银行系统)  SQLite(手机端) SQLServer SyBase(建模工具PowerDesigner) </li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;类的概念：&lt;br&gt; 一堆具有共同的成员变量、属性和成员方法、功能对象集合&lt;/li&gt;
-&lt;li&gt;接口的概念：&lt;br&gt; 接口是功能的集合，就是方法的集合&lt;br&gt; 也就是说 接口中只能定义方法，不能定义普通的成员变量&lt;br&gt; 而且接口中的成员方法，必须都是抽象的&lt;br&gt; 接口是比抽象类还要抽象的一种类型
     
     </summary>
     
