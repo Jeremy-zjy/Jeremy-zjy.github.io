@@ -1,8 +1,9 @@
-<ol>
-<li>类的概念：<br> 一堆 具有共同的成员变量、属性和成员方法、功能对象集合</li>
-<li><p>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型</p>
-<p> 问题：接口能创建对象吗？不能</p>
-<pre><code>接口作用：天生作为“父接口”
+<hr>
+<p>title: Java基础学习1<br>date: 2019-02-08 21:35:42<br>tags: Java</p>
+<h2 id="categories-Java"><a href="#categories-Java" class="headerlink" title="categories: Java"></a>categories: Java</h2><ol>
+<li>类的概念：<br> 一堆具有共同的成员变量、属性和成员方法、功能对象集合</li>
+<li>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型<!-- more -->
+ 问题：接口能创建对象吗？不能<pre><code>接口作用：天生作为“父接口”
 </code></pre></li>
 <li><p>接口的定义：<br> 定义接口用关键字：interface<br> 定义枚举用关键字：enum</p>
 <p> 格式：<br> public interface 接口名字{</p>
@@ -103,5 +104,13 @@ b.带有String类型参数构造
 public Date parse(String s);//把一个字符串形式的日期，解析成Date对象
 </code></pre></li>
 <li>Calender类<br>获取Calendar的子类对象<br>获取Calender对象的某个字段 (get)</li>
-<li>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值</li>
+<li>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值<br>public static long currentTimeMillis();//获取当前系统的毫秒值</li>
+<li>String(不可变)  StringBuilder(可变)<br>//当出现大量的字符串拼接运算 时 用StringBuilder</li>
+<li>基本数据类型 对应的引用类型<br>int Integer<br>拆箱：包装类型—&gt;基本类型<br>装箱：基本类型—&gt;包装类型</li>
+<li>正则表达式：</li>
+<li></li>
+<li>javac 生成编译文件</li>
+<li>java 执行类文件，出错原因java程序运行class文件,对于有包名的类,java把包名当成文件夹处理.”包名+类名”相当于”文件夹目录+类名”来寻找类。</li>
+<li>b = a++ a先赋值，再自增。  </li>
+<li>mysql Orcale DB2(银行系统)  SQLite(手机端) SQLServer SyBase(建模工具PowerDesigner) </li>
 </ol>
