@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-04-04T15:25:44.015Z</updated>
+  <updated>2021-04-04T15:30:26.756Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/"/>
     <id>http://yoursite.com/2021/04/04/hexo-github迁移电脑/</id>
     <published>2021-04-04T13:52:33.000Z</published>
-    <updated>2021-04-04T15:25:44.015Z</updated>
+    <updated>2021-04-04T15:30:26.756Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <a id="more"></a></p><h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol><li>复制blog文件夹</li><li>在新的电脑上下载新的git和nodejs</li><li>npm install</li><li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3> 下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2. Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2. Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li><li><blockquote><p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p></blockquote></li><li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p></li><li><p>生成ssh密钥文件：  </p><blockquote><p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p></blockquote></li><li><p>打开<a href="https://github.com/settings/keys&quot;" target="_blank" rel="noopener">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p><h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="&quot;https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation&quot;">参考解决方法</a></p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <a id="more"></a></p><h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul><li>复制blog文件夹</li><li>在新的电脑上下载新的git和nodejs</li><li>npm install</li><li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li></ul><ol><li><blockquote><p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p></blockquote></li><li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p></li><li><p>生成ssh密钥文件：  </p><blockquote><p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p></blockquote></li><li><p>打开<a href="https://github.com/settings/keys&quot;" target="_blank" rel="noopener">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p><h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="&quot;https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation&quot;">参考解决方法</a></p></li></ol>]]></content>
     
     <summary type="html">
     
