@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[hexo+github迁移电脑]]></title>
     <url>%2F2021%2F04%2F04%2Fhexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[hexo个人博客迁移从一台电脑上迁移至另外一台电脑 实现步骤 复制blog文件夹 在新的电脑上下载新的git和nodejs npm install 安装hexo,重新部署。问题1.nodejs版本过高 下载低版本13.14。2. Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题） git config –global user.name “你的GitHub用户名”git config –global user.email “你的GitHub注册邮箱” 删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git） 生成ssh密钥文件： ssh-keygen -t rsa -C “你的GitHub注册邮箱” 打开GitHub_Settings_keys 页面，新建new SSH Key，把密钥复制上去。 3.遇见404问题参考解决方法]]></content>
   </entry>
   <entry>
     <title><![CDATA[markdown]]></title>
