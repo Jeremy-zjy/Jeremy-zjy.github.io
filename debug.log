@@ -1,0 +1,25 @@
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Writing database to D:\\Blog\\blog/db.json","time":"2019-01-19T13:57:52.532Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Hexo version: \u001b[35m3.8.0\u001b[39m","time":"2019-01-19T13:57:52.559Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Working directory: \u001b[35mD:\\Blog\\blog\\\u001b[39m","time":"2019-01-19T13:57:52.562Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Config loaded: \u001b[35mD:\\Blog\\blog\\_config.yml\u001b[39m","time":"2019-01-19T13:57:52.798Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-deployer-git\u001b[39m","time":"2019-01-19T13:57:52.932Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-archive\u001b[39m","time":"2019-01-19T13:57:52.940Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-category\u001b[39m","time":"2019-01-19T13:57:52.948Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-index\u001b[39m","time":"2019-01-19T13:57:52.954Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-tag\u001b[39m","time":"2019-01-19T13:57:52.957Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-ejs\u001b[39m","time":"2019-01-19T13:57:52.972Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-marked\u001b[39m","time":"2019-01-19T13:57:52.988Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-stylus\u001b[39m","time":"2019-01-19T13:57:52.991Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-server\u001b[39m","time":"2019-01-19T13:57:53.126Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\merge-configs.js\u001b[39m","time":"2019-01-19T13:57:53.137Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\merge.js\u001b[39m","time":"2019-01-19T13:57:53.143Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\button.js\u001b[39m","time":"2019-01-19T13:57:53.145Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\center-quote.js\u001b[39m","time":"2019-01-19T13:57:53.146Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\exturl.js\u001b[39m","time":"2019-01-19T13:57:53.150Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\full-image.js\u001b[39m","time":"2019-01-19T13:57:53.151Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\group-pictures.js\u001b[39m","time":"2019-01-19T13:57:53.154Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\label.js\u001b[39m","time":"2019-01-19T13:57:53.156Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\lazy-image.js\u001b[39m","time":"2019-01-19T13:57:53.157Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\note.js\u001b[39m","time":"2019-01-19T13:57:53.158Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Script loaded: \u001b[35mthemes\\next\\scripts\\tags\\tabs.js\u001b[39m","time":"2019-01-19T13:57:53.159Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-C0AR7B9I","pid":17916,"level":20,"msg":"Database saved","time":"2019-01-19T13:57:53.174Z","v":0}
