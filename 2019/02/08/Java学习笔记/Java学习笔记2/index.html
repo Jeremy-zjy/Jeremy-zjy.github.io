@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java学习笔记2 | 飞舞伍five</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="项目（秒杀系统）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习笔记2">
+<meta property="og:url" content="http://yoursite.com/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/index.html">
+<meta property="og:site_name" content="飞舞伍five">
+<meta property="og:description" content="项目（秒杀系统）">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-02-08T00:35:42.000Z">
+<meta property="article:modified_time" content="2021-05-28T09:18:25.758Z">
+<meta property="article:author" content="右郁石">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="飞舞伍five" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞舞伍five</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java学习笔记/Java学习笔记2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/" class="article-date">
+  <time datetime="2019-02-08T00:35:42.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java学习笔记2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="项目（秒杀系统）"><a href="#项目（秒杀系统）" class="headerlink" title="项目（秒杀系统）"></a>项目（秒杀系统）</h1><span id="more"></span>
+<ul>
+<li><p>集合(collection)：<br>  数组的长度是固定的，集合的长度是可变的。<br>  每一个容器的数据结构不一样<br>  Collection接口定义着集合框架中最最共性的内容<br>  size(); add(); remove(); clear(); contains(); toArray();<br>  集合的遍历：<br>  在根接口中使用了一种公共的遍历方式，迭代器遍历</p>
+<ol>
+<li>获取一个集合的迭代器对象(迭代器对象不是我们创建的，而是每个集合自带的) 是一个接口<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;String&gt; it = names.iterator();</span><br><span class="line">while(it.hasnext())&#123;</span><br><span class="line">    String s = it.next();</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+java规定，如果一个集合使用迭代器遍历，那么遍历的过程中，不允许修改集合长度</li>
+<li>增强for循环<br>Collection<String> names = new ArrayList<String>();<br>for(数据类型 变量名：数组/集合){<br> syso(变量名);<br>}<br>使用增强for循环遍历集合的时候，不能修改集合的长度</String></String></li>
+<li>泛型:E实际上是一个“变量”  用来保存一种数据类型<br> <E>,&lt;K,V&gt;<br> 可以用在类，方法，接口上。<br> 泛型通配符<br> ？：代表任意类型</E></li>
+<li>Collections.shuffle(cards); //洗牌</li>
+<li>栈，队列<br>数组结构  Arraylist   Vector   查询快，增删慢<br>链表结构：一般使用双向链表<br>哈希表结构：查询快 增删快</li>
+<li>List接口特点：有下标，有序的，可重复<br>实现类：ArrayList,LinkedList,Vector 安全<br>List结构中的方法：<br>增：add(E e);  add(int index,E e)<br>删：remove(Object obj);remove(int index);<br>改：set(int index,E e);<br>查：get(int index);<br>其他：<br> size();clear(),contains(Object obj),toArray();<br> iterator();isEmpty();</li>
+<li>ArrayList:方法基本和List一致  </li>
+<li>LinkedList:还有大量的首尾操作方法<br>void addFirst(E e);<br>E removeFirst();<br>E getFirst();<br>E pop();  和removeFirst一致<br>void push(E e);   推入  和addFirst一致</li>
+<li>Set接口<br>a.无下标<br>b.无序的<br>c.不可重复<br>实现类：<br>HashSet：底层采用哈希表结构，查询快，增删快，无序的<br>LinkedHashSet:链表＋哈希表，查询快，增删快，有序<br>Set接口中的特有方法和Collection基本一致<br>TreeSet:红黑树</li>
+<li>哈希表<br>哈希值：每一个对象都具有哈希值<br>地址值实际是哈希值的16进制<br>String对象的哈希值：重写了Object类中的hashCode<br>不再通过地址值计算 只和字符串内容相关<br>哈希表结构，添加元素判断是否重复</li>
+<li>先判断新旧元素的哈希值</li>
+<li>再判断新旧元素的equals<br>自定义类，要使用HashSet存储<br>保证元素唯一性：<br>  必须重写自定义类的两个方法  hashcode   equals<br>定义一个标准得类：</li>
+<li>封装</li>
+<li>构造</li>
+<li>toString</li>
+<li>hashCode equals<br>contains方法：<br>ArrayList:names.contains(“abc”);<br>HashSet:set.contains(“abc”);</li>
+<li>Map接口<br>Map&lt;K,V&gt;集合常用方法： 、<br>HashMap<br>增：put(K key,V value);  //向集合中添加键值对<br>//如果集合中已存在该键，覆盖整个键值对，并返回被覆盖的键值对的值<br>判断k是不是空<br>哈希表结构，添加元素判断是否重复</li>
+<li>先判断新旧元素的哈希值</li>
+<li>再判断新旧元素的equals<br>删：v remove(object key);  //返回被删除的键值对的值<br>改：==put<br>查：V get(K key);  判断是不是空<br>Map集合遍历：   LinkedHashMap   HashMap<br>getKey();<br>getValue();</li>
+<li>keySet遍历<br>Set<Student> keys = students.keySet();  //放在set集合中<br>map.KeySet(); Iterator  hasnext<br>for(String key : keys)<br>{<br>  String value = students.get(key);<br>}</Student></li>
+<li>Set&lt;Map.Entry<String string="">&gt; entrySet = map.entrySet();<br>Iterator&lt;Map.Entry&lt;String,String&gt;&gt; it = entrySet.iterator();<br>while(it.hasNext(){<br>  Map.Entry&lt;String, String&gt; entry = it.next();<br>  String key = entry.getKey();<br>  String value = entry.getValue();<br>  system.out.println(key+”=”+value)；<br>})<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.Map.Entry;</span><br><span class="line">import java.util.Set;</span><br><span class="line">  </span><br><span class="line">public class MapTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Map&lt;Integer, String&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        //map集合存入数据</span><br><span class="line">        map.put(1, &quot;第一个value&quot;);</span><br><span class="line">        map.put(2, &quot;第二个value&quot;);</span><br><span class="line">        map.put(3, &quot;第三个value&quot;);</span><br><span class="line">         </span><br><span class="line">        //通过keySet取出map数据[for-each循环]</span><br><span class="line">        System.out.println(&quot;-------[for-each循环遍历]通过keySet取出map数据-------&quot;);</span><br><span class="line">        Set&lt;Integer&gt; keys = map.keySet();  //此行可省略，直接将map.keySet()写在for-each循环的条件中</span><br><span class="line">        for(Integer key:keys)&#123;</span><br><span class="line">            System.out.println(&quot;key值：&quot;+key+&quot; value值：&quot;+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过EntrySet取出map数据[for-each循环]</span><br><span class="line">        System.out.println(&quot;-------[for-each循环遍历]通过EntrySet取出map数据-------&quot;);</span><br><span class="line">        Set&lt;Entry&lt;Integer, String&gt;&gt; entrys = map.entrySet(); //此行可省略，直接将map.entrySet()写在for-each循环的条件中</span><br><span class="line">        for(Entry&lt;Integer, String&gt; entry:entrys)&#123;</span><br><span class="line">            System.out.println(&quot;key值：&quot;+entry.getKey()+&quot; value值：&quot;+entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过keySet取出map数据[Iterator遍历]</span><br><span class="line">        System.out.println(&quot;-------[Iterator循环遍历]通过keySet取出map数据---------&quot;);</span><br><span class="line">        Iterator&lt;Integer&gt; it = map.keySet().iterator(); //map.keySet()得到的是set集合，可以使用迭代器遍历</span><br><span class="line">        while(it.hasNext())&#123;</span><br><span class="line">            Integer key = it.next();</span><br><span class="line">            System.out.println(&quot;key值：&quot;+key+&quot; value值：&quot;+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过EntrySet取出map数据[Iterator遍历]</span><br><span class="line">        System.out.println(&quot;-------[Iterator循环遍历]通过EntrySet取出map数据---------&quot;);          </span><br><span class="line">        Iterator&lt;Entry&lt;Integer, String&gt;&gt; iterator = map.entrySet().iterator(); //map.entrySet()得到的是set集合，可以使用迭代器遍历</span><br><span class="line">        while(iterator.hasNext())&#123;</span><br><span class="line">            Entry&lt;Integer, String&gt; entry = iterator.next();</span><br><span class="line">            System.out.println(&quot;key值：&quot;+entry.getKey()+&quot; value值：&quot;+entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+内部类：<br>OutClass.InterClass ic = new OutClass.new InterClass();<br>内部接口    实现谁，重写谁<br>如果Map中的键是自定义类型，那么要保证键的唯一性，必须重写键对应类的hashCode和equals方法</String></li>
+<li>Properties类<br>本质就是一个Map集合<br>持久的属性集<br>ps.store(new FileWriter(“phones.properties”),””);//存<br>ps.load(new FileReader(“phones.properties)); //读取<br>没有泛型<br>具有Map接口的一切方法，以及自己特有的<br>getProperty();<br>setProperty();<br>public Set<String> stringPropertyNames();//和KeySet一样<br>Properties ps = new Properties();<br>可变参数：<br>public static int add(int…a){<br>  return 0;<br>}<br>//类型不能改变，多个参数时，可变参数在最后面<br>本质：数组  for(int i : a)<br>Collections：(集合工具类)中的静态方法：<br>public static void shuffle(List list);//打乱顺序<br>public static void sort(List list);//把集合元素按照自然顺序排序<br>Arrays:数组工具类<br>public static List asList(数组/可变参数); //把数组转化为List集合<br>Arrays.sort(nums);<br>Arrays.toString(nums);<br>Map集合的嵌套：</String></li>
+</ol>
+</li>
+<li><p>File类</p>
+<ol>
+<li>File类可以表示文件  也可以表示文件夹<br>构造：<br> 1.public File(String filepath);<br> 绝对路径：以盘符开头的路径<br> 相对路径：相对当前项目的根目录<br> 2.public File(String parent ,String child);<br> 3.public File(File parent,String child);</li>
+<li>File对象的获取方法<br>public String getAbsolutePath();//获取绝对路径<br>getName();  getPath();<br>public long length(); //获取File对象(文件)的字节数  不能计算文件夹</li>
+<li>File对象的删除和创建方法：</li>
+<li>创建方法<br>  创建文件：<pre><code>  public boolean creatNewFile(); //创建新的文件
+</code></pre>
+  创建文件夹<pre><code>  public boolean mkdir();
+</code></pre>
+</li>
+<li>判断方法<br>  判断是否是文件<pre><code>  public boolean isFile();
+</code></pre>
+  判断是否是文件夹<pre><code>  public boolean isDirectory();
+</code></pre>
+  判断是否存在<pre><code>  public boolean exists();
+</code></pre>
+</li>
+<li>删除<pre><code>  public boolean delete();
+</code></pre>
+</li>
+<li>File类下的list和listFiles方法(文件夹)<br>  1.public String[] list();<br>  2.public File[] listFiles();<br>  只能列出当前文件下的一级子文件或者子文件夹<br>  扩展：删除先删文件再删文件夹</li>
+<li>递归打印目录下的所有文件</li>
+<li>文件过滤器：FileFilter<br>在list和listFiles方法中使用</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/" data-id="ckp84lmnc000kowt28f9zf3rf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/09/python%E7%88%AC%E8%99%AB%E5%88%9D%E5%AD%A6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python爬虫初学
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/21/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">javascript学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/27/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/">hexo+github迁移电脑</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/markdown/">markdown</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">正则获取词缀集</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/">剑指offer(斐波那契数列)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 右郁石<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

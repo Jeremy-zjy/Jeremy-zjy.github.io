@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java基础学习1 | 飞舞伍five</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="类的概念： 一堆具有共同的成员变量、属性和成员方法、功能对象集合  接口的概念： 接口是功能的集合，就是方法的集合 也就是说 接口中只能定义方法，不能定义普通的成员变量 而且接口中的成员方法，必须都是抽象的 接口是比抽象类还要抽象的一种类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础学习1">
+<meta property="og:url" content="http://yoursite.com/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/index.html">
+<meta property="og:site_name" content="飞舞伍five">
+<meta property="og:description" content="类的概念： 一堆具有共同的成员变量、属性和成员方法、功能对象集合  接口的概念： 接口是功能的集合，就是方法的集合 也就是说 接口中只能定义方法，不能定义普通的成员变量 而且接口中的成员方法，必须都是抽象的 接口是比抽象类还要抽象的一种类型">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-01-04T03:20:24.000Z">
+<meta property="article:modified_time" content="2021-05-28T09:18:25.759Z">
+<meta property="article:author" content="右郁石">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="飞舞伍five" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞舞伍five</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java学习笔记/java学习笔记1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="article-date">
+  <time datetime="2020-01-04T03:20:24.000Z" itemprop="datePublished">2020-01-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java基础学习1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>类的概念：<br> 一堆具有共同的成员变量、属性和成员方法、功能对象集合</p>
+</li>
+<li><p>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型</p>
+<span id="more"></span>
+<p> 问题：接口能创建对象吗？不能</p>
+<pre><code> 接口作用：天生作为“父接口”
+</code></pre>
+</li>
+<li><p>接口的定义：<br> 定义接口用关键字：interface<br> 定义枚举用关键字：enum</p>
+<p> 格式：<br> public interface 接口名字{</p>
+<pre><code> //成员变量，不能定义普通的成员变量
+ //成员方法：必须都是抽象
+ public abstract 返回值类型 方法名();
+</code></pre>
+<p> }</p>
+<p> 类和接口的本质区别不大，他们的源码都是.java文件<br> 编译后都是.class文件</p>
+</li>
+<li><p>类与类之间：继承，而且是单继承，一个子类，只能有一个直接父类<br> 接口和接口之间:继承，但是可以多继承，一个子接口 可以有多个直接父接口</p>
+<p> 面试题：Java到底支不支持多继承？</p>
+<pre><code> 如果是类与类  不支持多继承  只支持多层继承
+ 如果是接口和接口  支持多继承  也支持多层继承
+</code></pre>
+<p> 类和接口之间：不叫继承(extends),叫实现(implements),可以多实现</p>
+<pre><code> 只有类 实现接口
+</code></pre>
+</li>
+<li><p>接口中成员的特点<br> 5.1成员变量，但是必须有固定修饰符public static final 数据类型 变量 = 值<br> 5.2成员方法，必须是固定修饰符public abstract 即抽象方法<br> 5.3接口不可以创建对象(抽象类也是)<br> 5.4实现类 实现类接口，那么必须重写接口中所有的抽象方法，然后才能创建对象</p>
+<pre><code> 否则 这个实现类 还是一个抽象类，是不能创建对象的
+ 在开发中最常用的模式：
+     public class A extends AbstractClassB implements 接口A，接口B&#123;
+         注意：
+         A中必须重写 抽象类中的抽象方法，以及所有接口中的抽象方法
+     &#125; 
+</code></pre>
+</li>
+<li><p>接口和抽象类的异同：</p>
+</li>
+<li><p>相同点：<br>  a.都不能创建对象<br>  b.都是作为父类/父接口<br>  c.子类/实现类 都必须重写抽象方法，然后才能创建对象</p>
+</li>
+<li><p>不同点：<br>  a.抽象类用关键字abstract  接口用关键字interface<br>  b.接口中只要有方法，必须都是抽象的<br>  c.抽象类可以定义任意成员变量  接口的成员变量必须public static final修饰<br>  d.类和抽象类之间关系是单继承，类和接口之间关系是多实现<br>  e.思想上的区别<br>  1.抽象类中必须定义整个继承体系中的共性内容<br>  2.接口中定义 整个继承体系之外的 额外扩展的功能。</p>
+</li>
+</ol>
+<p>7.面向对象3大特征：封装(安全性)，继承(扩展性)，多态(灵活性)<br>    多态：<br>    前提1.必须有子父类关系<br>        2.必须有方法的重写<br>    多态在Java中的表现形式：<br>        父类类型  变量名 = new 子类类型();<br>        接口类型  变量名 = new 实现类();<br>        Animal an = new Cat();<br>        父类类型的变量指向了子类的对象<br>    注意：<br>        1.使用多态调用成员变量<br>            编译时，看父类<br>            运行时，看父类<br>        2.使用多态调用成员方法<br>            编译时，看父类<br>            运行时，看子类<br>总结：<br>    弊端：多态只能调用子父类共有的方法，不能调用子类特有的方法<br>    好处：提高灵活性<br>    父类类型的变量，可以接收任何一个子类的对象<br>    调用方法的时候，编译是看父类，运行时运行的传递过来的子类对象的方法<br>    弊端的解决方案：<br>        向下转型：强制类型转换<br>        向上转型：自动类型转换 (就是多态)<br>    向下转型也有弊端：<br>        把父类的变量 转成任何子类类型时候，编译器直接通过<br>        可以转成cat,本质是dog 所以出错<br>    Java中解决向下转型弊端的方法：<br>        一个关键字Instanceof 运算符<br>        作用：判断某一个变量 不是 该类的类型<br>        格式：<br>            boolean b = an instanceof 类名<br>    多态提高程序的灵活性，扩展性，复用性。</p>
+<ol start="7">
+<li><p>static的介绍:<br> static的作用用来修饰类中的成员<br> 1.如果一个类的成员被static修饰了，怎么访问？ 类名.成员变量名<br> 存在方法区中的静态区，只有一个空间  优先于对象存在<br> 2.类名.成员变量(推荐)   对象.成员变量   都可以<br> 3.所有对象共有的，被staic修饰的成员属于类，不属于单个对象<br> 4.静态没有多态性 静态不属于对象，属于类<br> 5.静态代码块：</p>
+<pre><code> 在类的成员位置
+     static&#123;
+         代码
+     &#125;
+</code></pre>
+<p> 特点：<br> 使用到这个类时，JVM会自动执行静态代码块<br> 只会第一次使用时执行<br> 优先级比构造方法高，比main方法高<br> 作用：用来初始化类的,myswl数据(静态代码块来加载驱动)</p>
+</li>
+<li><p>final可以修饰<br> 类，成员变量，成员方法，局部变量(基本类型，引用类型)<br> 1.修饰类(太监类)，不能被继承<br> 2.final修饰成员变量: </p>
+<pre><code> 2.1必须在创建对象之前有却确定的值
+ 2.3只能赋值一次
+</code></pre>
+<p> 3.修饰方法:</p>
+<pre><code> 不能被子类重写
+</code></pre>
+<p> 4.修饰基本类型局部变量</p>
+<pre><code> 被final修饰的基本类型局部变量  只能赋值一次
+</code></pre>
+<p> 5.修饰引用类型局部变量</p>
+<pre><code> 被final修饰的引用类型局部变量  只能赋值一次
+ 但是引用类型所指向的对象中内容是可以改变的
+</code></pre>
+</li>
+<li><p>匿名内部类：是一种特殊的语法，用来快速创建抽象类的子类对象</p>
+<pre><code>         用来快速创建 接口的实现类对象
+</code></pre>
+<p> AbstractAnimal an1 = new AbstractAnimal(){</p>
+<pre><code> 重写
+</code></pre>
+<p> }<br> 多态</p>
+</li>
+<li><p>引用数据类型<br>a.类作为方法的参数或者返回值(我们需要传递或返回的是该类的对象)<br>b.抽象类作为方法的参数和返回值  (和9结合起来)我们需要传递或返回的是该抽象类的子类的对象<br>c.接口作为方法的参数和返回值   (我们需要传递或返回的是该接口的实现类的对象)</p>
+</li>
+<li><p>链式编程</p>
+</li>
+<li><p>权限修饰符<br>如果一个成员只想在本类中使用 用private修饰<br>如果一个成员想在本类和本包的其它类中使用 不写 default<br>如果一个成员想在本类，本包，其他包的子类中使用 用protected修饰<br>如果一个成员想在所有类中使用 用public修饰</p>
+</li>
+<li><p>Object类：<br>类Object是类层次结构的根类<br>所有类都必须直接或者间接的继承object</p>
+<ol>
+<li>boolean equals(Object obj);<br>p1.equals(p2);<br>//比较两个对象是否相等,在Object类中定义equals方法比较是 两个对象的地址<br>在String类中 重写了object父类中的equals方法，<br> 本来在object类中比较的是两个对象的地址<br> 在String重写后变成比较两个字符串的内容</li>
+</ol>
+<p>我们程序员 通常自定义一个类 也会重写equals</p>
+<ol start="2">
+<li>toString(); //返回该对象的字符串表示<br> Object类中的默认的返回值：包名.类名@地址<br> 实际开发中toString的使用，重写toString 返回对象中的成员变量</li>
+</ol>
+</li>
+<li><p>异常:是java代码编译或者运行过程中<br>异常的继承体系:<br>Throwable(异常和错误的超类):可以抛出去的东西</p>
+<pre><code>--Exception:异常(普通问题) 
+--编译时异常:
+  指的是Exception 以及Exception子类  (除了RuntimeException)
+--运行时异常:
+  RuntimeException以及其子类
+--Error:错误(严重问题) 
+比如:OutOfMemoryError:超出内存错误
+如果程序出现了错误，只能改代码
+</code></pre>
+<p>创建异常对象，对异常的基本操作：<br>1.抛出异常 2.处理异常(捕获异常，将异常获取，使用try/catch做分支处理)<br>JVM默认处理异常的方式:(中断处理)<br>处理异常的方式：<br>1.不处理</p>
+<pre><code>public 返回值类型 方法名(参数)throws xxxException&#123;
+
+&#125;
+</code></pre>
+<p>2.捕获处理</p>
+<pre><code>try&#123;
+    可能出现的异常的代码
+&#125;catch(Exception e)&#123;
+    //处理异常
+&#125;finally&#123;
+    //写上必须要执行的代码
+    //释放资源的代码
+&#125;
+</code></pre>
+<p>3.其他的处理方式</p>
+<pre><code>多个异常分别处理
+多个个异常一次捕获多次处理
+多个异常一次捕获一次处理
+</code></pre>
+<p>父类方法没有抛出异常，子类覆盖父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理。<br>打印异常信息:printStackTrace<br>1.RuntimeException<br>2.ClassCastException   类型转换异常(向下转型的时候)<br>3.ArrayIndexOutOfBoundsException  数组下标越界<br>4.StringIndexOutOfBoundsException  字符串下标越界<br>自定义异常类：<br>1.创建一个类，这个类必须用Exception结尾<br>2.必须继承Exception 或者  RumtimeException<br>3.自定义的异常 至少有两个构造</p>
+<pre><code>a.空参数构造
+b.带有String类型参数构造
+</code></pre>
+</li>
+<li><p>Object类:是所有类的根类<br>boolean equals(Object obj)<br>a.Object类中equals方法,比较是两个对象的地址，就是==号的作用<br>b.重写  比较两个字符串的内容   比较两个对象的成员变量的值<br>String toString();//返回该对象的字符串表示   hashCode()返回该对象的数字表示</p>
+</li>
+<li><p>什么叫设计模式？<br>把解决问题的方案 总结出一个套路</p>
+</li>
+<li><p>代理设计模式<br>  1.1静态代理设计模式<br>  1.2动态代理设计模式</p>
+</li>
+<li><p>date类:日期类</p>
+<pre><code>表示特定的瞬间，精确到毫秒
+</code></pre>
+<p>public Date(); //无参构造<br>public Date(long time);<br>1.DateFormat是一个抽象类 我们不能用它<br>2.我们使用它的一个子类：SimpleDateFormat<br>SimpleDateFormat:简单的日期格式化类<br>1.构造</p>
+<pre><code>public SimpleDateFormat(String pattern);//以指定的模式 创建一个日期格式化对象
+</code></pre>
+<p>2.成员方法</p>
+<pre><code>public String format(Date d);//格式化一个日期对象，返回格式化后的一个字符串
+public Date parse(String s);//把一个字符串形式的日期，解析成Date对象
+</code></pre>
+</li>
+<li><p>Calender类<br>获取Calendar的子类对象<br>获取Calender对象的某个字段 (get)</p>
+</li>
+<li><p>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值<br>public static long currentTimeMillis();//获取当前系统的毫秒值</p>
+</li>
+<li><p>String(不可变)  StringBuilder(可变)<br>//当出现大量的字符串拼接运算 时 用StringBuilder</p>
+</li>
+<li><p>基本数据类型 对应的引用类型<br>int Integer<br>拆箱：包装类型—&gt;基本类型<br>装箱：基本类型—&gt;包装类型</p>
+</li>
+<li><p>正则表达式：</p>
+</li>
+<li></li>
+<li><p>javac 生成编译文件</p>
+</li>
+<li><p>java 执行类文件，出错原因java程序运行class文件,对于有包名的类,java把包名当成文件夹处理.”包名+类名”相当于”文件夹目录+类名”来寻找类。</p>
+</li>
+<li><p>b = a++ a先赋值，再自增。  </p>
+</li>
+<li><p>mysql Orcale DB2(银行系统)  SQLite(手机端) SQLServer SyBase(建模工具PowerDesigner) </p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" data-id="ckp84lmnf000qowt2dv531dg5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          剑指offer(2)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/24/%E8%80%83%E7%A0%94/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">考研</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/27/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/">hexo+github迁移电脑</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/markdown/">markdown</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">正则获取词缀集</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/">剑指offer(斐波那契数列)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 右郁石<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

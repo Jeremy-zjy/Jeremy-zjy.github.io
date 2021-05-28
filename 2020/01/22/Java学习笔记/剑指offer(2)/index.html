@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>剑指offer(2) | 飞舞伍five</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指offer(2)">
+<meta property="og:url" content="http://yoursite.com/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/index.html">
+<meta property="og:site_name" content="飞舞伍five">
+<meta property="og:description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-01-22T13:35:42.000Z">
+<meta property="article:modified_time" content="2021-05-28T09:18:25.760Z">
+<meta property="article:author" content="右郁石">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="飞舞伍five" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞舞伍five</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java学习笔记/剑指offer(2)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/" class="article-date">
+  <time datetime="2020-01-22T13:35:42.000Z" itemprop="datePublished">2020-01-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      剑指offer(2)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<ul>
+<li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li>
+</ul>
+<hr>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    	String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&#x27;%&#x27;;</span><br><span class="line">                newstrArray[i+2*count+1]=&#x27;2&#x27;;</span><br><span class="line">                newstrArray[i+2*count+2]=&#x27;0&#x27;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p>
+<ol>
+<li>charAt(),deleteCharAt()   <blockquote>
+<p>s1.charAt(3);<br> s1.deleteCharAt(3); </p>
+</blockquote>
+</li>
+<li>setCharAt();<br>替换所引出的char值<blockquote>
+<p>str.setCharAt(indexnew, ‘0’);</p>
+</blockquote>
+</li>
+<li>append();  <blockquote>
+<p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p>
+</blockquote>
+</li>
+<li>replace两种用法：  <blockquote>
+<p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p>
+</blockquote>
+</li>
+<li>toString()  toCharArray()  <blockquote>
+<p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p>
+</blockquote>
+</li>
+<li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote>
+<p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p>
+</blockquote>
+</li>
+<li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li>
+</ol>
+<ol start="6">
+<li>一.java数据类型</li>
+<li>基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)</li>
+<li>引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型</li>
+<li>引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：</li>
+<li>相对路径：<pre><code>  相对于当前项目而言的
+</code></pre>
+</li>
+<li>绝对路径：<pre><code>  以盘符开头
+</code></pre>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/" data-id="ckp84lmng000towt295xtam0f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          剑指offer(斐波那契数列)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java基础学习1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/27/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/">hexo+github迁移电脑</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/markdown/">markdown</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">正则获取词缀集</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/">剑指offer(斐波那契数列)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 右郁石<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
