@@ -493,6 +493,66 @@ java规定，如果一个集合使用迭代器遍历，那么遍历的过程中�
       </tags>
   </entry>
   <entry>
+    <title>剑指offer(2)</title>
+    <url>/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/</url>
+    <content><![CDATA[<hr>
+<ul>
+<li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li>
+</ul>
+<hr>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    	String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&#x27;%&#x27;;</span><br><span class="line">                newstrArray[i+2*count+1]=&#x27;2&#x27;;</span><br><span class="line">                newstrArray[i+2*count+2]=&#x27;0&#x27;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p>
+<ol>
+<li>charAt(),deleteCharAt()   <blockquote>
+<p>s1.charAt(3);<br> s1.deleteCharAt(3); </p>
+</blockquote>
+</li>
+<li>setCharAt();<br>替换所引出的char值<blockquote>
+<p>str.setCharAt(indexnew, ‘0’);</p>
+</blockquote>
+</li>
+<li>append();  <blockquote>
+<p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p>
+</blockquote>
+</li>
+<li>replace两种用法：  <blockquote>
+<p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p>
+</blockquote>
+</li>
+<li>toString()  toCharArray()  <blockquote>
+<p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p>
+</blockquote>
+</li>
+<li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote>
+<p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p>
+</blockquote>
+</li>
+<li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li>
+</ol>
+<ol start="6">
+<li>一.java数据类型</li>
+<li>基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)</li>
+<li>引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型</li>
+<li>引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：</li>
+<li>相对路径：<pre><code>  相对于当前项目而言的
+</code></pre>
+</li>
+<li>绝对路径：<pre><code>  以盘符开头
+</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java基础学习1</title>
     <url>/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</url>
     <content><![CDATA[<ol>
@@ -664,66 +724,6 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指offer(2)</title>
-    <url>/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/</url>
-    <content><![CDATA[<hr>
-<ul>
-<li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li>
-</ul>
-<hr>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    	String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&#x27;%&#x27;;</span><br><span class="line">                newstrArray[i+2*count+1]=&#x27;2&#x27;;</span><br><span class="line">                newstrArray[i+2*count+2]=&#x27;0&#x27;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p>
-<ol>
-<li>charAt(),deleteCharAt()   <blockquote>
-<p>s1.charAt(3);<br> s1.deleteCharAt(3); </p>
-</blockquote>
-</li>
-<li>setCharAt();<br>替换所引出的char值<blockquote>
-<p>str.setCharAt(indexnew, ‘0’);</p>
-</blockquote>
-</li>
-<li>append();  <blockquote>
-<p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p>
-</blockquote>
-</li>
-<li>replace两种用法：  <blockquote>
-<p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p>
-</blockquote>
-</li>
-<li>toString()  toCharArray()  <blockquote>
-<p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p>
-</blockquote>
-</li>
-<li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote>
-<p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p>
-</blockquote>
-</li>
-<li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li>
-</ol>
-<ol start="6">
-<li>一.java数据类型</li>
-<li>基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)</li>
-<li>引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型</li>
-<li>引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：</li>
-<li>相对路径：<pre><code>  相对于当前项目而言的
-</code></pre>
-</li>
-<li>绝对路径：<pre><code>  以盘符开头
-</code></pre>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
 </search>
