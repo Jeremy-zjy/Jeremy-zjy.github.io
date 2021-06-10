@@ -1,7 +1,7 @@
 ---
 title: hexo+github搭建博客
 date: 2019-01-19 14:59:20
-tags:
+tags: 
 copyright: true
 ---
 # 序
@@ -66,6 +66,7 @@ hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
     >git config --global http.proxy   
 
     **取消代理：**  
+    
     >git config --global --unset http.proxy  
 7. ERROR Process failed: about/index.md  
 TypeError: Cannot read property 'utcOffset' of null  
@@ -74,10 +75,10 @@ TypeError: Cannot read property 'utcOffset' of null
 查看index.html文件是否还在，可以参考[这个][2]
 
 [2]: link "https://www.jianshu.com/p/af83fc73e525"
-    
+
 <p style="color: #AD5D0F;font-size: 23px; font-family: '宋体';">附加功能：</p>
 
-***  
+***
 ### 1.打赏  
 1. 准备支付宝和微信二维码
 2. 在_config.yml中配置图片  
