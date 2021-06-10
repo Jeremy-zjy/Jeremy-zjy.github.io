@@ -95,15 +95,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java基础复习</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
-<p>封装，继承，多态</p>
-<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
-<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
-]]></content>
-  </entry>
-  <entry>
     <title>javascript学习笔记</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
@@ -132,6 +123,15 @@ d[0].className="b";
 }
 </script>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>java基础复习</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
+<p>封装，继承，多态</p>
+<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
+<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
 ]]></content>
   </entry>
   <entry>
@@ -164,14 +164,6 @@ d[0].className="b";
 </ul>
 <p>如果先安装node，再安装nvm，可能会出现修改后，版本仍然未变的情况，尝试了网上很多方法，建议还是卸载重新安装降低版本的node.js</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>test1</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
-      <tags>
-        <tag>测试</tag>
-      </tags>
   </entry>
   <entry>
     <title>个人随笔</title>
@@ -288,6 +280,14 @@ d[0].className="b";
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test1</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
+      <tags>
+        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
