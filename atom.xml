@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-06-10T08:49:19.385Z</updated>
+  <updated>2021-06-10T12:42:58.919Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test1</title>
+    <link href="http://yoursite.com/posts/undefined/"/>
+    <id>http://yoursite.com/posts/undefined/</id>
+    <published>2021-06-10T12:39:48.000Z</published>
+    <updated>2021-06-10T12:42:58.919Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;新的一篇文章&quot;&gt;&lt;a href=&quot;#新的一篇文章&quot; class=&quot;headerlink&quot; title=&quot;新的一篇文章&quot;&gt;&lt;/a&gt;新的一篇文章&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>java基础复习</title>
