@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>javascript学习笔记</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
+<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>HTML 中的脚本必须位于 <script> 与 </script> 标签之间。脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中，也可以保存在外部文件中（则不需要加标签）。</p>
+<h2 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h2><ul>
+<li>使用 window.alert() 弹出警告框。</li>
+<li>使用 document.write() 方法将内容写到 HTML 文档中。</li>
+<li>使用 innerHTML 写入到 HTML 元素。</li>
+<li>使用 console.log() 写入到浏览器的控制台。  </li>
+</ul>
+<script>
+    var y;
+    var z;
+    var d;
+x=document.getElementsByClassName("Barrage-listItem");
+y=document.getElementById(x[0].id);
+d=y.getElementsByTagName("div");
+var reg = /Barrage-userEnter/i;    
+console.log(reg.test(d[0].className)); 
+console.log(d[0].className);
+if(reg.test(d[0].className))
+{
+z=y.getElementsByTagName("span");
+console.log(z[2].title);
+d[0].className="b";
+}
+</script>
+
+]]></content>
+  </entry>
+  <entry>
     <title>hexo+github搭建博客</title>
-    <url>/2019/01/19/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。<br>  <span id="more"></span></p>
 <h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a>搭建步骤：</h2><ol>
 <li><p>GitHub创建个人仓库（名称与用户名一致）  </p>
@@ -45,6 +76,7 @@
 </ol>
 <p><strong>注意需要在blog文件下进行操作</strong><br><strong>还有congig.yml 空格问题基本新手都会犯</strong><br>2. 执行hexo命令出现ERROR<br><strong>npm install 即可</strong><br>3. 前面都没有问题到了hexo d时候连接不上git<br><strong>所以不应用http 应该使用git</strong><br>4. 本地命令成功 但是localhost:访问不到网址<br><strong>大概率是端口占用了</strong><br>5. 本地可以访问但是用户名加github.io无法访问<br><strong>注意库名与用户名一致!!!</strong><br>6. 下载主题出现代理的问题<br>    <strong>查询是否使用代理：</strong><br>    &gt;git config –global http.proxy   </p>
 <pre><code>**取消代理：**  
+
 &gt;git config --global --unset http.proxy  
 </code></pre>
 <ol start="7">
@@ -67,7 +99,7 @@
   </entry>
   <entry>
     <title>hexo+github迁移电脑</title>
-    <url>/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
 <h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
 <li>复制blog文件夹</li>
@@ -94,39 +126,17 @@
 ]]></content>
   </entry>
   <entry>
-    <title>javascript学习笔记</title>
-    <url>/2019/01/21/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
-<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>HTML 中的脚本必须位于 <script> 与 </script> 标签之间。脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中，也可以保存在外部文件中（则不需要加标签）。</head></body></p>
-<h2 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h2><ul>
-<li>使用 window.alert() 弹出警告框。</li>
-<li>使用 document.write() 方法将内容写到 HTML 文档中。</li>
-<li>使用 innerHTML 写入到 HTML 元素。</li>
-<li>使用 console.log() 写入到浏览器的控制台。  </li>
-</ul>
-<script>
-    var y;
-    var z;
-    var d;
-x=document.getElementsByClassName("Barrage-listItem");
-y=document.getElementById(x[0].id);
-d=y.getElementsByTagName("div");
-var reg = /Barrage-userEnter/i;    
-console.log(reg.test(d[0].className)); 
-console.log(d[0].className);
-if(reg.test(d[0].className))
-{
-z=y.getElementsByTagName("span");
-console.log(z[2].title);
-d[0].className="b";
-}
-</script>
-
+    <title>java基础复习</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
+<p>封装，继承，多态</p>
+<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
+<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
 ]]></content>
   </entry>
   <entry>
     <title>markdown</title>
-    <url>/2020/05/05/markdown/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<ul>
 <li>空格<br>输入 &amp;nbsp;</li>
 <li>空行<br>输入 &amp;emsp;</li>
@@ -135,7 +145,7 @@ d[0].className="b";
   </entry>
   <entry>
     <title>python爬虫初学</title>
-    <url>/2019/02/09/python%E7%88%AC%E8%99%AB%E5%88%9D%E5%AD%A6/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<p>#coding:utf-8</p>
 <span id="more"></span>
 <p>#author:Ericam_</p>
@@ -144,7 +154,7 @@ d[0].className="b";
   </entry>
   <entry>
     <title>test</title>
-    <url>/2021/05/27/test/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="多电脑使用hexo博客"><a href="#多电脑使用hexo博客" class="headerlink" title="多电脑使用hexo博客"></a>多电脑使用hexo博客</h1><ul>
 <li><p>【Hexo异常】fatal: in unpopulated submodule ‘.deploy_git’</p>
 <p><a href="https://blog.csdn.net/nomasp/article/details/79504699"></a></p>
@@ -157,7 +167,7 @@ d[0].className="b";
   </entry>
   <entry>
     <title>个人随笔</title>
-    <url>/2019/01/20/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="1月20记"><a href="#1月20记" class="headerlink" title="1月20记"></a>1月20记</h1><span id="more"></span>
 <p>好久没有写日记了，下午和从小长大的朋友聊了会天，真的感觉时间过的好快。而且似乎到了什么年龄，周围的人就会询问关心你这个年龄应该干的事情做的怎么样。就好像上学期间就是学校的好坏，工作期间就是结婚工资。那么究竟你是变得更好还是会更烂呢？  </p>
 <ol>
@@ -274,7 +284,7 @@ d[0].className="b";
   </entry>
   <entry>
     <title>剑指offer(斐波那契数列)</title>
-    <url>/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<ul>
 <li>避免递归造成的调用栈消耗<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public int Fibonacci(int n) &#123;</span><br><span class="line">        int a = 0;</span><br><span class="line">        int b = 1;</span><br><span class="line">        while(n--&gt;0)&#123;</span><br><span class="line">            b = a + b;</span><br><span class="line">            a = b - a;</span><br><span class="line">        &#125;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>复杂度<br>时间复杂度：O(n)O(n)<br>空间复杂度：O(1)O(1)</li>
@@ -283,7 +293,7 @@ d[0].className="b";
   </entry>
   <entry>
     <title>正则获取词缀集</title>
-    <url>/2020/05/05/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="从词典中获取词缀集"><a href="#从词典中获取词缀集" class="headerlink" title="从词典中获取词缀集"></a>从词典中获取词缀集</h1><span id="more"></span>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">f = open(&quot;C:/Users/张金元/Desktop/a.txt&quot;, &quot;r&quot;, encoding=&#x27;utf-8&#x27;)     #打开a.txt文件，以只读得方式，注意编码格式，含中文</span><br><span class="line">data = f.readlines()                            #循环文本中得每一行，得到得是一个列表的格式&lt;class &#x27;list&#x27;&gt;</span><br><span class="line">f.close()                                       #关闭a.txt文件</span><br><span class="line">for line in data:</span><br><span class="line">    result = re.findall(&#x27;-(\w*\w)\s+&#x27;,line)     #使用正则表达式筛选每一行的数据,自行查找正则表达式   取得后缀</span><br><span class="line">    result1 = list(set(result))          #去掉重复后缀</span><br><span class="line">    result1.sort(key=result.index)       #按照之前的list排序</span><br><span class="line">    print(&quot;res1:%s&quot; % result1)</span><br><span class="line">for i in result1:</span><br><span class="line">    f1 = open(&quot;C:/Users/张金元/Desktop/c.txt&quot;, &quot;a+&quot;, encoding=&#x27;utf-8&#x27;)          #新建一个c.txt文本，已追加的方式写入</span><br><span class="line">    f1.write(i + &#x27;\n&#x27;)  # 将每一行打印进c.txt文件并换行</span><br><span class="line">    f1.close()  # 关闭c.txt文件**</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
 <h2 id="python-txt操作"><a href="#python-txt操作" class="headerlink" title="python txt操作"></a>python txt操作</h2><ul>
@@ -308,7 +318,7 @@ d[0].className="b";
 <li>(…)                分组，默认为捕获，即被分组的内容可以被单独取出，默认每个分组有个索引，从 1 开始，按照”(“的顺序决定索引值</li>
 <li>(?iLmsux)            分组中可以设置模式，iLmsux之中的每个字符代表一个模式,用法参见 模式 I</li>
 <li>(?:…)              分组的不捕获模式，计算索引时会跳过这个分组</li>
-<li>(?P<name>…)        分组的命名模式，取此分组中的内容时可以使用索引也可以使用name</name></li>
+<li>(?P<name>…)        分组的命名模式，取此分组中的内容时可以使用索引也可以使用name</li>
 <li>(?P=name)            分组的引用模式，可在同一个正则表达式用引用前面命名过的正则</li>
 <li>(?#…)              注释，不影响正则表达式其它部分,用法参见 模式 I</li>
 <li>(?=…)              顺序肯定环视，表示所在位置右侧能够匹配括号内正则</li>
@@ -338,8 +348,22 @@ d[0].className="b";
       </tags>
   </entry>
   <entry>
+    <title>考研</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<span id="more"></span>
+<pre><code>失败不是终点，找好工作再说8
+</code></pre>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>汇编语言</title>
-    <url>/2019/02/25/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<span id="more"></span>
 <h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><h3 id="数据寻址方式"><a href="#数据寻址方式" class="headerlink" title="数据寻址方式:"></a>数据寻址方式:</h3><ul>
 <li>CPU:</li>
@@ -359,30 +383,16 @@ d[0].className="b";
 ]]></content>
   </entry>
   <entry>
-    <title>考研</title>
-    <url>/2019/03/24/%E8%80%83%E7%A0%94/</url>
-    <content><![CDATA[<span id="more"></span>
-<pre><code>失败不是终点，找好工作再说8
-</code></pre>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java学习笔记2</title>
-    <url>/2019/02/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="项目（秒杀系统）"><a href="#项目（秒杀系统）" class="headerlink" title="项目（秒杀系统）"></a>项目（秒杀系统）</h1><span id="more"></span>
 <ul>
 <li><p>集合(collection)：<br>  数组的长度是固定的，集合的长度是可变的。<br>  每一个容器的数据结构不一样<br>  Collection接口定义着集合框架中最最共性的内容<br>  size(); add(); remove(); clear(); contains(); toArray();<br>  集合的遍历：<br>  在根接口中使用了一种公共的遍历方式，迭代器遍历</p>
 <ol>
 <li>获取一个集合的迭代器对象(迭代器对象不是我们创建的，而是每个集合自带的) 是一个接口<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Iterator&lt;String&gt; it = names.iterator();</span><br><span class="line">while(it.hasnext())&#123;</span><br><span class="line">    String s = it.next();</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 java规定，如果一个集合使用迭代器遍历，那么遍历的过程中，不允许修改集合长度</li>
-<li>增强for循环<br>Collection<String> names = new ArrayList<String>();<br>for(数据类型 变量名：数组/集合){<br> syso(变量名);<br>}<br>使用增强for循环遍历集合的时候，不能修改集合的长度</String></String></li>
-<li>泛型:E实际上是一个“变量”  用来保存一种数据类型<br> <E>,&lt;K,V&gt;<br> 可以用在类，方法，接口上。<br> 泛型通配符<br> ？：代表任意类型</E></li>
+<li>增强for循环<br>Collection<String> names = new ArrayList<String>();<br>for(数据类型 变量名：数组/集合){<br> syso(变量名);<br>}<br>使用增强for循环遍历集合的时候，不能修改集合的长度</li>
+<li>泛型:E实际上是一个“变量”  用来保存一种数据类型<br> <E>,&lt;K,V&gt;<br> 可以用在类，方法，接口上。<br> 泛型通配符<br> ？：代表任意类型</li>
 <li>Collections.shuffle(cards); //洗牌</li>
 <li>栈，队列<br>数组结构  Arraylist   Vector   查询快，增删慢<br>链表结构：一般使用双向链表<br>哈希表结构：查询快 增删快</li>
 <li>List接口特点：有下标，有序的，可重复<br>实现类：ArrayList,LinkedList,Vector 安全<br>List结构中的方法：<br>增：add(E e);  add(int index,E e)<br>删：remove(Object obj);remove(int index);<br>改：set(int index,E e);<br>查：get(int index);<br>其他：<br> size();clear(),contains(Object obj),toArray();<br> iterator();isEmpty();</li>
@@ -399,10 +409,10 @@ java规定，如果一个集合使用迭代器遍历，那么遍历的过程中�
 <li>Map接口<br>Map&lt;K,V&gt;集合常用方法： 、<br>HashMap<br>增：put(K key,V value);  //向集合中添加键值对<br>//如果集合中已存在该键，覆盖整个键值对，并返回被覆盖的键值对的值<br>判断k是不是空<br>哈希表结构，添加元素判断是否重复</li>
 <li>先判断新旧元素的哈希值</li>
 <li>再判断新旧元素的equals<br>删：v remove(object key);  //返回被删除的键值对的值<br>改：==put<br>查：V get(K key);  判断是不是空<br>Map集合遍历：   LinkedHashMap   HashMap<br>getKey();<br>getValue();</li>
-<li>keySet遍历<br>Set<Student> keys = students.keySet();  //放在set集合中<br>map.KeySet(); Iterator  hasnext<br>for(String key : keys)<br>{<br>  String value = students.get(key);<br>}</Student></li>
-<li>Set&lt;Map.Entry<String string="">&gt; entrySet = map.entrySet();<br>Iterator&lt;Map.Entry&lt;String,String&gt;&gt; it = entrySet.iterator();<br>while(it.hasNext(){<br>  Map.Entry&lt;String, String&gt; entry = it.next();<br>  String key = entry.getKey();<br>  String value = entry.getValue();<br>  system.out.println(key+”=”+value)；<br>})<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.Map.Entry;</span><br><span class="line">import java.util.Set;</span><br><span class="line">  </span><br><span class="line">public class MapTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Map&lt;Integer, String&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        //map集合存入数据</span><br><span class="line">        map.put(1, &quot;第一个value&quot;);</span><br><span class="line">        map.put(2, &quot;第二个value&quot;);</span><br><span class="line">        map.put(3, &quot;第三个value&quot;);</span><br><span class="line">         </span><br><span class="line">        //通过keySet取出map数据[for-each循环]</span><br><span class="line">        System.out.println(&quot;-------[for-each循环遍历]通过keySet取出map数据-------&quot;);</span><br><span class="line">        Set&lt;Integer&gt; keys = map.keySet();  //此行可省略，直接将map.keySet()写在for-each循环的条件中</span><br><span class="line">        for(Integer key:keys)&#123;</span><br><span class="line">            System.out.println(&quot;key值：&quot;+key+&quot; value值：&quot;+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过EntrySet取出map数据[for-each循环]</span><br><span class="line">        System.out.println(&quot;-------[for-each循环遍历]通过EntrySet取出map数据-------&quot;);</span><br><span class="line">        Set&lt;Entry&lt;Integer, String&gt;&gt; entrys = map.entrySet(); //此行可省略，直接将map.entrySet()写在for-each循环的条件中</span><br><span class="line">        for(Entry&lt;Integer, String&gt; entry:entrys)&#123;</span><br><span class="line">            System.out.println(&quot;key值：&quot;+entry.getKey()+&quot; value值：&quot;+entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过keySet取出map数据[Iterator遍历]</span><br><span class="line">        System.out.println(&quot;-------[Iterator循环遍历]通过keySet取出map数据---------&quot;);</span><br><span class="line">        Iterator&lt;Integer&gt; it = map.keySet().iterator(); //map.keySet()得到的是set集合，可以使用迭代器遍历</span><br><span class="line">        while(it.hasNext())&#123;</span><br><span class="line">            Integer key = it.next();</span><br><span class="line">            System.out.println(&quot;key值：&quot;+key+&quot; value值：&quot;+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过EntrySet取出map数据[Iterator遍历]</span><br><span class="line">        System.out.println(&quot;-------[Iterator循环遍历]通过EntrySet取出map数据---------&quot;);          </span><br><span class="line">        Iterator&lt;Entry&lt;Integer, String&gt;&gt; iterator = map.entrySet().iterator(); //map.entrySet()得到的是set集合，可以使用迭代器遍历</span><br><span class="line">        while(iterator.hasNext())&#123;</span><br><span class="line">            Entry&lt;Integer, String&gt; entry = iterator.next();</span><br><span class="line">            System.out.println(&quot;key值：&quot;+entry.getKey()+&quot; value值：&quot;+entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-内部类：<br>OutClass.InterClass ic = new OutClass.new InterClass();<br>内部接口    实现谁，重写谁<br>如果Map中的键是自定义类型，那么要保证键的唯一性，必须重写键对应类的hashCode和equals方法</String></li>
-<li>Properties类<br>本质就是一个Map集合<br>持久的属性集<br>ps.store(new FileWriter(“phones.properties”),””);//存<br>ps.load(new FileReader(“phones.properties)); //读取<br>没有泛型<br>具有Map接口的一切方法，以及自己特有的<br>getProperty();<br>setProperty();<br>public Set<String> stringPropertyNames();//和KeySet一样<br>Properties ps = new Properties();<br>可变参数：<br>public static int add(int…a){<br>  return 0;<br>}<br>//类型不能改变，多个参数时，可变参数在最后面<br>本质：数组  for(int i : a)<br>Collections：(集合工具类)中的静态方法：<br>public static void shuffle(List list);//打乱顺序<br>public static void sort(List list);//把集合元素按照自然顺序排序<br>Arrays:数组工具类<br>public static List asList(数组/可变参数); //把数组转化为List集合<br>Arrays.sort(nums);<br>Arrays.toString(nums);<br>Map集合的嵌套：</String></li>
+<li>keySet遍历<br>Set<Student> keys = students.keySet();  //放在set集合中<br>map.KeySet(); Iterator  hasnext<br>for(String key : keys)<br>{<br>  String value = students.get(key);<br>}</li>
+<li>Set&lt;Map.Entry<String String>&gt; entrySet = map.entrySet();<br>Iterator&lt;Map.Entry&lt;String,String&gt;&gt; it = entrySet.iterator();<br>while(it.hasNext(){<br>  Map.Entry&lt;String, String&gt; entry = it.next();<br>  String key = entry.getKey();<br>  String value = entry.getValue();<br>  system.out.println(key+”=”+value)；<br>})<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.Map.Entry;</span><br><span class="line">import java.util.Set;</span><br><span class="line">  </span><br><span class="line">public class MapTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Map&lt;Integer, String&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        //map集合存入数据</span><br><span class="line">        map.put(1, &quot;第一个value&quot;);</span><br><span class="line">        map.put(2, &quot;第二个value&quot;);</span><br><span class="line">        map.put(3, &quot;第三个value&quot;);</span><br><span class="line">         </span><br><span class="line">        //通过keySet取出map数据[for-each循环]</span><br><span class="line">        System.out.println(&quot;-------[for-each循环遍历]通过keySet取出map数据-------&quot;);</span><br><span class="line">        Set&lt;Integer&gt; keys = map.keySet();  //此行可省略，直接将map.keySet()写在for-each循环的条件中</span><br><span class="line">        for(Integer key:keys)&#123;</span><br><span class="line">            System.out.println(&quot;key值：&quot;+key+&quot; value值：&quot;+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过EntrySet取出map数据[for-each循环]</span><br><span class="line">        System.out.println(&quot;-------[for-each循环遍历]通过EntrySet取出map数据-------&quot;);</span><br><span class="line">        Set&lt;Entry&lt;Integer, String&gt;&gt; entrys = map.entrySet(); //此行可省略，直接将map.entrySet()写在for-each循环的条件中</span><br><span class="line">        for(Entry&lt;Integer, String&gt; entry:entrys)&#123;</span><br><span class="line">            System.out.println(&quot;key值：&quot;+entry.getKey()+&quot; value值：&quot;+entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过keySet取出map数据[Iterator遍历]</span><br><span class="line">        System.out.println(&quot;-------[Iterator循环遍历]通过keySet取出map数据---------&quot;);</span><br><span class="line">        Iterator&lt;Integer&gt; it = map.keySet().iterator(); //map.keySet()得到的是set集合，可以使用迭代器遍历</span><br><span class="line">        while(it.hasNext())&#123;</span><br><span class="line">            Integer key = it.next();</span><br><span class="line">            System.out.println(&quot;key值：&quot;+key+&quot; value值：&quot;+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        //通过EntrySet取出map数据[Iterator遍历]</span><br><span class="line">        System.out.println(&quot;-------[Iterator循环遍历]通过EntrySet取出map数据---------&quot;);          </span><br><span class="line">        Iterator&lt;Entry&lt;Integer, String&gt;&gt; iterator = map.entrySet().iterator(); //map.entrySet()得到的是set集合，可以使用迭代器遍历</span><br><span class="line">        while(iterator.hasNext())&#123;</span><br><span class="line">            Entry&lt;Integer, String&gt; entry = iterator.next();</span><br><span class="line">            System.out.println(&quot;key值：&quot;+entry.getKey()+&quot; value值：&quot;+entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+内部类：<br>OutClass.InterClass ic = new OutClass.new InterClass();<br>内部接口    实现谁，重写谁<br>如果Map中的键是自定义类型，那么要保证键的唯一性，必须重写键对应类的hashCode和equals方法</li>
+<li>Properties类<br>本质就是一个Map集合<br>持久的属性集<br>ps.store(new FileWriter(“phones.properties”),””);//存<br>ps.load(new FileReader(“phones.properties)); //读取<br>没有泛型<br>具有Map接口的一切方法，以及自己特有的<br>getProperty();<br>setProperty();<br>public Set<String> stringPropertyNames();//和KeySet一样<br>Properties ps = new Properties();<br>可变参数：<br>public static int add(int…a){<br>  return 0;<br>}<br>//类型不能改变，多个参数时，可变参数在最后面<br>本质：数组  for(int i : a)<br>Collections：(集合工具类)中的静态方法：<br>public static void shuffle(List list);//打乱顺序<br>public static void sort(List list);//把集合元素按照自然顺序排序<br>Arrays:数组工具类<br>public static List asList(数组/可变参数); //把数组转化为List集合<br>Arrays.sort(nums);<br>Arrays.toString(nums);<br>Map集合的嵌套：</li>
 </ol>
 </li>
 <li><p>File类</p>
@@ -440,121 +450,8 @@ java规定，如果一个集合使用迭代器遍历，那么遍历的过程中�
       </tags>
   </entry>
   <entry>
-    <title>Java学习笔记2</title>
-    <url>/2019/02/11/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/</url>
-    <content><![CDATA[<h2 id="io-多线程-网络编程-XML"><a href="#io-多线程-网络编程-XML" class="headerlink" title="io 多线程  网络编程  XML"></a>io 多线程  网络编程  XML</h2><span id="more"></span>
-<ul>
-<li><p>IO流<br>  1.字符流,字节流<br>  字符输入流：共同的父类Reader  比如FileReader,BufferedReader</p>
-<pre><code>  功能：读取一个字符，读取一个字符数组(一部分)，读取一个字符串
-</code></pre>
-<p>  字符输出流：共同的父类Writer  比如FileWriter,BufferedWriter</p>
-<pre><code>  功能：写一个字符，写一个字符数组(一部分)，写一个字符串
-</code></pre>
-<p>  字节输入流：共同父类 InputStream  比如：FileInputStream,BufferInputStream    读取一个字节   读取一个字节数组<br>  字节输出流：共同父类 OutputStream  比如：FileOutputStream,BufferOutputStream    写一个字节   写一个字节数组<br>  2.OutputStream:字节输出流的根类，这是一个抽象类<br>  public void close();<br>  public void flush(); //刷新流<br>  public void write(int b); //写一个字节<br>  public void write(byte[] bs); //写一个字节数组<br>  public void writre(byte[] bs,int startIndex, int lenght);//写一个字节数组的一部分<br>  3.续写和换行<br>  FileOutputStream fos = new FileOutputStream(“2.txt”,true);<br>  fos.write(“\r\nhello”.getBytes());<br>  fos.close();<br>  4.InputStream:字节输入流的根类，这是一个抽象类<br>  1.public int read();、、读取一个字节，返回是码值<br>  2.public int read(byte[] bs);//读取一个字节数组，返回值表示实际读取到的字节数<br>  我们用InputStream具体子类：FileInputStream<br>  一次读取一个字节<br>  FileIntputStream fis = new FileIntputStream(new File(“1.txt”));<br>  int b = 0;<br>  while(b=fis.read()!=-1)<br>  {</p>
-<pre><code>  System.out.println((char)b);
-</code></pre>
-<p>  }<br>  fis.close();<br>  一次读取一个字节数组<br>  byte[] bs = new byte[4];<br>  int len = fis.read(bs);<br>  System.out.println(len); //实际字节数<br>  System.out.println(new String(bs));<br>  标准：<br>  while((len = fis.read(bs)!=-1))<br>  {</p>
-<pre><code>  System.out.println(new String(bs,0,len))
-</code></pre>
-<p>  }<br>  复制文件：<br>  long s= System.currentTimeMillis(); //系统时间<br>  while((len = fis.read(bs)!=-1))<br>  {</p>
-<pre><code>  fos.writ(bs,0,len);
-</code></pre>
-<p>  }<br>  字节缓冲流：<br>  BufferedOutputStream bos = new BufferedOutputStream(new FileOutputaStream(“1.txt”));<br>  字节流读取中文的乱码问题：读取中文读了一半<br>  解决问题：字符流  转化流<br>  字符编码表(字符集)<br>  ASCII码表<br>  在GBK码表中一个中文2个字节 在UTF-8中一个中文 3个字节<br>  OutputStreamWriter  是字符流通向字节流的桥梁，查码表(编码)<br>  OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(“1.txt”));<br>  osw.close();<br>  字节-&gt;解码-&gt;字符： InputStreamReader<br>  字符-&gt;编码-&gt;字节： OutputStreamWriter<br>  transient关键字：<br>  用来修饰成员变量 用不用没有影响<br>  序列化的时候有用，如果一个成员变量被transient修饰，那么序列化的时候会忽略该成员变量<br>  static:关键字 他也具有和transient一样的功能<br>  打印流：<br>  PrintWriter:打印字符流<br>  PrintyStream:打印字节流</p>
-<p>  使用第三方框架的步骤<br>  1.导入classpath<br>  a.在工程根目录下 建立一个目录”lib”<br>  b.把要使用的第三方框架的jar包拷贝过来<br>  c.添加构建路径 右键单击jar包—-&gt;Build Path —-&gt; Add to Build Path<br>  以FileUtils为例</p>
-</li>
-<li><p>多线程</p>
-<ol>
-<li>内存RAM  硬盘ROM<br>多线程程序并不能提高程序的运行速度，但能够提高程序运行速率，让cpu的使用率更高。<br>main方法所在线程  我们就称为主线程<br>Thread类：线程类<br>public Thread();//创建一个默认名字的线程对象<br>public Thread(String name);//创建一个指定名字的线程对象<br>第一种：继承<br>class 子线程类 extends Thread{<br> run(){<pre><code> 任务代码
-</code></pre>
- }<br>}<br>子线程类 t = new 子线程类();<br>t.start();<br>第二种：声明实现Runable接口的类，重写run方法，创建实现类对象，创建Thread对象，并把刚刚的实现类对象 作为参数传递，启动这个Thread对象<br>从耦合性分析用第二种<br>扩展性:第一种继承Thread，那么子线程类就不能继承别的类<br>第二种方式  由于是实现了接口，同时可以继承别的类<br>匿名内部类创建线程对象</li>
-<li>new Thread(){<br> public void run(){<pre><code> /////////
-</code></pre>
- }<br>}.start();</li>
-<li>new Thread(new Runnable(){<br> public void run(){<pre><code> /////
-</code></pre>
- }<br>}).start();<br>线程安全问题：1.同步锁  synchronized(obj)</li>
-<li>同步方法:<br>public synchronized void sale()<br>{<br>}<br>这里同步方法使用的锁对象  叫做this对象<br>这里同步方法是静态方法，那么他的锁对象是当前类.class</li>
-<li>lock接口方式<br>实现类：ReentrantLock</li>
-</ol>
-</li>
-<li><p>网络编程  udp  tcp<br>  InetAddress</p>
-</li>
-<li><p>XML语法<br>  文档说明：</p>
-  <?xml version="1.0 encoding="TTF-8"?>
-<p>  作用：存放数据  配置文件<br>  CDATA区 <!--[CDATA[]]--></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指offer(2)</title>
-    <url>/2020/01/22/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%91%E6%8C%87offer(2)/</url>
-    <content><![CDATA[<hr>
-<ul>
-<li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li>
-</ul>
-<hr>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    	String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&#x27;%&#x27;;</span><br><span class="line">                newstrArray[i+2*count+1]=&#x27;2&#x27;;</span><br><span class="line">                newstrArray[i+2*count+2]=&#x27;0&#x27;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p>
-<ol>
-<li>charAt(),deleteCharAt()   <blockquote>
-<p>s1.charAt(3);<br> s1.deleteCharAt(3); </p>
-</blockquote>
-</li>
-<li>setCharAt();<br>替换所引出的char值<blockquote>
-<p>str.setCharAt(indexnew, ‘0’);</p>
-</blockquote>
-</li>
-<li>append();  <blockquote>
-<p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p>
-</blockquote>
-</li>
-<li>replace两种用法：  <blockquote>
-<p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p>
-</blockquote>
-</li>
-<li>toString()  toCharArray()  <blockquote>
-<p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p>
-</blockquote>
-</li>
-<li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote>
-<p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p>
-</blockquote>
-</li>
-<li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li>
-</ol>
-<ol start="6">
-<li>一.java数据类型</li>
-<li>基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)</li>
-<li>引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型</li>
-<li>引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：</li>
-<li>相对路径：<pre><code>  相对于当前项目而言的
-</code></pre>
-</li>
-<li>绝对路径：<pre><code>  以盘符开头
-</code></pre>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java基础学习1</title>
-    <url>/2020/01/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</url>
+    <url>/posts/undefined/</url>
     <content><![CDATA[<ol>
 <li><p>类的概念：<br> 一堆具有共同的成员变量、属性和成员方法、功能对象集合</p>
 </li>
@@ -724,6 +621,119 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记2</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h2 id="io-多线程-网络编程-XML"><a href="#io-多线程-网络编程-XML" class="headerlink" title="io 多线程  网络编程  XML"></a>io 多线程  网络编程  XML</h2><span id="more"></span>
+<ul>
+<li><p>IO流<br>  1.字符流,字节流<br>  字符输入流：共同的父类Reader  比如FileReader,BufferedReader</p>
+<pre><code>  功能：读取一个字符，读取一个字符数组(一部分)，读取一个字符串
+</code></pre>
+<p>  字符输出流：共同的父类Writer  比如FileWriter,BufferedWriter</p>
+<pre><code>  功能：写一个字符，写一个字符数组(一部分)，写一个字符串
+</code></pre>
+<p>  字节输入流：共同父类 InputStream  比如：FileInputStream,BufferInputStream    读取一个字节   读取一个字节数组<br>  字节输出流：共同父类 OutputStream  比如：FileOutputStream,BufferOutputStream    写一个字节   写一个字节数组<br>  2.OutputStream:字节输出流的根类，这是一个抽象类<br>  public void close();<br>  public void flush(); //刷新流<br>  public void write(int b); //写一个字节<br>  public void write(byte[] bs); //写一个字节数组<br>  public void writre(byte[] bs,int startIndex, int lenght);//写一个字节数组的一部分<br>  3.续写和换行<br>  FileOutputStream fos = new FileOutputStream(“2.txt”,true);<br>  fos.write(“\r\nhello”.getBytes());<br>  fos.close();<br>  4.InputStream:字节输入流的根类，这是一个抽象类<br>  1.public int read();、、读取一个字节，返回是码值<br>  2.public int read(byte[] bs);//读取一个字节数组，返回值表示实际读取到的字节数<br>  我们用InputStream具体子类：FileInputStream<br>  一次读取一个字节<br>  FileIntputStream fis = new FileIntputStream(new File(“1.txt”));<br>  int b = 0;<br>  while(b=fis.read()!=-1)<br>  {</p>
+<pre><code>  System.out.println((char)b);
+</code></pre>
+<p>  }<br>  fis.close();<br>  一次读取一个字节数组<br>  byte[] bs = new byte[4];<br>  int len = fis.read(bs);<br>  System.out.println(len); //实际字节数<br>  System.out.println(new String(bs));<br>  标准：<br>  while((len = fis.read(bs)!=-1))<br>  {</p>
+<pre><code>  System.out.println(new String(bs,0,len))
+</code></pre>
+<p>  }<br>  复制文件：<br>  long s= System.currentTimeMillis(); //系统时间<br>  while((len = fis.read(bs)!=-1))<br>  {</p>
+<pre><code>  fos.writ(bs,0,len);
+</code></pre>
+<p>  }<br>  字节缓冲流：<br>  BufferedOutputStream bos = new BufferedOutputStream(new FileOutputaStream(“1.txt”));<br>  字节流读取中文的乱码问题：读取中文读了一半<br>  解决问题：字符流  转化流<br>  字符编码表(字符集)<br>  ASCII码表<br>  在GBK码表中一个中文2个字节 在UTF-8中一个中文 3个字节<br>  OutputStreamWriter  是字符流通向字节流的桥梁，查码表(编码)<br>  OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(“1.txt”));<br>  osw.close();<br>  字节-&gt;解码-&gt;字符： InputStreamReader<br>  字符-&gt;编码-&gt;字节： OutputStreamWriter<br>  transient关键字：<br>  用来修饰成员变量 用不用没有影响<br>  序列化的时候有用，如果一个成员变量被transient修饰，那么序列化的时候会忽略该成员变量<br>  static:关键字 他也具有和transient一样的功能<br>  打印流：<br>  PrintWriter:打印字符流<br>  PrintyStream:打印字节流</p>
+<p>  使用第三方框架的步骤<br>  1.导入classpath<br>  a.在工程根目录下 建立一个目录”lib”<br>  b.把要使用的第三方框架的jar包拷贝过来<br>  c.添加构建路径 右键单击jar包—-&gt;Build Path —-&gt; Add to Build Path<br>  以FileUtils为例</p>
+</li>
+<li><p>多线程</p>
+<ol>
+<li>内存RAM  硬盘ROM<br>多线程程序并不能提高程序的运行速度，但能够提高程序运行速率，让cpu的使用率更高。<br>main方法所在线程  我们就称为主线程<br>Thread类：线程类<br>public Thread();//创建一个默认名字的线程对象<br>public Thread(String name);//创建一个指定名字的线程对象<br>第一种：继承<br>class 子线程类 extends Thread{<br> run(){<pre><code> 任务代码
+</code></pre>
+ }<br>}<br>子线程类 t = new 子线程类();<br>t.start();<br>第二种：声明实现Runable接口的类，重写run方法，创建实现类对象，创建Thread对象，并把刚刚的实现类对象 作为参数传递，启动这个Thread对象<br>从耦合性分析用第二种<br>扩展性:第一种继承Thread，那么子线程类就不能继承别的类<br>第二种方式  由于是实现了接口，同时可以继承别的类<br>匿名内部类创建线程对象</li>
+<li>new Thread(){<br> public void run(){<pre><code> /////////
+</code></pre>
+ }<br>}.start();</li>
+<li>new Thread(new Runnable(){<br> public void run(){<pre><code> /////
+</code></pre>
+ }<br>}).start();<br>线程安全问题：1.同步锁  synchronized(obj)</li>
+<li>同步方法:<br>public synchronized void sale()<br>{<br>}<br>这里同步方法使用的锁对象  叫做this对象<br>这里同步方法是静态方法，那么他的锁对象是当前类.class</li>
+<li>lock接口方式<br>实现类：ReentrantLock</li>
+</ol>
+</li>
+<li><p>网络编程  udp  tcp<br>  InetAddress</p>
+</li>
+<li><p>XML语法<br>  文档说明：</p>
+  <?xml version="1.0 encoding="TTF-8"?>
+<p>  作用：存放数据  配置文件<br>  CDATA区 <![CDATA[]]></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>剑指offer(2)</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<hr>
+<ul>
+<li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li>
+</ul>
+<hr>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    	String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&#x27;%&#x27;;</span><br><span class="line">                newstrArray[i+2*count+1]=&#x27;2&#x27;;</span><br><span class="line">                newstrArray[i+2*count+2]=&#x27;0&#x27;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p>
+<ol>
+<li>charAt(),deleteCharAt()   <blockquote>
+<p>s1.charAt(3);<br> s1.deleteCharAt(3); </p>
+</blockquote>
+</li>
+<li>setCharAt();<br>替换所引出的char值<blockquote>
+<p>str.setCharAt(indexnew, ‘0’);</p>
+</blockquote>
+</li>
+<li>append();  <blockquote>
+<p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p>
+</blockquote>
+</li>
+<li>replace两种用法：  <blockquote>
+<p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p>
+</blockquote>
+</li>
+<li>toString()  toCharArray()  <blockquote>
+<p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p>
+</blockquote>
+</li>
+<li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote>
+<p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p>
+</blockquote>
+</li>
+<li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li>
+</ol>
+<ol start="6">
+<li>一.java数据类型</li>
+<li>基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)</li>
+<li>引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型</li>
+<li>引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：</li>
+<li>相对路径：<pre><code>  相对于当前项目而言的
+</code></pre>
+</li>
+<li>绝对路径：<pre><code>  以盘符开头
+</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
 </search>
