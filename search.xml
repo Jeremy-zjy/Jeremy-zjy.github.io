@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo+github迁移电脑</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
-<li>复制blog文件夹</li>
-<li>在新的电脑上下载新的git和nodejs</li>
-<li>npm install</li>
-<li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li>
-</ul>
-<ol>
-<li><blockquote>
-<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
-</blockquote>
-</li>
-<li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p>
-</li>
-<li><p>生成ssh密钥文件：  </p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p>
-</blockquote>
-</li>
-<li><p>打开<a href="https://github.com/settings/keys%22">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p>
-<h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="%22https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation%22">参考解决方法</a></p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>hexo+github搭建博客</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。<br>  <span id="more"></span></p>
@@ -95,6 +67,34 @@
 ]]></content>
   </entry>
   <entry>
+    <title>hexo+github迁移电脑</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
+<li>复制blog文件夹</li>
+<li>在新的电脑上下载新的git和nodejs</li>
+<li>npm install</li>
+<li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li>
+</ul>
+<ol>
+<li><blockquote>
+<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
+</blockquote>
+</li>
+<li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p>
+</li>
+<li><p>生成ssh密钥文件：  </p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p>
+</blockquote>
+</li>
+<li><p>打开<a href="https://github.com/settings/keys%22">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p>
+<h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="%22https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation%22">参考解决方法</a></p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>javascript学习笔记</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
@@ -126,21 +126,21 @@ d[0].className="b";
 ]]></content>
   </entry>
   <entry>
-    <title>java基础复习</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
-<p>封装，继承，多态</p>
-<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
-<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
-]]></content>
-  </entry>
-  <entry>
     <title>markdown</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<ul>
 <li>空格<br>输入 &amp;nbsp;</li>
 <li>空行<br>输入 &amp;emsp;</li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>java基础复习</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
+<p>封装，继承，多态</p>
+<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
+<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
 ]]></content>
   </entry>
   <entry>
@@ -164,6 +164,14 @@ d[0].className="b";
 </ul>
 <p>如果先安装node，再安装nvm，可能会出现修改后，版本仍然未变的情况，尝试了网上很多方法，建议还是卸载重新安装降低版本的node.js</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>test1</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
   <entry>
     <title>个人随笔</title>
@@ -283,14 +291,6 @@ d[0].className="b";
       </tags>
   </entry>
   <entry>
-    <title>test1</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
-      <tags>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>剑指offer(斐波那契数列)</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<ul>
@@ -298,6 +298,20 @@ d[0].className="b";
 <li>复杂度<br>时间复杂度：O(n)O(n)<br>空间复杂度：O(1)O(1)</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>考研</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<span id="more"></span>
+<pre><code>失败不是终点，找好工作再说8
+</code></pre>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
   </entry>
   <entry>
     <title>正则获取词缀集</title>
@@ -375,20 +389,6 @@ d[0].className="b";
 <li>相对寻址方式</li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>考研</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<span id="more"></span>
-<pre><code>失败不是终点，找好工作再说8
-</code></pre>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
   </entry>
   <entry>
     <title>Java学习笔记2</title>
