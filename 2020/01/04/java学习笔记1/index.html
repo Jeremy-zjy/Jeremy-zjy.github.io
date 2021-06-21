@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Java基础学习1 | 飞舞伍five</title><meta name="keywords" content="Java"><meta name="author" content="右郁石"><meta name="copyright" content="右郁石"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="类的概念： 一堆具有共同的成员变量、属性和成员方法、功能对象集合  接口的概念： 接口是功能的集合，就是方法的集合 也就是说 接口中只能定义方法，不能定义普通的成员变量 而且接口中的成员方法，必须都是抽象的 接口是比抽象类还要抽象的一种类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础学习1">
+<meta property="og:url" content="http://yoursite.com/2020/01/04/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/index.html">
+<meta property="og:site_name" content="飞舞伍five">
+<meta property="og:description" content="类的概念： 一堆具有共同的成员变量、属性和成员方法、功能对象集合  接口的概念： 接口是功能的集合，就是方法的集合 也就是说 接口中只能定义方法，不能定义普通的成员变量 而且接口中的成员方法，必须都是抽象的 接口是比抽象类还要抽象的一种类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2020-01-04T03:20:24.000Z">
+<meta property="article:modified_time" content="2021-05-28T09:18:25.759Z">
+<meta property="article:author" content="右郁石">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/01/04/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java基础学习1',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-05-28 17:18:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="飞舞伍five" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">飞舞伍five</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java基础学习1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-01-04T03:20:24.000Z" title="发表于 2020-01-04 11:20:24">2020-01-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-28T09:18:25.759Z" title="更新于 2021-05-28 17:18:25">2021-05-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java基础学习1"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li><p>类的概念：<br> 一堆具有共同的成员变量、属性和成员方法、功能对象集合</p>
+</li>
+<li><p>接口的概念：<br> 接口是功能的集合，就是方法的集合<br> 也就是说 接口中只能定义方法，不能定义普通的成员变量<br> 而且接口中的成员方法，必须都是抽象的<br> 接口是比抽象类还要抽象的一种类型</p>
+<span id="more"></span>
+<p> 问题：接口能创建对象吗？不能</p>
+<pre><code> 接口作用：天生作为“父接口”
+</code></pre>
+</li>
+<li><p>接口的定义：<br> 定义接口用关键字：interface<br> 定义枚举用关键字：enum</p>
+<p> 格式：<br> public interface 接口名字{</p>
+<pre><code> //成员变量，不能定义普通的成员变量
+ //成员方法：必须都是抽象
+ public abstract 返回值类型 方法名();
+</code></pre>
+<p> }</p>
+<p> 类和接口的本质区别不大，他们的源码都是.java文件<br> 编译后都是.class文件</p>
+</li>
+<li><p>类与类之间：继承，而且是单继承，一个子类，只能有一个直接父类<br> 接口和接口之间:继承，但是可以多继承，一个子接口 可以有多个直接父接口</p>
+<p> 面试题：Java到底支不支持多继承？</p>
+<pre><code> 如果是类与类  不支持多继承  只支持多层继承
+ 如果是接口和接口  支持多继承  也支持多层继承
+</code></pre>
+<p> 类和接口之间：不叫继承(extends),叫实现(implements),可以多实现</p>
+<pre><code> 只有类 实现接口
+</code></pre>
+</li>
+<li><p>接口中成员的特点<br> 5.1成员变量，但是必须有固定修饰符public static final 数据类型 变量 = 值<br> 5.2成员方法，必须是固定修饰符public abstract 即抽象方法<br> 5.3接口不可以创建对象(抽象类也是)<br> 5.4实现类 实现类接口，那么必须重写接口中所有的抽象方法，然后才能创建对象</p>
+<pre><code> 否则 这个实现类 还是一个抽象类，是不能创建对象的
+ 在开发中最常用的模式：
+     public class A extends AbstractClassB implements 接口A，接口B&#123;
+         注意：
+         A中必须重写 抽象类中的抽象方法，以及所有接口中的抽象方法
+     &#125; 
+</code></pre>
+</li>
+<li><p>接口和抽象类的异同：</p>
+</li>
+<li><p>相同点：<br>  a.都不能创建对象<br>  b.都是作为父类/父接口<br>  c.子类/实现类 都必须重写抽象方法，然后才能创建对象</p>
+</li>
+<li><p>不同点：<br>  a.抽象类用关键字abstract  接口用关键字interface<br>  b.接口中只要有方法，必须都是抽象的<br>  c.抽象类可以定义任意成员变量  接口的成员变量必须public static final修饰<br>  d.类和抽象类之间关系是单继承，类和接口之间关系是多实现<br>  e.思想上的区别<br>  1.抽象类中必须定义整个继承体系中的共性内容<br>  2.接口中定义 整个继承体系之外的 额外扩展的功能。</p>
+</li>
+</ol>
+<p>7.面向对象3大特征：封装(安全性)，继承(扩展性)，多态(灵活性)<br>    多态：<br>    前提1.必须有子父类关系<br>        2.必须有方法的重写<br>    多态在Java中的表现形式：<br>        父类类型  变量名 = new 子类类型();<br>        接口类型  变量名 = new 实现类();<br>        Animal an = new Cat();<br>        父类类型的变量指向了子类的对象<br>    注意：<br>        1.使用多态调用成员变量<br>            编译时，看父类<br>            运行时，看父类<br>        2.使用多态调用成员方法<br>            编译时，看父类<br>            运行时，看子类<br>总结：<br>    弊端：多态只能调用子父类共有的方法，不能调用子类特有的方法<br>    好处：提高灵活性<br>    父类类型的变量，可以接收任何一个子类的对象<br>    调用方法的时候，编译是看父类，运行时运行的传递过来的子类对象的方法<br>    弊端的解决方案：<br>        向下转型：强制类型转换<br>        向上转型：自动类型转换 (就是多态)<br>    向下转型也有弊端：<br>        把父类的变量 转成任何子类类型时候，编译器直接通过<br>        可以转成cat,本质是dog 所以出错<br>    Java中解决向下转型弊端的方法：<br>        一个关键字Instanceof 运算符<br>        作用：判断某一个变量 不是 该类的类型<br>        格式：<br>            boolean b = an instanceof 类名<br>    多态提高程序的灵活性，扩展性，复用性。</p>
+<ol start="7">
+<li><p>static的介绍:<br> static的作用用来修饰类中的成员<br> 1.如果一个类的成员被static修饰了，怎么访问？ 类名.成员变量名<br> 存在方法区中的静态区，只有一个空间  优先于对象存在<br> 2.类名.成员变量(推荐)   对象.成员变量   都可以<br> 3.所有对象共有的，被staic修饰的成员属于类，不属于单个对象<br> 4.静态没有多态性 静态不属于对象，属于类<br> 5.静态代码块：</p>
+<pre><code> 在类的成员位置
+     static&#123;
+         代码
+     &#125;
+</code></pre>
+<p> 特点：<br> 使用到这个类时，JVM会自动执行静态代码块<br> 只会第一次使用时执行<br> 优先级比构造方法高，比main方法高<br> 作用：用来初始化类的,myswl数据(静态代码块来加载驱动)</p>
+</li>
+<li><p>final可以修饰<br> 类，成员变量，成员方法，局部变量(基本类型，引用类型)<br> 1.修饰类(太监类)，不能被继承<br> 2.final修饰成员变量: </p>
+<pre><code> 2.1必须在创建对象之前有却确定的值
+ 2.3只能赋值一次
+</code></pre>
+<p> 3.修饰方法:</p>
+<pre><code> 不能被子类重写
+</code></pre>
+<p> 4.修饰基本类型局部变量</p>
+<pre><code> 被final修饰的基本类型局部变量  只能赋值一次
+</code></pre>
+<p> 5.修饰引用类型局部变量</p>
+<pre><code> 被final修饰的引用类型局部变量  只能赋值一次
+ 但是引用类型所指向的对象中内容是可以改变的
+</code></pre>
+</li>
+<li><p>匿名内部类：是一种特殊的语法，用来快速创建抽象类的子类对象</p>
+<pre><code>         用来快速创建 接口的实现类对象
+</code></pre>
+<p> AbstractAnimal an1 = new AbstractAnimal(){</p>
+<pre><code> 重写
+</code></pre>
+<p> }<br> 多态</p>
+</li>
+<li><p>引用数据类型<br>a.类作为方法的参数或者返回值(我们需要传递或返回的是该类的对象)<br>b.抽象类作为方法的参数和返回值  (和9结合起来)我们需要传递或返回的是该抽象类的子类的对象<br>c.接口作为方法的参数和返回值   (我们需要传递或返回的是该接口的实现类的对象)</p>
+</li>
+<li><p>链式编程</p>
+</li>
+<li><p>权限修饰符<br>如果一个成员只想在本类中使用 用private修饰<br>如果一个成员想在本类和本包的其它类中使用 不写 default<br>如果一个成员想在本类，本包，其他包的子类中使用 用protected修饰<br>如果一个成员想在所有类中使用 用public修饰</p>
+</li>
+<li><p>Object类：<br>类Object是类层次结构的根类<br>所有类都必须直接或者间接的继承object</p>
+<ol>
+<li>boolean equals(Object obj);<br>p1.equals(p2);<br>//比较两个对象是否相等,在Object类中定义equals方法比较是 两个对象的地址<br>在String类中 重写了object父类中的equals方法，<br> 本来在object类中比较的是两个对象的地址<br> 在String重写后变成比较两个字符串的内容</li>
+</ol>
+<p>我们程序员 通常自定义一个类 也会重写equals</p>
+<ol start="2">
+<li>toString(); //返回该对象的字符串表示<br> Object类中的默认的返回值：包名.类名@地址<br> 实际开发中toString的使用，重写toString 返回对象中的成员变量</li>
+</ol>
+</li>
+<li><p>异常:是java代码编译或者运行过程中<br>异常的继承体系:<br>Throwable(异常和错误的超类):可以抛出去的东西</p>
+<pre><code>--Exception:异常(普通问题) 
+--编译时异常:
+  指的是Exception 以及Exception子类  (除了RuntimeException)
+--运行时异常:
+  RuntimeException以及其子类
+--Error:错误(严重问题) 
+比如:OutOfMemoryError:超出内存错误
+如果程序出现了错误，只能改代码
+</code></pre>
+<p>创建异常对象，对异常的基本操作：<br>1.抛出异常 2.处理异常(捕获异常，将异常获取，使用try/catch做分支处理)<br>JVM默认处理异常的方式:(中断处理)<br>处理异常的方式：<br>1.不处理</p>
+<pre><code>public 返回值类型 方法名(参数)throws xxxException&#123;
+
+&#125;
+</code></pre>
+<p>2.捕获处理</p>
+<pre><code>try&#123;
+    可能出现的异常的代码
+&#125;catch(Exception e)&#123;
+    //处理异常
+&#125;finally&#123;
+    //写上必须要执行的代码
+    //释放资源的代码
+&#125;
+</code></pre>
+<p>3.其他的处理方式</p>
+<pre><code>多个异常分别处理
+多个个异常一次捕获多次处理
+多个异常一次捕获一次处理
+</code></pre>
+<p>父类方法没有抛出异常，子类覆盖父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理。<br>打印异常信息:printStackTrace<br>1.RuntimeException<br>2.ClassCastException   类型转换异常(向下转型的时候)<br>3.ArrayIndexOutOfBoundsException  数组下标越界<br>4.StringIndexOutOfBoundsException  字符串下标越界<br>自定义异常类：<br>1.创建一个类，这个类必须用Exception结尾<br>2.必须继承Exception 或者  RumtimeException<br>3.自定义的异常 至少有两个构造</p>
+<pre><code>a.空参数构造
+b.带有String类型参数构造
+</code></pre>
+</li>
+<li><p>Object类:是所有类的根类<br>boolean equals(Object obj)<br>a.Object类中equals方法,比较是两个对象的地址，就是==号的作用<br>b.重写  比较两个字符串的内容   比较两个对象的成员变量的值<br>String toString();//返回该对象的字符串表示   hashCode()返回该对象的数字表示</p>
+</li>
+<li><p>什么叫设计模式？<br>把解决问题的方案 总结出一个套路</p>
+</li>
+<li><p>代理设计模式<br>  1.1静态代理设计模式<br>  1.2动态代理设计模式</p>
+</li>
+<li><p>date类:日期类</p>
+<pre><code>表示特定的瞬间，精确到毫秒
+</code></pre>
+<p>public Date(); //无参构造<br>public Date(long time);<br>1.DateFormat是一个抽象类 我们不能用它<br>2.我们使用它的一个子类：SimpleDateFormat<br>SimpleDateFormat:简单的日期格式化类<br>1.构造</p>
+<pre><code>public SimpleDateFormat(String pattern);//以指定的模式 创建一个日期格式化对象
+</code></pre>
+<p>2.成员方法</p>
+<pre><code>public String format(Date d);//格式化一个日期对象，返回格式化后的一个字符串
+public Date parse(String s);//把一个字符串形式的日期，解析成Date对象
+</code></pre>
+</li>
+<li><p>Calender类<br>获取Calendar的子类对象<br>获取Calender对象的某个字段 (get)</p>
+</li>
+<li><p>System类<br>它不能被实例化，因为构造方法私有化了<br>而且System类中的方法都是静态的，通过类名就可以直接访问<br>System.exit(0); //退出JVM<br>public static void gc(); //运行java的垃圾回收器(并不是马上运行)<br>public static String getProperty(String ProertyName);//获取某一个属性的值<br>public static long currentTimeMillis();//获取当前系统的毫秒值</p>
+</li>
+<li><p>String(不可变)  StringBuilder(可变)<br>//当出现大量的字符串拼接运算 时 用StringBuilder</p>
+</li>
+<li><p>基本数据类型 对应的引用类型<br>int Integer<br>拆箱：包装类型—&gt;基本类型<br>装箱：基本类型—&gt;包装类型</p>
+</li>
+<li><p>正则表达式：</p>
+</li>
+<li></li>
+<li><p>javac 生成编译文件</p>
+</li>
+<li><p>java 执行类文件，出错原因java程序运行class文件,对于有包名的类,java把包名当成文件夹处理.”包名+类名”相当于”文件夹目录+类名”来寻找类。</p>
+</li>
+<li><p>b = a++ a先赋值，再自增。  </p>
+</li>
+<li><p>mysql Orcale DB2(银行系统)  SQLite(手机端) SQLServer SyBase(建模工具PowerDesigner) </p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">右郁石</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/01/04/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/">http://yoursite.com/2020/01/04/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">飞舞伍five</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/01/22/%E5%89%91%E6%8C%87offer(2)/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">剑指offer(2)</div></div></a></div><div class="next-post pull-right"><a href="/2019/03/24/%E8%80%83%E7%A0%94/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">考研</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/02/08/Java学习笔记2/" title="Java学习笔记2"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-02-08</div><div class="title">Java学习笔记2</div></div></a></div><div><a href="/2019/02/11/java学习笔记3/" title="Java学习笔记2"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-02-11</div><div class="title">Java学习笔记2</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">右郁石</div><div class="author-info__description">热爱生活，享受生活，分享生活</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Jeremy-zjy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/15810680839@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/10/test1/" title="test1"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test1"/></a><div class="content"><a class="title" href="/2021/06/10/test1/" title="test1">test1</a><time datetime="2021-06-10T12:39:48.000Z" title="发表于 2021-06-10 20:39:48">2021-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" title="java基础复习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础复习"/></a><div class="content"><a class="title" href="/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" title="java基础复习">java基础复习</a><time datetime="2021-06-07T08:12:48.000Z" title="发表于 2021-06-07 16:12:48">2021-06-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/27/test/" title="test"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test"/></a><div class="content"><a class="title" href="/2021/05/27/test/" title="test">test</a><time datetime="2021-05-27T04:51:17.000Z" title="发表于 2021-05-27 12:51:17">2021-05-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/" title="hexo+github迁移电脑"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo+github迁移电脑"/></a><div class="content"><a class="title" href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/" title="hexo+github迁移电脑">hexo+github迁移电脑</a><time datetime="2021-04-04T13:52:33.000Z" title="发表于 2021-04-04 21:52:33">2021-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/05/05/markdown/" title="markdown"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown"/></a><div class="content"><a class="title" href="/2020/05/05/markdown/" title="markdown">markdown</a><time datetime="2020-05-05T13:18:37.000Z" title="发表于 2020-05-05 21:18:37">2020-05-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 右郁石</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>剑指offer(2) | 飞舞伍five</title><meta name="keywords" content="算法"><meta name="author" content="右郁石"><meta name="copyright" content="右郁石"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指offer(2)">
+<meta property="og:url" content="http://yoursite.com/2020/01/22/%E5%89%91%E6%8C%87offer(2)/index.html">
+<meta property="og:site_name" content="飞舞伍five">
+<meta property="og:description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2020-01-22T13:35:42.000Z">
+<meta property="article:modified_time" content="2021-05-28T09:18:25.760Z">
+<meta property="article:author" content="右郁石">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/01/22/%E5%89%91%E6%8C%87offer(2)/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '剑指offer(2)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-05-28 17:18:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="飞舞伍five" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">飞舞伍five</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">剑指offer(2)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-01-22T13:35:42.000Z" title="发表于 2020-01-22 21:35:42">2020-01-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-28T09:18:25.760Z" title="更新于 2021-05-28 17:18:25">2021-05-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="剑指offer(2)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
+<ul>
+<li>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  </li>
+</ul>
+<hr>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">    	String str1 = str.toString();</span><br><span class="line">        if(str1.equals(&quot;&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            return(str1);</span><br><span class="line">        &#125;</span><br><span class="line">        char [] strArray = str1.toCharArray();</span><br><span class="line">        int lengthSpace = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]==&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                lengthSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int newStrLength = strArray.length + lengthSpace*2;</span><br><span class="line">        char [] newstrArray = new char[newStrLength];</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 0;i&lt;strArray.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(strArray[i]!=&#x27; &#x27;)</span><br><span class="line">            &#123;</span><br><span class="line">                newstrArray[i+count*2] = strArray[i];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                newstrArray[i+2*count]=&#x27;%&#x27;;</span><br><span class="line">                newstrArray[i+2*count+1]=&#x27;2&#x27;;</span><br><span class="line">                newstrArray[i+2*count+2]=&#x27;0&#x27;;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">        return new String(newstrArray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">return str.toString().replaceAll(&quot;\\s&quot;, &quot;%20&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>题解：如果建新数组的话，从后往前还是从前往后都是一样的。???</p>
+<ol>
+<li>charAt(),deleteCharAt()   <blockquote>
+<p>s1.charAt(3);<br> s1.deleteCharAt(3); </p>
+</blockquote>
+</li>
+<li>setCharAt();<br>替换所引出的char值<blockquote>
+<p>str.setCharAt(indexnew, ‘0’);</p>
+</blockquote>
+</li>
+<li>append();  <blockquote>
+<p>StringBuffer s1 = new StringBuffer().append(“bbb”);<br> s1.append(“aaa”);<br> System.out.println(s1.toString());</p>
+</blockquote>
+</li>
+<li>replace两种用法：  <blockquote>
+<p>replace(int start，int end, String str)<br>replace(char oldchar, char newchar)</p>
+</blockquote>
+</li>
+<li>toString()  toCharArray()  <blockquote>
+<p>StringBuffer s1 = new StringBuffer();<br>s1.toString();<br>String s2 = new String();<br>s2.toCharArray();</p>
+</blockquote>
+</li>
+<li>delete(); insert(); indexOf(); lastIndexOf(); reverse(); length();<br>indexOf()返回指定字符串的开始字符索引位置，还可以从某个字符索引位置开始向后匹配，没有找到匹配的就会返回-1<br>lastIndexOf()是从后往前匹配，也支持从指定索引开始从后往前去匹配<blockquote>
+<p>s1.delete(2,4);<br>s1.insert(2,”cc”);<br>System.out.println(s1.indexOf(“ba”));<br>System.out.println(s1.indexOf(“ba”,2));<br>System.out.println(s1.reverse());<br>System.out.println(s1.length());</p>
+</blockquote>
+</li>
+<li>String,StringBuffer,StringBuilder三者的使用方法和区别<br>String适用于少量的字符串操作的情况<br>StringBuilder适用于单线程下在字符缓冲区进行大量操作的情况<br>StringBuffer适用多线程下在字符缓冲区进行大量操作的情况</li>
+</ol>
+<ol start="6">
+<li>一.java数据类型</li>
+<li>基本数据类型<br>byte(1) boolean(1) short(2) char(2) int(4) float(4) long(8)double (8)</li>
+<li>引用数据类型<br>string,数组，集合ArrayList,Scanner,Random,自定义类型</li>
+<li>引用类型String中的方法<br>第一组：判断方法<br>boolean equals(String str);  //比较两个字符串是否相等<br>boolean equalsIgnoreCase(String str);  //比较两个内容是否相等 （忽略大小写）<br>boolean startsWith(String subStr); //判断某个字符串是否以指定的子串开头<br>boolean endsWith(String subStr); //判断某个字符串是否以指定的子串结尾<br>第二组：获取方法<br>int length();//获取字符串中字符个数<br>char charAt(int index); //获取字符串中某一个字符<br>String substring(int startIndex);//从指定下标开始截取字符串，直到字符串结尾<br>substring(int startIndex,int endIndex); //包括开头不包括结尾？<br>int indexof(String subStr); //获取子串第一次出现的下标<br>第三组：转换方法<br>String toLowerCase(); //转成小写串<br>String toUpperCase);  //转成大写串<br>Char[] toCharArray(); //变成字符数组<br>第四组：其他方法<br>String trim();//去掉字符串两端的空格<br>String[] split(String str); //切割字符串<br>三：读写文件<br>输出流：数据从java程序 到  文件中<br>FilWriter：文件的字符输出流，写数据  （一个字符，一个字符串，一个字符数组）<br>  write(int ch);// 写一个字符<br>  write(char[] chs); //写一个字符数组<br>  write(String s);// 写一个字符串<br>  write(char[] chs,int startInex,int len);// 写一个字符数组的一部分<br>  write(String s,int startInex,int len); //写一个字符串的一部分<br>输入流：数据从文件  到  java程序中<br>FileReader:文件的字符输入流,读数据（一个字符，一个字符数组）<br>   int read();//读取一个字符  ASCII<br>   int read(char[] chs); //一次读取一个字符数组，返回值是读取的字符的个数<br>文件的路径分为两种：</li>
+<li>相对路径：<pre><code>  相对于当前项目而言的
+</code></pre>
+</li>
+<li>绝对路径：<pre><code>  以盘符开头
+</code></pre>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">右郁石</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/01/22/%E5%89%91%E6%8C%87offer(2)/">http://yoursite.com/2020/01/22/%E5%89%91%E6%8C%87offer(2)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">飞舞伍five</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">剑指offer(斐波那契数列)</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/04/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java基础学习1</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">右郁石</div><div class="author-info__description">热爱生活，享受生活，分享生活</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Jeremy-zjy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/15810680839@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/10/test1/" title="test1"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test1"/></a><div class="content"><a class="title" href="/2021/06/10/test1/" title="test1">test1</a><time datetime="2021-06-10T12:39:48.000Z" title="发表于 2021-06-10 20:39:48">2021-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" title="java基础复习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础复习"/></a><div class="content"><a class="title" href="/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" title="java基础复习">java基础复习</a><time datetime="2021-06-07T08:12:48.000Z" title="发表于 2021-06-07 16:12:48">2021-06-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/27/test/" title="test"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="test"/></a><div class="content"><a class="title" href="/2021/05/27/test/" title="test">test</a><time datetime="2021-05-27T04:51:17.000Z" title="发表于 2021-05-27 12:51:17">2021-05-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/" title="hexo+github迁移电脑"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo+github迁移电脑"/></a><div class="content"><a class="title" href="/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/" title="hexo+github迁移电脑">hexo+github迁移电脑</a><time datetime="2021-04-04T13:52:33.000Z" title="发表于 2021-04-04 21:52:33">2021-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/05/05/markdown/" title="markdown"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown"/></a><div class="content"><a class="title" href="/2020/05/05/markdown/" title="markdown">markdown</a><time datetime="2020-05-05T13:18:37.000Z" title="发表于 2020-05-05 21:18:37">2020-05-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 右郁石</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
