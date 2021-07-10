@@ -68,61 +68,6 @@ java规定，如果一个集合使用迭代器遍历，那么遍历的过程中�
       </tags>
   </entry>
   <entry>
-    <title>hexo+github迁移电脑</title>
-    <url>/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/</url>
-    <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
-<li>复制blog文件夹</li>
-<li>在新的电脑上下载新的git和nodejs</li>
-<li>npm install</li>
-<li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li>
-</ul>
-<ol>
-<li><blockquote>
-<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
-</blockquote>
-</li>
-<li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p>
-</li>
-<li><p>生成ssh密钥文件：  </p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p>
-</blockquote>
-</li>
-<li><p>打开<a href="https://github.com/settings/keys%22">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p>
-<h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="%22https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation%22">参考解决方法</a></p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>java基础复习</title>
-    <url>/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
-<p>封装，继承，多态</p>
-<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
-<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
-<p>属性=成员变量=field=域、字段</p>
-<p>方法=成员方法=函数=method</p>
-<p>创建类的对象=类的实例化=实例化类</p>
-<p>局部变量没有默认初始化值</p>
-<p>重载：</p>
-<p>在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</p>
-<p>可变个数形参的方法：</p>
-<p>数据类型 …  变量名</p>
-<p>可变个数形参的方法与本类中方法名相同，形参不同的方法之间构成重载。</p>
-<p>可变个数形参的方法与本类中方法名相同，形参类型也相同的数组之间不构成重载。</p>
-<p>可变个数形参在方法的形参中，必须声明在末尾。</p>
-<p>可变个数形参在方法的形参中，最多只能声明一个可变形参。</p>
-<ol start="2">
-<li><p>变量赋值：</p>
-<p>基本数据类型：此时赋值的是变量所保存的数据值。</p>
-<p>引用数据类型：此时赋值的是变量所保存的数据的地址值</p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>hexo+github搭建博客</title>
     <url>/2019/01/19/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。<br>  <span id="more"></span></p>
@@ -185,6 +130,64 @@ java规定，如果一个集合使用迭代器遍历，那么遍历的过程中�
 </li>
 <li>wechat.jpg、alipay.png图片放入themes/next/source/images(主题配置)中</li>
 <li>（解决文字闪烁问题）修改next/source/css/_common/components/post/post-reward.styl，注释wechat:hover和alipay:hover</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>javascript学习笔记</title>
+    <url>/2019/01/21/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
+<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>HTML 中的脚本必须位于 <script> 与 </script> 标签之间。脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中，也可以保存在外部文件中（则不需要加标签）。</head></body></p>
+<h2 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h2><ul>
+<li>使用 window.alert() 弹出警告框。</li>
+<li>使用 document.write() 方法将内容写到 HTML 文档中。</li>
+<li>使用 innerHTML 写入到 HTML 元素。</li>
+<li>使用 console.log() 写入到浏览器的控制台。  </li>
+</ul>
+<script>
+    var y;
+    var z;
+    var d;
+x=document.getElementsByClassName("Barrage-listItem");
+y=document.getElementById(x[0].id);
+d=y.getElementsByTagName("div");
+var reg = /Barrage-userEnter/i;    
+console.log(reg.test(d[0].className)); 
+console.log(d[0].className);
+if(reg.test(d[0].className))
+{
+z=y.getElementsByTagName("span");
+console.log(z[2].title);
+d[0].className="b";
+}
+</script>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>java基础复习</title>
+    <url>/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
+<p>封装，继承，多态</p>
+<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
+<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
+<p>属性=成员变量=field=域、字段</p>
+<p>方法=成员方法=函数=method</p>
+<p>创建类的对象=类的实例化=实例化类</p>
+<p>局部变量没有默认初始化值</p>
+<p>重载：</p>
+<p>在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</p>
+<p>可变个数形参的方法：</p>
+<p>数据类型 …  变量名</p>
+<p>可变个数形参的方法与本类中方法名相同，形参不同的方法之间构成重载。</p>
+<p>可变个数形参的方法与本类中方法名相同，形参类型也相同的数组之间不构成重载。</p>
+<p>可变个数形参在方法的形参中，必须声明在末尾。</p>
+<p>可变个数形参在方法的形参中，最多只能声明一个可变形参。</p>
+<ol start="2">
+<li><p>变量赋值：</p>
+<p>基本数据类型：此时赋值的是变量所保存的数据值。</p>
+<p>引用数据类型：此时赋值的是变量所保存的数据的地址值</p>
+</li>
 </ol>
 ]]></content>
   </entry>
@@ -363,34 +366,31 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
       </tags>
   </entry>
   <entry>
-    <title>javascript学习笔记</title>
-    <url>/2019/01/21/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
-<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>HTML 中的脚本必须位于 <script> 与 </script> 标签之间。脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中，也可以保存在外部文件中（则不需要加标签）。</head></body></p>
-<h2 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h2><ul>
-<li>使用 window.alert() 弹出警告框。</li>
-<li>使用 document.write() 方法将内容写到 HTML 文档中。</li>
-<li>使用 innerHTML 写入到 HTML 元素。</li>
-<li>使用 console.log() 写入到浏览器的控制台。  </li>
+    <title>hexo+github迁移电脑</title>
+    <url>/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/</url>
+    <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
+<li>复制blog文件夹</li>
+<li>在新的电脑上下载新的git和nodejs</li>
+<li>npm install</li>
+<li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li>
 </ul>
-<script>
-    var y;
-    var z;
-    var d;
-x=document.getElementsByClassName("Barrage-listItem");
-y=document.getElementById(x[0].id);
-d=y.getElementsByTagName("div");
-var reg = /Barrage-userEnter/i;    
-console.log(reg.test(d[0].className)); 
-console.log(d[0].className);
-if(reg.test(d[0].className))
-{
-z=y.getElementsByTagName("span");
-console.log(z[2].title);
-d[0].className="b";
-}
-</script>
-
+<ol>
+<li><blockquote>
+<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
+</blockquote>
+</li>
+<li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p>
+</li>
+<li><p>生成ssh密钥文件：  </p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p>
+</blockquote>
+</li>
+<li><p>打开<a href="https://github.com/settings/keys%22">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p>
+<h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="%22https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation%22">参考解决方法</a></p>
+</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
@@ -456,12 +456,38 @@ d[0].className="b";
 ]]></content>
   </entry>
   <entry>
+    <title>python爬虫初学</title>
+    <url>/2019/02/09/python%E7%88%AC%E8%99%AB%E5%88%9D%E5%AD%A6/</url>
+    <content><![CDATA[<p>#coding:utf-8</p>
+<span id="more"></span>
+<p>#author:Ericam_</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">import sys</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import urllib.request</span><br><span class="line">import time</span><br><span class="line">headers = (&#x27;User-Agent&#x27;, &#x27;Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1&#x27;)</span><br><span class="line">opener = urllib.request.build_opener()</span><br><span class="line">opener.addheaders = &#123;headers&#125;</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line">def get_download(url):</span><br><span class="line">    file = urllib.request.urlopen(url)</span><br><span class="line">    data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">    section_name = data.title.string</span><br><span class="line">    print(section_name)</span><br><span class="line">    section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">    section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">    fp = open(&quot;D:/python/2.txt&quot;,&#x27;a&#x27;,encoding=&#x27;utf-8&#x27;)   </span><br><span class="line">    fp.write(section_name+&#x27;\n&#x27;)  </span><br><span class="line">    fp.write(section_text+&#x27;\n&#x27;)  </span><br><span class="line">    fp.close()</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    url = &quot;http://www.net767.com/shuji/fubaba/10995.html&quot;</span><br><span class="line">    while(True):</span><br><span class="line">        file = urllib.request.urlopen(url)</span><br><span class="line">        data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">        section_name = data.title.string</span><br><span class="line">        print(section_name)</span><br><span class="line">        section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">        section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">        print(section_text)</span><br><span class="line">        txt_section=data.select(&#x27;#pagebar a&#x27;)</span><br><span class="line">        l1=len(txt_section)</span><br><span class="line">        for num in range(1,l1-1):</span><br><span class="line">            y=txt_section[num][&#x27;href&#x27;]</span><br><span class="line">            url = &quot;http://www.net767.com&quot;+y</span><br><span class="line">            get_download(url)</span><br><span class="line">            print(y)</span><br><span class="line">        txt2_section=data.select(&#x27;.LinkNextArticle&#x27;)</span><br><span class="line">        y2=txt2_section[0][&#x27;href&#x27;]</span><br><span class="line">        url = &quot;http://www.net767.com&quot;+y2</span><br><span class="line">        if(url == &#x27;http://www.net767.com/shuji/fubaba/11003_9.html&#x27;):</span><br><span class="line">            break</span><br><span class="line">        print(y2)</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>test1</title>
     <url>/2021/06/10/test1/</url>
     <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
       <tags>
         <tag>测试</tag>
+        <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2021/05/27/test/</url>
+    <content><![CDATA[<h1 id="多电脑使用hexo博客"><a href="#多电脑使用hexo博客" class="headerlink" title="多电脑使用hexo博客"></a>多电脑使用hexo博客</h1><ul>
+<li><p>【Hexo异常】fatal: in unpopulated submodule ‘.deploy_git’</p>
+<p><a href="https://blog.csdn.net/nomasp/article/details/79504699"></a></p>
+</li>
+<li><h1 id="Window下完全卸载删除Nodejs"><a href="#Window下完全卸载删除Nodejs" class="headerlink" title="Window下完全卸载删除Nodejs"></a><a href="https://www.cnblogs.com/fighxp/p/7410235.html">Window下完全卸载删除Nodejs</a></h1></li>
+<li><h1 id="nvm安装（Windows篇-https-www-jianshu-com-p-13c0b3ca7c71"><a href="#nvm安装（Windows篇-https-www-jianshu-com-p-13c0b3ca7c71" class="headerlink" title="nvm安装（Windows篇)https://www.jianshu.com/p/13c0b3ca7c71"></a>nvm安装（Windows篇)<a href="https://www.jianshu.com/p/13c0b3ca7c71">https://www.jianshu.com/p/13c0b3ca7c71</a></h1></li>
+</ul>
+<p>如果先安装node，再安装nvm，可能会出现修改后，版本仍然未变的情况，尝试了网上很多方法，建议还是卸载重新安装降低版本的node.js</p>
+]]></content>
   </entry>
   <entry>
     <title>个人随笔</title>
@@ -581,28 +607,6 @@ d[0].className="b";
       </tags>
   </entry>
   <entry>
-    <title>python爬虫初学</title>
-    <url>/2019/02/09/python%E7%88%AC%E8%99%AB%E5%88%9D%E5%AD%A6/</url>
-    <content><![CDATA[<p>#coding:utf-8</p>
-<span id="more"></span>
-<p>#author:Ericam_</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">import sys</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import urllib.request</span><br><span class="line">import time</span><br><span class="line">headers = (&#x27;User-Agent&#x27;, &#x27;Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1&#x27;)</span><br><span class="line">opener = urllib.request.build_opener()</span><br><span class="line">opener.addheaders = &#123;headers&#125;</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line">def get_download(url):</span><br><span class="line">    file = urllib.request.urlopen(url)</span><br><span class="line">    data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">    section_name = data.title.string</span><br><span class="line">    print(section_name)</span><br><span class="line">    section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">    section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">    fp = open(&quot;D:/python/2.txt&quot;,&#x27;a&#x27;,encoding=&#x27;utf-8&#x27;)   </span><br><span class="line">    fp.write(section_name+&#x27;\n&#x27;)  </span><br><span class="line">    fp.write(section_text+&#x27;\n&#x27;)  </span><br><span class="line">    fp.close()</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    url = &quot;http://www.net767.com/shuji/fubaba/10995.html&quot;</span><br><span class="line">    while(True):</span><br><span class="line">        file = urllib.request.urlopen(url)</span><br><span class="line">        data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">        section_name = data.title.string</span><br><span class="line">        print(section_name)</span><br><span class="line">        section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">        section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">        print(section_text)</span><br><span class="line">        txt_section=data.select(&#x27;#pagebar a&#x27;)</span><br><span class="line">        l1=len(txt_section)</span><br><span class="line">        for num in range(1,l1-1):</span><br><span class="line">            y=txt_section[num][&#x27;href&#x27;]</span><br><span class="line">            url = &quot;http://www.net767.com&quot;+y</span><br><span class="line">            get_download(url)</span><br><span class="line">            print(y)</span><br><span class="line">        txt2_section=data.select(&#x27;.LinkNextArticle&#x27;)</span><br><span class="line">        y2=txt2_section[0][&#x27;href&#x27;]</span><br><span class="line">        url = &quot;http://www.net767.com&quot;+y2</span><br><span class="line">        if(url == &#x27;http://www.net767.com/shuji/fubaba/11003_9.html&#x27;):</span><br><span class="line">            break</span><br><span class="line">        print(y2)</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2021/05/27/test/</url>
-    <content><![CDATA[<h1 id="多电脑使用hexo博客"><a href="#多电脑使用hexo博客" class="headerlink" title="多电脑使用hexo博客"></a>多电脑使用hexo博客</h1><ul>
-<li><p>【Hexo异常】fatal: in unpopulated submodule ‘.deploy_git’</p>
-<p><a href="https://blog.csdn.net/nomasp/article/details/79504699"></a></p>
-</li>
-<li><h1 id="Window下完全卸载删除Nodejs"><a href="#Window下完全卸载删除Nodejs" class="headerlink" title="Window下完全卸载删除Nodejs"></a><a href="https://www.cnblogs.com/fighxp/p/7410235.html">Window下完全卸载删除Nodejs</a></h1></li>
-<li><h1 id="nvm安装（Windows篇-https-www-jianshu-com-p-13c0b3ca7c71"><a href="#nvm安装（Windows篇-https-www-jianshu-com-p-13c0b3ca7c71" class="headerlink" title="nvm安装（Windows篇)https://www.jianshu.com/p/13c0b3ca7c71"></a>nvm安装（Windows篇)<a href="https://www.jianshu.com/p/13c0b3ca7c71">https://www.jianshu.com/p/13c0b3ca7c71</a></h1></li>
-</ul>
-<p>如果先安装node，再安装nvm，可能会出现修改后，版本仍然未变的情况，尝试了网上很多方法，建议还是卸载重新安装降低版本的node.js</p>
-]]></content>
-  </entry>
-  <entry>
     <title>剑指offer(2)</title>
     <url>/2020/01/22/%E5%89%91%E6%8C%87offer(2)/</url>
     <content><![CDATA[<hr>
@@ -663,6 +667,15 @@ d[0].className="b";
       </tags>
   </entry>
   <entry>
+    <title>剑指offer(斐波那契数列)</title>
+    <url>/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/</url>
+    <content><![CDATA[<ul>
+<li>避免递归造成的调用栈消耗<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public int Fibonacci(int n) &#123;</span><br><span class="line">        int a = 0;</span><br><span class="line">        int b = 1;</span><br><span class="line">        while(n--&gt;0)&#123;</span><br><span class="line">            b = a + b;</span><br><span class="line">            a = b - a;</span><br><span class="line">        &#125;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>复杂度<br>时间复杂度：O(n)O(n)<br>空间复杂度：O(1)O(1)</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>正则获取词缀集</title>
     <url>/2020/05/05/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h1 id="从词典中获取词缀集"><a href="#从词典中获取词缀集" class="headerlink" title="从词典中获取词缀集"></a>从词典中获取词缀集</h1><span id="more"></span>
@@ -719,29 +732,6 @@ d[0].className="b";
       </tags>
   </entry>
   <entry>
-    <title>考研</title>
-    <url>/2019/03/24/%E8%80%83%E7%A0%94/</url>
-    <content><![CDATA[<span id="more"></span>
-<pre><code>失败不是终点，找好工作再说8
-</code></pre>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指offer(斐波那契数列)</title>
-    <url>/2020/02/17/%E5%89%91%E6%8C%87offer(%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91)/</url>
-    <content><![CDATA[<ul>
-<li>避免递归造成的调用栈消耗<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public int Fibonacci(int n) &#123;</span><br><span class="line">        int a = 0;</span><br><span class="line">        int b = 1;</span><br><span class="line">        while(n--&gt;0)&#123;</span><br><span class="line">            b = a + b;</span><br><span class="line">            a = b - a;</span><br><span class="line">        &#125;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>复杂度<br>时间复杂度：O(n)O(n)<br>空间复杂度：O(1)O(1)</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>汇编语言</title>
     <url>/2019/02/25/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</url>
     <content><![CDATA[<span id="more"></span>
@@ -761,5 +751,19 @@ d[0].className="b";
 <li>相对寻址方式</li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>考研</title>
+    <url>/2019/03/24/%E8%80%83%E7%A0%94/</url>
+    <content><![CDATA[<span id="more"></span>
+<pre><code>失败不是终点，找好工作再说8
+</code></pre>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
   </entry>
 </search>
