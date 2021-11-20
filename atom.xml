@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-07-10T09:35:42.138Z</updated>
+  <updated>2021-08-05T11:34:29.980Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,18 +17,100 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode309 最佳买卖股票时机含冷冻期</title>
+    <link href="http://yoursite.com/2021/08/05/leetcode309/"/>
+    <id>http://yoursite.com/2021/08/05/leetcode309/</id>
+    <published>2021-08-05T08:15:03.000Z</published>
+    <updated>2021-08-05T11:34:29.980Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">题目链接</a></p><p>计算最大利润（在约束条件下）：</p><ul><li>不能同时参与多笔交易（必须在再次购买前出售掉之前的股票）</li><li>卖出股票后，无法在第二天买入股票（冷冻期为一天）</li></ul><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>这道题是最近遇见最难处理的一道DP题。</p><p>我们可以试想对于每一天的i，都有可能是三种状态：</p><ol><li>不持股且当天没有卖出$dp[i][0]$;</li><li>持股$dp[i][1]$;</li><li>不持股且当天卖了$dp[i][2]$;</li></ol><p>初始化：</p><p>$dp[0][0]$ = 0;</p><p>$dp[0][1]$ = -prices[0];</p><p>$dp[0][2]$ = 0;</p><p>分析：</p><p>第i天不持股且没有卖出，所以有两种可能：</p><ol><li><p>i-1天不持股且当天没有卖出</p></li><li><p>i-1天不持股但是当天卖出去了</p><p>所以： $dp[i][0]=max(dp[i-1][0],dp[i-1][2])$</p></li></ol><p>第i天持股，也有两种可能：</p><ol><li><p>昨天持股，今天继承昨天的</p></li><li><p>昨天不持股，今天买入。这里的前提是昨天一定没有卖，如果卖了则今天就无法交易了</p><p>所以：$dp[i][1]=max(dp[i-1][1],dp[i-1][0]-p[i])$</p></li></ol><p>第i天不持股且当天卖出了 == $dp[i][2]=dp[i-1][1]+p[i]$</p><p>最后一天的最大收益有两种可能，而且一定是“不持有”状态下的两种可能，把这两种“不持有”比较一下大小，返回即可</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxProfit(int[] prices) &#123;</span><br><span class="line">        int n=prices.length;</span><br><span class="line">        if(n&lt;=1) return 0;</span><br><span class="line">        int [][] dp = new int[n][3];</span><br><span class="line">        dp[0][0]=0;</span><br><span class="line">        dp[0][1]=-1*prices[0];</span><br><span class="line">        dp[0][2]=0;</span><br><span class="line">        for(int i = 1; i &lt; n; i++)&#123;</span><br><span class="line">            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][2]);</span><br><span class="line">            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0] - prices[i]);</span><br><span class="line">            dp[i][2] = dp[i-1][1]+prices[i];</span><br><span class="line">        &#125;</span><br><span class="line">        return Math.max(dp[n-1][0],dp[n-1][2]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;       </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot; title=&quot;题意&quot;&gt;&lt;/a&gt;题意&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/best-time-to-buy-and-sell-st</summary>
+      
+    
+    
+    
+    <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode279</title>
+    <link href="http://yoursite.com/2021/08/03/leetcode279/"/>
+    <id>http://yoursite.com/2021/08/03/leetcode279/</id>
+    <published>2021-08-03T10:06:23.000Z</published>
+    <updated>2021-08-03T10:06:23.850Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2021/07/22/%E9%9A%8F%E7%AC%94/"/>
+    <id>http://yoursite.com/2021/07/22/%E9%9A%8F%E7%AC%94/</id>
+    <published>2021-07-22T13:55:17.037Z</published>
+    <updated>2021-07-22T13:56:07.554Z</updated>
+    
+    <content type="html"><![CDATA[<p>突然回想到那份数学卷子，可能在22岁以前都没有想过，第一道第二道选择题会出错，而且恰好分数线就是388，似乎命运真的在冥冥之中和自己开了一个玩笑，不，可能不是玩笑而是命运给予你的反馈吧，毕竟一直以来的考试确实挺眷顾自己的，没有过这种致命失误，运气不好的同时也是自己没有做好万分的准备，可惜的是这次并没有眷顾自己。</p><p>可能在调剂后，心里都并没有多难受，但是现在我想这份遗憾真的可能要伴随我两年了，但是我更希望自己能做出改变，让它最好只有一年，而不是几年后的哪一天还会想起今天的遗憾，当然更想的是提升自己的能力和内涵，做自己想做的那一个优秀的自己。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;突然回想到那份数学卷子，可能在22岁以前都没有想过，第一道第二道选择题会出错，而且恰好分数线就是388，似乎命运真的在冥冥之中和自己开了一个玩笑，不，可能不是玩笑而是命运给予你的反馈吧，毕竟一直以来的考试确实挺眷顾自己的，没有过这种致命失误，运气不好的同时也是自己没有做好万</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数组与链表</title>
+    <link href="http://yoursite.com/2021/07/16/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/"/>
+    <id>http://yoursite.com/2021/07/16/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/</id>
+    <published>2021-07-16T08:48:56.000Z</published>
+    <updated>2021-07-16T08:59:21.033Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数组，链表"><a href="#数组，链表" class="headerlink" title="数组，链表"></a>数组，链表</h1><p>数组：</p><p>所有元素都连续的存储于一段内存中，且每个元素占用的内存大小相同。这使得数组具备了通过下标快速访问数据的能力。<br>但连续存储的缺点也很明显，增加容量，增删元素的成本很高，时间复杂度均为 O(n)。增加数组容量需要先申请一块新的内存，然后复制原有的元素。如果需要的话，可能还要删除原先的内存。删除元素时，需要移动被删除元素之后的所有元素。</p><ul><li>优点：可以根据偏移实现快速的随机读写。</li><li>缺点：扩容，增删元素极慢。</li></ul><p><a href="https://leetcode-cn.com/problems/linked-list-cycle/solution/yi-wen-gao-ding-chang-jian-de-lian-biao-wen-ti-h-2/">参考链接</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;数组，链表&quot;&gt;&lt;a href=&quot;#数组，链表&quot; class=&quot;headerlink&quot; title=&quot;数组，链表&quot;&gt;&lt;/a&gt;数组，链表&lt;/h1&gt;&lt;p&gt;数组：&lt;/p&gt;
+&lt;p&gt;所有元素都连续的存储于一段内存中，且每个元素占用的内存大小相同。这使得数组具备了通过下标快速访</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>test1</title>
     <link href="http://yoursite.com/2021/06/10/test1/"/>
     <id>http://yoursite.com/2021/06/10/test1/</id>
     <published>2021-06-10T12:39:48.000Z</published>
-    <updated>2021-07-10T09:35:42.138Z</updated>
+    <updated>2021-07-10T11:07:59.522Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1><p>友链</p><p>娱乐板块</p><p>字数统计</p><p>评论</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;新的一篇文章&quot;&gt;&lt;a href=&quot;#新的一篇文章&quot; class=&quot;headerlink&quot; title=&quot;新的一篇文章&quot;&gt;&lt;/a&gt;新的一篇文章&lt;/h1&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;新的一篇文章&quot;&gt;&lt;a href=&quot;#新的一篇文章&quot; class=&quot;headerlink&quot; title=&quot;新的一篇文章&quot;&gt;&lt;/a&gt;新的一篇文章&lt;/h1&gt;&lt;p&gt;友链&lt;/p&gt;
+&lt;p&gt;娱乐板块&lt;/p&gt;
+&lt;p&gt;字数统计&lt;/p&gt;
+&lt;p&gt;评论&lt;/p&gt;
+</summary>
       
     
     
@@ -39,6 +121,28 @@
     <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
     
     <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动打卡</title>
+    <link href="http://yoursite.com/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/"/>
+    <id>http://yoursite.com/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</id>
+    <published>2021-06-10T12:39:48.000Z</published>
+    <updated>2021-11-20T02:08:06.393Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="兰大自动打卡"><a href="#兰大自动打卡" class="headerlink" title="兰大自动打卡"></a>兰大自动打卡</h1><p>参考博主伍尔夫的猫的博文<a href="https://blog.csdn.net/zhaoqianchong/article/details/113060219?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163721754316780274161777%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163721754316780274161777&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-10-113060219.first_rank_v2_pc_rank_v29&utm_term=%E7%BD%91%E9%A1%B5%E7%AB%AF%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1&spm=1018.2226.3001.4187">如何通过Python自动完成移动校园“每日健康”打卡</a>和博主CookiePie的文章<a href="https://blog.csdn.net/CookiePie/article/details/109698484">Python—利用Requests实现每日微信自动打卡</a>，拿来主义可耻，所以还是自己写一篇博客记录一下解决问题的过程，主要是为了学习，顺便激励自己好好写论文，坚持写代码，早日去实习。</p><h2 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h2><h3 id="1、抓包"><a href="#1、抓包" class="headerlink" title="1、抓包"></a>1、抓包</h3><p>不细说了，安装Fiddler或者在浏览器端的话直接用谷歌开发者工具。(我是在浏览器端完成的，小程序端会复杂些)</p><h3 id="2、安装selenium"><a href="#2、安装selenium" class="headerlink" title="2、安装selenium"></a>2、安装selenium</h3><p>我用的也是Pycharm，参考这个博主的<a href="https://blog.csdn.net/HW140701/article/details/59109649?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161140090116780261940479%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161140090116780261940479&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-59109649.first_rank_v2_pc_rank_v29&utm_term=pycharm%20webdriver.PhantomJS&spm=1018.2226.3001.4187">Python配置Selenium+Chrome环境和Selenium+PhantomJS环境</a></p><h3 id="3、配置Phantomjs"><a href="#3、配置Phantomjs" class="headerlink" title="3、配置Phantomjs"></a>3、配置Phantomjs</h3><p>如果参考上面安装过程中测试代码没有问题就可以跳过了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">driver = webdriver.Chrome()</span><br></pre></td></tr></table></figure><p>如果会报错，那么奖励你，继续看<a href="https://blog.csdn.net/HW140701/article/details/59109649?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161140090116780261940479%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161140090116780261940479&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-59109649.first_rank_v2_pc_rank_v29&utm_term=pycharm%20webdriver.PhantomJS&spm=1018.2226.3001.4187">Python配置Selenium+Chrome环境和Selenium+PhantomJS环境</a>，其中，第5点说明了无界面的浏览器包PhantomJS的应用。如果还会报错，可以将selenium的版本修改为了selenium2.48.0版本，亲测可以。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码参考了原博主的，然后根据学校的网站进行抓包分析，思路和原博主基本上是一致的。</p><ol><li>抓包分析</li><li>模拟登录</li><li>伪装Header发送Cookie，data</li></ol><p>但是!!!，正是由于抓取的post包里面有<strong>Authorization</strong>，</p><p><img src="/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/blog_picture\daka\Snipaste_2021-11-19_21-26-02.png" alt="Snipaste_2021-11-19_21-26-02"></p><p>并且它还是刷新的，如果Header中没有授权码，则服务器默认收到的是非法数据。所以耗费了一天时间才搞定。所以重点记录解决这个问题的思路，因为我看的好几篇博客并没有遇见这个问题，只需要Cookie和User-Agent就可以了。</p><p>直接说Authorization，先读读这个<a href="https://www.cnblogs.com/wuwuyong/p/12210842.html"><a href="https://www.cnblogs.com/wuwuyong/p/12210842.html">权限认证基础:区分Authentication,Authorization以及Cookie、Session、Token </a></a>，说实话我这个菜鸡开始也不是很懂，不过看见这个，那没事了。</p><p><img src="/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/blog_picture\daka\Snipaste_2021-11-19_21-11-58.png" alt="Snipaste_2021-11-19_21-11-58"></p><p>也就是说我们需要去找到服务端返回给客户端的token，也就是刷新的Authorization。所以</p><ol><li><p>找到它</p></li><li><p>获取并使用它</p></li><li><p>更新它</p><p>那么我们已经在包里面找到它了，但是实际上还是没有找到它…因为我们需要将它的值获取到且随着它更新，而不是复制出来。</p></li></ol><p>那么到这里，我当时有两个思路：</p><ol><li><p>我有一个大胆（笨比）的想法，就是webdriver.Chrome()既然是模拟浏览器操作，那么我们</p><ul><li>模拟登录后，得到新的网页</li><li>然后点击“健康打卡”又可以进入打卡界面</li><li>终于只需要点击上报就ok啦！ 这不是有手就行！？ 然后我写了如下代码：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">driver = webdriver.Chrome()</span><br><span class="line">    driver.maximize_window()</span><br><span class="line">    driver.get(url_)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;username&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;password&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;password&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;loginForm&quot;]/div[4]/button&#x27;</span>).click()</span><br><span class="line">    sleep(<span class="number">2</span>)</span><br><span class="line">    cookie_ = driver.get_cookies()[<span class="number">0</span>]</span><br><span class="line">    <span class="built_in">print</span>(driver.current_url)</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    driver.switch_to.window(driver.window_handles[<span class="number">0</span>])</span><br><span class="line">    el = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]&#x27;</span>)</span><br><span class="line">    ActionChains(driver).move_to_element(el).perform()   <span class="comment">#鼠标移动到该元素停留</span></span><br><span class="line">    sleep(<span class="number">2</span>)</span><br><span class="line">    buttonElement = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]/a/div[2]/p[2]/span[1]&#x27;</span>)</span><br><span class="line">    ActionClick = ActionChains(driver).click(buttonElement)</span><br><span class="line">    ActionClick.perform()</span><br><span class="line">    frame1 = driver.find_element_by_id(<span class="string">&quot;iframe&quot;</span>)</span><br><span class="line">    <span class="comment"># 切换到iframe1这个内嵌网页</span></span><br><span class="line">    driver.switch_to.frame(frame1)</span><br><span class="line">    ActionChains(driver).move_by_offset(<span class="number">843</span>, <span class="number">100</span>).click().perform()  <span class="comment"># 鼠标左键点击， 200为x坐标， 100为y坐标</span></span><br><span class="line">    sleep(<span class="number">3</span>)</span><br><span class="line">    driver.quit()</span><br><span class="line">    <span class="keyword">return</span> cookie_[<span class="string">&#x27;name&#x27;</span>] + <span class="string">&#x27;=&#x27;</span> + cookie_[<span class="string">&#x27;value&#x27;</span>]</span><br></pre></td></tr></table></figure><p>首先简简单单的就到了第二步，准备点击健康打卡，结果tmd它不是button，没办法click()，而且只有鼠标在这个模块上放一秒，它才会出现进入这个元素。所以我机智的（暴力的）通过强大的driver模拟了这一操作过程。终于，到了最后一步了，只需要点击新出现弹窗里面的“进入”就可以了，结果tmd(真的忍不住)这个弹窗就很神奇，它的元素是定位不到的！(试了很多解决方法不行)无奈之下，想到了我的老本行——暴力，把鼠标移动到这个“进入”的坐标位置点击左键即可。然后用snipaste截图测位置测了半天没找到，只能放弃。</p></li><li><p>暴力无奈之下，只能另寻他路。结果突然发现这个Authorization就是token，并且它还保存在sessionStorage里面，真的得来全不费功夫。真的需要认真读文档和博客，而不是自己瞎弄。后面就是打开切换到这个内嵌iframe上，然后获取到token值，这样就解决问题了。代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.action_chains <span class="keyword">import</span> ActionChains</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_cookie</span>(<span class="params">url_, user_</span>):</span></span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    driver = webdriver.Chrome()</span><br><span class="line">    driver.get(url_)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;username&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;password&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;password&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;loginForm&quot;]/div[4]/button&#x27;</span>).click()</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    cookie_ = driver.get_cookies()[<span class="number">0</span>]</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    driver.switch_to.window(driver.window_handles[<span class="number">0</span>])</span><br><span class="line">    el = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]&#x27;</span>)</span><br><span class="line">    ActionChains(driver).move_to_element(el).perform()</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    buttonElement = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]/a/div[2]/p[2]/span[1]&#x27;</span>)</span><br><span class="line">    ActionClick = ActionChains(driver).click(buttonElement)</span><br><span class="line">    ActionClick.perform()</span><br><span class="line">    frame1 = driver.find_element_by_id(<span class="string">&quot;iframe&quot;</span>)</span><br><span class="line">    <span class="comment"># 切换到iframe1这个内嵌网页</span></span><br><span class="line">    driver.switch_to.frame(frame1)</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    token = driver.execute_script(<span class="string">&#x27;return sessionStorage.getItem(&quot;token&quot;);&#x27;</span>)</span><br><span class="line">    driver.quit()</span><br><span class="line">    <span class="built_in">list</span>.append(cookie_[<span class="string">&#x27;name&#x27;</span>] + <span class="string">&#x27;=&#x27;</span> + cookie_[<span class="string">&#x27;value&#x27;</span>])</span><br><span class="line">    <span class="built_in">list</span>.append(token)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span></span><br><span class="line"></span><br><span class="line">user = &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>, <span class="string">&#x27;password&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">list</span> = get_cookie(</span><br><span class="line">    <span class="string">&#x27;http://my.lzu.edu.cn:8080/login?service=http://my.lzu.edu.cn&#x27;</span>, user)  <span class="comment">##网页打卡入口</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Authorization&#x27;</span>: <span class="built_in">list</span>[<span class="number">1</span>],</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;Cookie&#x27;</span>: <span class="built_in">list</span>[<span class="number">0</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;bh&#x27;</span>: <span class="string">&#x27;xxxxxxxxxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xykh&#x27;</span>: <span class="string">&#x27;xxxxxxxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;twfw&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;jkm&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;sfzx&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;sfgl&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;szsf&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;szds&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;szxq&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sfcg&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;cgdd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;gldd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;jzyy&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bllb&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;sfjctr&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;jcrysm&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xgjcjlsj&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xgjcjldd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xgjcjlsm&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;zcwd&#x27;</span>: <span class="number">0.0</span>,</span><br><span class="line">    <span class="string">&#x27;zwwd&#x27;</span>: <span class="number">0.0</span>,</span><br><span class="line">    <span class="string">&#x27;wswd&#x27;</span>: <span class="number">0.0</span>,</span><br><span class="line">    <span class="string">&#x27;sbr&#x27;</span>: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sjd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;initLng&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;initLat&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;dwfs&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;   <span class="comment">##= 这个就是抓取的Post包的data，更新自己的数据信息</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://appservice.lzu.edu.cn/dailyReportAll/api/grtbMrsb/submit&#x27;</span>  <span class="comment">##提交信息时候的php</span></span><br><span class="line">key = <span class="string">&#x27;Server酱的key&#x27;</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s = requests.session()</span><br><span class="line">    response = s.post(url=url, headers=headers, data=data)</span><br><span class="line">    html = response.text</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://sc.ftqq.com/%s.send?text=登录页访问超时，打卡失败&#x27;</span> % key</span><br><span class="line">    requests.get(url)</span><br><span class="line"><span class="keyword">if</span> json.loads(response.text)[<span class="string">&#x27;message&#x27;</span>] == <span class="string">&#x27;成功&#x27;</span>:</span><br><span class="line">    <span class="comment">#url = &#x27;https://sc.ftqq.com/%s.send?text=自动打卡成功&#x27; % key</span></span><br><span class="line">    <span class="comment">#requests.get(url)</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://sc.ftqq.com/%s.send?text=自动打卡失败&#x27;</span> % key</span><br><span class="line">    requests.get(url)</span><br></pre></td></tr></table></figure><p>最后就是用<a href="https://blog.csdn.net/weixin_43229819/article/details/106398615">Windows任务计划程定时调用执行Python脚本</a></p><p>还用了<a href="https://blog.csdn.net/weixin_43745169/article/details/103792025?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163737383016780366595912%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163737383016780366595912&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-103792025.first_rank_v2_pc_rank_v29&utm_term=server%E9%85%B1&spm=1018.2226.3001.4187">Server酱</a>来提示打卡成功和打卡失败，over！</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;兰大自动打卡&quot;&gt;&lt;a href=&quot;#兰大自动打卡&quot; class=&quot;headerlink&quot; title=&quot;兰大自动打卡&quot;&gt;&lt;/a&gt;兰大自动打卡&lt;/h1&gt;&lt;p&gt;参考博主伍尔夫的猫的博文&lt;a href=&quot;https://blog.csdn.net/zhaoqiancho</summary>
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -333,44 +437,6 @@
     
     
     <summary type="html">&lt;p&gt;参考菜鸟教程进行学习&lt;br&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>个人随笔</title>
-    <link href="http://yoursite.com/2019/01/20/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
-    <id>http://yoursite.com/2019/01/20/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/</id>
-    <published>2019-01-20T12:23:42.000Z</published>
-    <updated>2021-05-28T09:18:25.763Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1月20记"><a href="#1月20记" class="headerlink" title="1月20记"></a>1月20记</h1><span id="more"></span><p>好久没有写日记了，下午和从小长大的朋友聊了会天，真的感觉时间过的好快。而且似乎到了什么年龄，周围的人就会询问关心你这个年龄应该干的事情做的怎么样。就好像上学期间就是学校的好坏，工作期间就是结婚工资。那么究竟你是变得更好还是会更烂呢？  </p><ol><li>考研信息，结课作业。1.21到1.25  </li><li>英语单词，阅读。寒假每天坚持</li><li>线代复习，真题。寒假每天坚持<br>视频每天3个，加看辅导书。</li><li>javascrip,css,html。 </li><li>python,爬虫项目。 1.28到2.2  </li><li>实验室论文，深度学习。 2.2以后</li><li>小程序项目   1.28到2.2</li><li>java  2.2以后<br>前三个尽量做完，4，5，7完成一二即可，6，8能入门就再好不过了。  <h2 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h2></li></ol><ul><li>旅游（估计难了 555）</li><li>联系一下朋友同学 （加油嗷）</li><li>吃饭，作息规律 （一定可以的）</li><li>读完3本书 (穷爸爸，富爸爸  如何阅读一本书  自控力)</li><li>想到的再继续补充~</li></ul><h2 id="2-8到2-20（11天）"><a href="#2-8到2-20（11天）" class="headerlink" title="2.8到2.20（11天）"></a>2.8到2.20（11天）</h2><ul><li>线代每天两个视频，辅导讲义写完  3</li><li>英语一个单元   2.5（课听完）</li><li>看书1个小时   </li><li>查考研信息    问问问</li><li>健身刷牙</li><li>python斗鱼的项目</li><li>小程序的项目</li><li></li></ul><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>抛弃浮躁，脚踏实地。</p><h2 id="英语："><a href="#英语：" class="headerlink" title="英语："></a>英语：</h2><ul><li>单词：</li></ul><ol><li>高频单词视频看完 （2月之前）</li><li>每天1个list背诵</li><li>空闲时间刷百词斩</li></ol><ul><li>阅读：</li></ul><ol><li>3.4月份：08年之前的真题阅读精读（一天一篇）+网课学习  暂定3个小时</li><li>5，6，7 做完所有真题阅读  </li><li>8，9，10 作文，翻译，完型  暂定<h2 id="数学："><a href="#数学：" class="headerlink" title="数学："></a>数学：</h2></li></ol><ul><li>线代：</li></ul><ol><li>两天一章，视频+讲义+课本看完（2月底）</li><li>暂定暑假过第二遍</li></ol><ul><li>高数：</li></ul><ol><li>3，4月刷高数18讲+书+记笔记（第一遍）</li><li>后来暂定</li></ol><ul><li>概率论：</li></ul><ol><li>5或6月份<h2 id="专业课："><a href="#专业课：" class="headerlink" title="专业课："></a>专业课：</h2></li><li>大概确定院校！！！</li><li>背书</li><li>真题<h2 id="政治："><a href="#政治：" class="headerlink" title="政治："></a>政治：</h2></li><li>9月份大纲确定开始</li></ol><h2 id="时间安排：（暂定，根据具体情况会调整）"><a href="#时间安排：（暂定，根据具体情况会调整）" class="headerlink" title="时间安排：（暂定，根据具体情况会调整）"></a>时间安排：（暂定，根据具体情况会调整）</h2><ol><li>6：30~6：40洗漱</li><li>6：40~7：00吃早饭</li><li>7：10~8：00背单词</li><li>8：00~12：00</li><li>12：00~12：20吃饭</li><li>12：20~1：10休息</li><li>1：30~4：30</li><li>4：40~5：30健身</li><li>5：30~5:50吃饭</li><li>6：00~6：20洗澡</li><li>6：30~11:00</li><li>11:00~11:30洗漱，处理部分事情，睡觉</li></ol><ul><li>补充：</li></ul><ol><li>根据上课的时间进行有效调整</li><li>最重要的是把每天的任务计划都要提前列出来并且完成</li><li>咨询考研相关信息（学校，实验室，导师，考研参考书，学习方法，有效途径，询问学长学姐老师同学）放在中午12：00<del>1：30，4：30</del>6；30，11：00以后  其他时间不要看！！！</li><li></li></ol><ul><li>3.8</li></ul><ol><li>7点起来 洗漱，吃饭。</li><li>8点到9点背单词和句子</li><li>9点到11点看英语视频</li><li>11点去吃饭+问王伟考研学校+专业课考什么</li><li>2点到4：30点看线代视频</li><li>4：30~6：30 健身，吃饭，洗澡</li><li>6：30~10：00 高数</li><li>买参考书</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;1月20记&quot;&gt;&lt;a href=&quot;#1月20记&quot; class=&quot;headerlink&quot; title=&quot;1月20记&quot;&gt;&lt;/a&gt;1月20记&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo+github搭建博客</title>
-    <link href="http://yoursite.com/2019/01/19/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2019/01/19/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</id>
-    <published>2019-01-19T06:59:20.000Z</published>
-    <updated>2021-06-10T08:48:47.161Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。<br>  <span id="more"></span></p><h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a>搭建步骤：</h2><ol><li><p>GitHub创建个人仓库（名称与用户名一致）  </p></li><li><p>git安装，绑定github密钥  </p><blockquote><p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p></blockquote><p> 生成ssh密钥文件：  </p><blockquote><p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p></blockquote><p> 打开<a href="link" title="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p></li></ol><ol start="3"><li><p>安装node.js，npm   </p></li><li><p>安装hexo：</p><blockquote><p>npm install -g hexo-cli   </p></blockquote><p> 博客初始化：</p><blockquote><p>hexo init blog</p></blockquote><p> 查看本地localhost是否成功  </p></li><li><p>修改.yml站点配置文件，绑定github  </p></li><li><p>绑定域名<br> 在blog\source下新建CNAME文件（无文件名）,例如：<br> XXX.top<br> 域名解析：建立CNAME解析，主机名分别为@和www，对应值都是你的 Github 个人主页地址  </p></li><li><p>最后hexo g,hexo d,就ok辣。  </p></li></ol><h2 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍"></a>命令介绍</h2><p>npm install hexo -g #安装Hexo<br>npm update hexo -g #升级<br>hexo init #初始化博客<br>hexo n “我的博客” == hexo new “我的博客” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署<br>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令  </p><h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><p>首先第一次搭建完成后，遇到了61行date的问题 ，一直没有解决，所以我选择了再次搭建，并且将此过程记录了下来。</p><ol><li>使用hexo命令显示无效  </li></ol><p><strong>注意需要在blog文件下进行操作</strong><br><strong>还有congig.yml 空格问题基本新手都会犯</strong><br>2. 执行hexo命令出现ERROR<br><strong>npm install 即可</strong><br>3. 前面都没有问题到了hexo d时候连接不上git<br><strong>所以不应用http 应该使用git</strong><br>4. 本地命令成功 但是localhost:访问不到网址<br><strong>大概率是端口占用了</strong><br>5. 本地可以访问但是用户名加github.io无法访问<br><strong>注意库名与用户名一致!!!</strong><br>6. 下载主题出现代理的问题<br>    <strong>查询是否使用代理：</strong><br>    &gt;git config –global http.proxy   </p><pre><code>**取消代理：**  &gt;git config --global --unset http.proxy  </code></pre><ol start="7"><li>ERROR Process failed: about/index.md<br>TypeError: Cannot read property ‘utcOffset’ of null<br>折腾了半天发现原来站点的配置文件的timezone也就是时区必须要和主题的的配置文件一直，把这两个文件下的timezone都设为Asia/Shanghai就解决了</li><li>Cannot GET/xxx<br>查看index.html文件是否还在，可以参考<a href="link" title="https://www.jianshu.com/p/af83fc73e525">这个</a></li></ol><p style="color: #AD5D0F;font-size: 23px; font-family: '宋体';">附加功能：</p><hr><h3 id="1-打赏"><a href="#1-打赏" class="headerlink" title="1.打赏"></a>1.打赏</h3><ol><li>准备支付宝和微信二维码</li><li>在_config.yml中配置图片  <blockquote><p>reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！<br>wechatpay: /images/wechat.jpg<br>alipay: /images/aipay.png  </p></blockquote></li><li>wechat.jpg、alipay.png图片放入themes/next/source/images(主题配置)中</li><li>（解决文字闪烁问题）修改next/source/css/_common/components/post/post-reward.styl，注释wechat:hover和alipay:hover</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;  搭建博客的过程教程很多，我也是参照网上的教程搭建的博客。搭建博客已经过去半年了，但是自己这么久却没有写这篇博文，多说无益，希望能从这篇博客开始先记录hexo博客的问题以及解决方法然后能坚持下去将自己所学所见记录下来，也作为自己生活学习的一个监督和记录。&lt;br&gt;&lt;/p&gt;</summary>
     
     
     

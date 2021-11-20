@@ -134,6 +134,33 @@ java规定，如果一个集合使用迭代器遍历，那么遍历的过程中�
 ]]></content>
   </entry>
   <entry>
+    <title>java基础复习</title>
+    <url>/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
+<p>封装，继承，多态</p>
+<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
+<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
+<p>属性=成员变量=field=域、字段</p>
+<p>方法=成员方法=函数=method</p>
+<p>创建类的对象=类的实例化=实例化类</p>
+<p>局部变量没有默认初始化值</p>
+<p>重载：</p>
+<p>在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</p>
+<p>可变个数形参的方法：</p>
+<p>数据类型 …  变量名</p>
+<p>可变个数形参的方法与本类中方法名相同，形参不同的方法之间构成重载。</p>
+<p>可变个数形参的方法与本类中方法名相同，形参类型也相同的数组之间不构成重载。</p>
+<p>可变个数形参在方法的形参中，必须声明在末尾。</p>
+<p>可变个数形参在方法的形参中，最多只能声明一个可变形参。</p>
+<ol start="2">
+<li><p>变量赋值：</p>
+<p>基本数据类型：此时赋值的是变量所保存的数据值。</p>
+<p>引用数据类型：此时赋值的是变量所保存的数据的地址值</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>javascript学习笔记</title>
     <url>/2019/01/21/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>参考菜鸟教程进行学习<br>  <span id="more"></span></p>
@@ -165,28 +192,29 @@ d[0].className="b";
 ]]></content>
   </entry>
   <entry>
-    <title>java基础复习</title>
-    <url>/2021/06/07/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="JAVASE"><a href="#JAVASE" class="headerlink" title="JAVASE"></a>JAVASE</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
-<p>封装，继承，多态</p>
-<p>类是对一类事物的描述，是抽象的、概念上的定义</p>
-<p>对象是实际存在的该类事物的每个个体，因而也称为实例（instance）</p>
-<p>属性=成员变量=field=域、字段</p>
-<p>方法=成员方法=函数=method</p>
-<p>创建类的对象=类的实例化=实例化类</p>
-<p>局部变量没有默认初始化值</p>
-<p>重载：</p>
-<p>在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</p>
-<p>可变个数形参的方法：</p>
-<p>数据类型 …  变量名</p>
-<p>可变个数形参的方法与本类中方法名相同，形参不同的方法之间构成重载。</p>
-<p>可变个数形参的方法与本类中方法名相同，形参类型也相同的数组之间不构成重载。</p>
-<p>可变个数形参在方法的形参中，必须声明在末尾。</p>
-<p>可变个数形参在方法的形参中，最多只能声明一个可变形参。</p>
-<ol start="2">
-<li><p>变量赋值：</p>
-<p>基本数据类型：此时赋值的是变量所保存的数据值。</p>
-<p>引用数据类型：此时赋值的是变量所保存的数据的地址值</p>
+    <title>hexo+github迁移电脑</title>
+    <url>/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/</url>
+    <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
+<li>复制blog文件夹</li>
+<li>在新的电脑上下载新的git和nodejs</li>
+<li>npm install</li>
+<li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li>
+</ul>
+<ol>
+<li><blockquote>
+<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
+</blockquote>
+</li>
+<li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p>
+</li>
+<li><p>生成ssh密钥文件：  </p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p>
+</blockquote>
+</li>
+<li><p>打开<a href="https://github.com/settings/keys%22">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p>
+<h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="%22https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation%22">参考解决方法</a></p>
 </li>
 </ol>
 ]]></content>
@@ -366,34 +394,6 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
       </tags>
   </entry>
   <entry>
-    <title>hexo+github迁移电脑</title>
-    <url>/2021/04/04/hexo-github%E8%BF%81%E7%A7%BB%E7%94%B5%E8%84%91/</url>
-    <content><![CDATA[<h1 id="hexo个人博客迁移"><a href="#hexo个人博客迁移" class="headerlink" title="hexo个人博客迁移"></a>hexo个人博客迁移</h1><p>从一台电脑上迁移至另外一台电脑<br> <span id="more"></span></p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
-<li>复制blog文件夹</li>
-<li>在新的电脑上下载新的git和nodejs</li>
-<li>npm install</li>
-<li>安装hexo,重新部署。<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="1-nodejs版本过高"><a href="#1-nodejs版本过高" class="headerlink" title="1.nodejs版本过高"></a>1.nodejs版本过高</h3>  下载低版本13.14。<h3 id="2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）"><a href="#2-Please-make-sure-you-have-the-correct-access-rights-and-the-repository-exists-（一般是公钥出问题）" class="headerlink" title="2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）"></a>2.Please make sure you have the correct access rights and the repository exists.（一般是公钥出问题）</h3></li>
-</ul>
-<ol>
-<li><blockquote>
-<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”  </p>
-</blockquote>
-</li>
-<li><p>删除.ssh文件夹（直接搜索该文件夹）下的known_hosts(手动删除即可，不需要git）</p>
-</li>
-<li><p>生成ssh密钥文件：  </p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”   </p>
-</blockquote>
-</li>
-<li><p>打开<a href="https://github.com/settings/keys%22">GitHub_Settings_keys</a> 页面，新建new SSH Key，把密钥复制上去。</p>
-<h3 id="3-遇见404问题"><a href="#3-遇见404问题" class="headerlink" title="3.遇见404问题"></a>3.遇见404问题</h3><p><a href="%22https://www.jianshu.com/p/2349c763cc02?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation%22">参考解决方法</a></p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>Java学习笔记2</title>
     <url>/2019/02/11/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/</url>
     <content><![CDATA[<h2 id="io-多线程-网络编程-XML"><a href="#io-多线程-网络编程-XML" class="headerlink" title="io 多线程  网络编程  XML"></a>io 多线程  网络编程  XML</h2><span id="more"></span>
@@ -456,27 +456,6 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
 ]]></content>
   </entry>
   <entry>
-    <title>python爬虫初学</title>
-    <url>/2019/02/09/python%E7%88%AC%E8%99%AB%E5%88%9D%E5%AD%A6/</url>
-    <content><![CDATA[<p>#coding:utf-8</p>
-<span id="more"></span>
-<p>#author:Ericam_</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">import sys</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import urllib.request</span><br><span class="line">import time</span><br><span class="line">headers = (&#x27;User-Agent&#x27;, &#x27;Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1&#x27;)</span><br><span class="line">opener = urllib.request.build_opener()</span><br><span class="line">opener.addheaders = &#123;headers&#125;</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line">def get_download(url):</span><br><span class="line">    file = urllib.request.urlopen(url)</span><br><span class="line">    data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">    section_name = data.title.string</span><br><span class="line">    print(section_name)</span><br><span class="line">    section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">    section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">    fp = open(&quot;D:/python/2.txt&quot;,&#x27;a&#x27;,encoding=&#x27;utf-8&#x27;)   </span><br><span class="line">    fp.write(section_name+&#x27;\n&#x27;)  </span><br><span class="line">    fp.write(section_text+&#x27;\n&#x27;)  </span><br><span class="line">    fp.close()</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    url = &quot;http://www.net767.com/shuji/fubaba/10995.html&quot;</span><br><span class="line">    while(True):</span><br><span class="line">        file = urllib.request.urlopen(url)</span><br><span class="line">        data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">        section_name = data.title.string</span><br><span class="line">        print(section_name)</span><br><span class="line">        section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">        section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">        print(section_text)</span><br><span class="line">        txt_section=data.select(&#x27;#pagebar a&#x27;)</span><br><span class="line">        l1=len(txt_section)</span><br><span class="line">        for num in range(1,l1-1):</span><br><span class="line">            y=txt_section[num][&#x27;href&#x27;]</span><br><span class="line">            url = &quot;http://www.net767.com&quot;+y</span><br><span class="line">            get_download(url)</span><br><span class="line">            print(y)</span><br><span class="line">        txt2_section=data.select(&#x27;.LinkNextArticle&#x27;)</span><br><span class="line">        y2=txt2_section[0][&#x27;href&#x27;]</span><br><span class="line">        url = &quot;http://www.net767.com&quot;+y2</span><br><span class="line">        if(url == &#x27;http://www.net767.com/shuji/fubaba/11003_9.html&#x27;):</span><br><span class="line">            break</span><br><span class="line">        print(y2)</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>test1</title>
-    <url>/2021/06/10/test1/</url>
-    <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>test</title>
     <url>/2021/05/27/test/</url>
     <content><![CDATA[<h1 id="多电脑使用hexo博客"><a href="#多电脑使用hexo博客" class="headerlink" title="多电脑使用hexo博客"></a>多电脑使用hexo博客</h1><ul>
@@ -487,6 +466,31 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
 <li><h1 id="nvm安装（Windows篇-https-www-jianshu-com-p-13c0b3ca7c71"><a href="#nvm安装（Windows篇-https-www-jianshu-com-p-13c0b3ca7c71" class="headerlink" title="nvm安装（Windows篇)https://www.jianshu.com/p/13c0b3ca7c71"></a>nvm安装（Windows篇)<a href="https://www.jianshu.com/p/13c0b3ca7c71">https://www.jianshu.com/p/13c0b3ca7c71</a></h1></li>
 </ul>
 <p>如果先安装node，再安装nvm，可能会出现修改后，版本仍然未变的情况，尝试了网上很多方法，建议还是卸载重新安装降低版本的node.js</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>test1</title>
+    <url>/2021/06/10/test1/</url>
+    <content><![CDATA[<h1 id="新的一篇文章"><a href="#新的一篇文章" class="headerlink" title="新的一篇文章"></a>新的一篇文章</h1><p>友链</p>
+<p>娱乐板块</p>
+<p>字数统计</p>
+<p>评论</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫初学</title>
+    <url>/2019/02/09/python%E7%88%AC%E8%99%AB%E5%88%9D%E5%AD%A6/</url>
+    <content><![CDATA[<p>#coding:utf-8</p>
+<span id="more"></span>
+<p>#author:Ericam_</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">import sys</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import urllib.request</span><br><span class="line">import time</span><br><span class="line">headers = (&#x27;User-Agent&#x27;, &#x27;Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1&#x27;)</span><br><span class="line">opener = urllib.request.build_opener()</span><br><span class="line">opener.addheaders = &#123;headers&#125;</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line">def get_download(url):</span><br><span class="line">    file = urllib.request.urlopen(url)</span><br><span class="line">    data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">    section_name = data.title.string</span><br><span class="line">    print(section_name)</span><br><span class="line">    section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">    section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">    fp = open(&quot;D:/python/2.txt&quot;,&#x27;a&#x27;,encoding=&#x27;utf-8&#x27;)   </span><br><span class="line">    fp.write(section_name+&#x27;\n&#x27;)  </span><br><span class="line">    fp.write(section_text+&#x27;\n&#x27;)  </span><br><span class="line">    fp.close()</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    url = &quot;http://www.net767.com/shuji/fubaba/10995.html&quot;</span><br><span class="line">    while(True):</span><br><span class="line">        file = urllib.request.urlopen(url)</span><br><span class="line">        data = BeautifulSoup(file , from_encoding=&quot;utf8&quot;)    </span><br><span class="line">        section_name = data.title.string</span><br><span class="line">        print(section_name)</span><br><span class="line">        section_text = data.select(&#x27;#content #left font&#x27;)[0].text</span><br><span class="line">        section_text=re.sub( &#x27;\s+&#x27;, &#x27;\r\n\t&#x27;, section_text).strip(&#x27;\r\n&#x27;)</span><br><span class="line">        print(section_text)</span><br><span class="line">        txt_section=data.select(&#x27;#pagebar a&#x27;)</span><br><span class="line">        l1=len(txt_section)</span><br><span class="line">        for num in range(1,l1-1):</span><br><span class="line">            y=txt_section[num][&#x27;href&#x27;]</span><br><span class="line">            url = &quot;http://www.net767.com&quot;+y</span><br><span class="line">            get_download(url)</span><br><span class="line">            print(y)</span><br><span class="line">        txt2_section=data.select(&#x27;.LinkNextArticle&#x27;)</span><br><span class="line">        y2=txt2_section[0][&#x27;href&#x27;]</span><br><span class="line">        url = &quot;http://www.net767.com&quot;+y2</span><br><span class="line">        if(url == &#x27;http://www.net767.com/shuji/fubaba/11003_9.html&#x27;):</span><br><span class="line">            break</span><br><span class="line">        print(y2)</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -764,6 +768,134 @@ public Date parse(String s);//把一个字符串形式的日期，解析成Date�
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode279</title>
+    <url>/2021/08/03/leetcode279/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>数组与链表</title>
+    <url>/2021/07/16/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="数组，链表"><a href="#数组，链表" class="headerlink" title="数组，链表"></a>数组，链表</h1><p>数组：</p>
+<p>所有元素都连续的存储于一段内存中，且每个元素占用的内存大小相同。这使得数组具备了通过下标快速访问数据的能力。<br>但连续存储的缺点也很明显，增加容量，增删元素的成本很高，时间复杂度均为 O(n)。增加数组容量需要先申请一块新的内存，然后复制原有的元素。如果需要的话，可能还要删除原先的内存。删除元素时，需要移动被删除元素之后的所有元素。</p>
+<ul>
+<li>优点：可以根据偏移实现快速的随机读写。</li>
+<li>缺点：扩容，增删元素极慢。</li>
+</ul>
+<p><a href="https://leetcode-cn.com/problems/linked-list-cycle/solution/yi-wen-gao-ding-chang-jian-de-lian-biao-wen-ti-h-2/">参考链接</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>leetcode309 最佳买卖股票时机含冷冻期</title>
+    <url>/2021/08/05/leetcode309/</url>
+    <content><![CDATA[<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">题目链接</a></p>
+<p>计算最大利润（在约束条件下）：</p>
+<ul>
+<li>不能同时参与多笔交易（必须在再次购买前出售掉之前的股票）</li>
+<li>卖出股票后，无法在第二天买入股票（冷冻期为一天）</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>这道题是最近遇见最难处理的一道DP题。</p>
+<p>我们可以试想对于每一天的i，都有可能是三种状态：</p>
+<ol>
+<li>不持股且当天没有卖出$dp[i][0]$;</li>
+<li>持股$dp[i][1]$;</li>
+<li>不持股且当天卖了$dp[i][2]$;</li>
+</ol>
+<p>初始化：</p>
+<p>$dp[0][0]$ = 0;</p>
+<p>$dp[0][1]$ = -prices[0];</p>
+<p>$dp[0][2]$ = 0;</p>
+<p>分析：</p>
+<p>第i天不持股且没有卖出，所以有两种可能：</p>
+<ol>
+<li><p>i-1天不持股且当天没有卖出</p>
+</li>
+<li><p>i-1天不持股但是当天卖出去了</p>
+<p>所以： $dp[i][0]=max(dp[i-1][0],dp[i-1][2])$</p>
+</li>
+</ol>
+<p>第i天持股，也有两种可能：</p>
+<ol>
+<li><p>昨天持股，今天继承昨天的</p>
+</li>
+<li><p>昨天不持股，今天买入。这里的前提是昨天一定没有卖，如果卖了则今天就无法交易了</p>
+<p>所以：$dp[i][1]=max(dp[i-1][1],dp[i-1][0]-p[i])$</p>
+</li>
+</ol>
+<p>第i天不持股且当天卖出了 == $dp[i][2]=dp[i-1][1]+p[i]$</p>
+<p>最后一天的最大收益有两种可能，而且一定是“不持有”状态下的两种可能，把这两种“不持有”比较一下大小，返回即可</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxProfit(int[] prices) &#123;</span><br><span class="line">        int n=prices.length;</span><br><span class="line">        if(n&lt;=1) return 0;</span><br><span class="line">        int [][] dp = new int[n][3];</span><br><span class="line">        dp[0][0]=0;</span><br><span class="line">        dp[0][1]=-1*prices[0];</span><br><span class="line">        dp[0][2]=0;</span><br><span class="line">        for(int i = 1; i &lt; n; i++)&#123;</span><br><span class="line">            dp[i][0] = Math.max(dp[i-1][0],dp[i-1][2]);</span><br><span class="line">            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0] - prices[i]);</span><br><span class="line">            dp[i][2] = dp[i-1][1]+prices[i];</span><br><span class="line">        &#125;</span><br><span class="line">        return Math.max(dp[n-1][0],dp[n-1][2]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;       </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/07/22/%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<p>突然回想到那份数学卷子，可能在22岁以前都没有想过，第一道第二道选择题会出错，而且恰好分数线就是388，似乎命运真的在冥冥之中和自己开了一个玩笑，不，可能不是玩笑而是命运给予你的反馈吧，毕竟一直以来的考试确实挺眷顾自己的，没有过这种致命失误，运气不好的同时也是自己没有做好万分的准备，可惜的是这次并没有眷顾自己。</p>
+<p>可能在调剂后，心里都并没有多难受，但是现在我想这份遗憾真的可能要伴随我两年了，但是我更希望自己能做出改变，让它最好只有一年，而不是几年后的哪一天还会想起今天的遗憾，当然更想的是提升自己的能力和内涵，做自己想做的那一个优秀的自己。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>自动打卡</title>
+    <url>/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</url>
+    <content><![CDATA[<h1 id="兰大自动打卡"><a href="#兰大自动打卡" class="headerlink" title="兰大自动打卡"></a>兰大自动打卡</h1><p>参考博主伍尔夫的猫的博文<a href="https://blog.csdn.net/zhaoqianchong/article/details/113060219?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163721754316780274161777%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163721754316780274161777&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-10-113060219.first_rank_v2_pc_rank_v29&utm_term=%E7%BD%91%E9%A1%B5%E7%AB%AF%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1&spm=1018.2226.3001.4187">如何通过Python自动完成移动校园“每日健康”打卡</a>和博主CookiePie的文章<a href="https://blog.csdn.net/CookiePie/article/details/109698484">Python—利用Requests实现每日微信自动打卡</a>，拿来主义可耻，所以还是自己写一篇博客记录一下解决问题的过程，主要是为了学习，顺便激励自己好好写论文，坚持写代码，早日去实习。</p>
+<h2 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h2><h3 id="1、抓包"><a href="#1、抓包" class="headerlink" title="1、抓包"></a>1、抓包</h3><p>不细说了，安装Fiddler或者在浏览器端的话直接用谷歌开发者工具。(我是在浏览器端完成的，小程序端会复杂些)</p>
+<h3 id="2、安装selenium"><a href="#2、安装selenium" class="headerlink" title="2、安装selenium"></a>2、安装selenium</h3><p>我用的也是Pycharm，参考这个博主的<a href="https://blog.csdn.net/HW140701/article/details/59109649?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161140090116780261940479%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161140090116780261940479&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-59109649.first_rank_v2_pc_rank_v29&utm_term=pycharm%20webdriver.PhantomJS&spm=1018.2226.3001.4187">Python配置Selenium+Chrome环境和Selenium+PhantomJS环境</a></p>
+<h3 id="3、配置Phantomjs"><a href="#3、配置Phantomjs" class="headerlink" title="3、配置Phantomjs"></a>3、配置Phantomjs</h3><p>如果参考上面安装过程中测试代码没有问题就可以跳过了</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver = webdriver.Chrome()</span><br></pre></td></tr></table></figure>
+
+<p>如果会报错，那么奖励你，继续看<a href="https://blog.csdn.net/HW140701/article/details/59109649?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161140090116780261940479%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161140090116780261940479&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-59109649.first_rank_v2_pc_rank_v29&utm_term=pycharm%20webdriver.PhantomJS&spm=1018.2226.3001.4187">Python配置Selenium+Chrome环境和Selenium+PhantomJS环境</a>，其中，第5点说明了无界面的浏览器包PhantomJS的应用。如果还会报错，可以将selenium的版本修改为了selenium2.48.0版本，亲测可以。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码参考了原博主的，然后根据学校的网站进行抓包分析，思路和原博主基本上是一致的。</p>
+<ol>
+<li>抓包分析</li>
+<li>模拟登录</li>
+<li>伪装Header发送Cookie，data</li>
+</ol>
+<p>但是!!!，正是由于抓取的post包里面有<strong>Authorization</strong>，</p>
+<p><img src="/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/blog_picture\daka\Snipaste_2021-11-19_21-26-02.png" alt="Snipaste_2021-11-19_21-26-02"></p>
+<p>并且它还是刷新的，如果Header中没有授权码，则服务器默认收到的是非法数据。所以耗费了一天时间才搞定。所以重点记录解决这个问题的思路，因为我看的好几篇博客并没有遇见这个问题，只需要Cookie和User-Agent就可以了。</p>
+<p>直接说Authorization，先读读这个<a href="https://www.cnblogs.com/wuwuyong/p/12210842.html"><a href="https://www.cnblogs.com/wuwuyong/p/12210842.html">权限认证基础:区分Authentication,Authorization以及Cookie、Session、Token </a></a>，说实话我这个菜鸡开始也不是很懂，不过看见这个，那没事了。</p>
+<p><img src="/2021/06/10/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/blog_picture\daka\Snipaste_2021-11-19_21-11-58.png" alt="Snipaste_2021-11-19_21-11-58"></p>
+<p>也就是说我们需要去找到服务端返回给客户端的token，也就是刷新的Authorization。所以</p>
+<ol>
+<li><p>找到它</p>
+</li>
+<li><p>获取并使用它</p>
+</li>
+<li><p>更新它</p>
+<p>那么我们已经在包里面找到它了，但是实际上还是没有找到它…因为我们需要将它的值获取到且随着它更新，而不是复制出来。</p>
+</li>
+</ol>
+<p>那么到这里，我当时有两个思路：</p>
+<ol>
+<li><p>我有一个大胆（笨比）的想法，就是webdriver.Chrome()既然是模拟浏览器操作，那么我们</p>
+<ul>
+<li>模拟登录后，得到新的网页</li>
+<li>然后点击“健康打卡”又可以进入打卡界面</li>
+<li>终于只需要点击上报就ok啦！ 这不是有手就行！？ 然后我写了如下代码：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver = webdriver.Chrome()</span><br><span class="line">    driver.maximize_window()</span><br><span class="line">    driver.get(url_)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;username&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;password&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;password&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;loginForm&quot;]/div[4]/button&#x27;</span>).click()</span><br><span class="line">    sleep(<span class="number">2</span>)</span><br><span class="line">    cookie_ = driver.get_cookies()[<span class="number">0</span>]</span><br><span class="line">    <span class="built_in">print</span>(driver.current_url)</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    driver.switch_to.window(driver.window_handles[<span class="number">0</span>])</span><br><span class="line">    el = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]&#x27;</span>)</span><br><span class="line">    ActionChains(driver).move_to_element(el).perform()   <span class="comment">#鼠标移动到该元素停留</span></span><br><span class="line">    sleep(<span class="number">2</span>)</span><br><span class="line">    buttonElement = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]/a/div[2]/p[2]/span[1]&#x27;</span>)</span><br><span class="line">    ActionClick = ActionChains(driver).click(buttonElement)</span><br><span class="line">    ActionClick.perform()</span><br><span class="line">    frame1 = driver.find_element_by_id(<span class="string">&quot;iframe&quot;</span>)</span><br><span class="line">    <span class="comment"># 切换到iframe1这个内嵌网页</span></span><br><span class="line">    driver.switch_to.frame(frame1)</span><br><span class="line">    ActionChains(driver).move_by_offset(<span class="number">843</span>, <span class="number">100</span>).click().perform()  <span class="comment"># 鼠标左键点击， 200为x坐标， 100为y坐标</span></span><br><span class="line">    sleep(<span class="number">3</span>)</span><br><span class="line">    driver.quit()</span><br><span class="line">    <span class="keyword">return</span> cookie_[<span class="string">&#x27;name&#x27;</span>] + <span class="string">&#x27;=&#x27;</span> + cookie_[<span class="string">&#x27;value&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>首先简简单单的就到了第二步，准备点击健康打卡，结果tmd它不是button，没办法click()，而且只有鼠标在这个模块上放一秒，它才会出现进入这个元素。所以我机智的（暴力的）通过强大的driver模拟了这一操作过程。终于，到了最后一步了，只需要点击新出现弹窗里面的“进入”就可以了，结果tmd(真的忍不住)这个弹窗就很神奇，它的元素是定位不到的！(试了很多解决方法不行)无奈之下，想到了我的老本行——暴力，把鼠标移动到这个“进入”的坐标位置点击左键即可。然后用snipaste截图测位置测了半天没找到，只能放弃。</p>
+</li>
+<li><p>暴力无奈之下，只能另寻他路。结果突然发现这个Authorization就是token，并且它还保存在sessionStorage里面，真的得来全不费功夫。真的需要认真读文档和博客，而不是自己瞎弄。后面就是打开切换到这个内嵌iframe上，然后获取到token值，这样就解决问题了。代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.action_chains <span class="keyword">import</span> ActionChains</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_cookie</span>(<span class="params">url_, user_</span>):</span></span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    driver = webdriver.Chrome()</span><br><span class="line">    driver.get(url_)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;username&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;password&quot;]&#x27;</span>).send_keys(user_[<span class="string">&#x27;password&#x27;</span>])</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;loginForm&quot;]/div[4]/button&#x27;</span>).click()</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    cookie_ = driver.get_cookies()[<span class="number">0</span>]</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    driver.switch_to.window(driver.window_handles[<span class="number">0</span>])</span><br><span class="line">    el = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]&#x27;</span>)</span><br><span class="line">    ActionChains(driver).move_to_element(el).perform()</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    buttonElement = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;my-apps&quot;]/li[3]/a/div[2]/p[2]/span[1]&#x27;</span>)</span><br><span class="line">    ActionClick = ActionChains(driver).click(buttonElement)</span><br><span class="line">    ActionClick.perform()</span><br><span class="line">    frame1 = driver.find_element_by_id(<span class="string">&quot;iframe&quot;</span>)</span><br><span class="line">    <span class="comment"># 切换到iframe1这个内嵌网页</span></span><br><span class="line">    driver.switch_to.frame(frame1)</span><br><span class="line">    sleep(<span class="number">1</span>)</span><br><span class="line">    token = driver.execute_script(<span class="string">&#x27;return sessionStorage.getItem(&quot;token&quot;);&#x27;</span>)</span><br><span class="line">    driver.quit()</span><br><span class="line">    <span class="built_in">list</span>.append(cookie_[<span class="string">&#x27;name&#x27;</span>] + <span class="string">&#x27;=&#x27;</span> + cookie_[<span class="string">&#x27;value&#x27;</span>])</span><br><span class="line">    <span class="built_in">list</span>.append(token)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span></span><br><span class="line"></span><br><span class="line">user = &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>, <span class="string">&#x27;password&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">list</span> = get_cookie(</span><br><span class="line">    <span class="string">&#x27;http://my.lzu.edu.cn:8080/login?service=http://my.lzu.edu.cn&#x27;</span>, user)  <span class="comment">##网页打卡入口</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Authorization&#x27;</span>: <span class="built_in">list</span>[<span class="number">1</span>],</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;Cookie&#x27;</span>: <span class="built_in">list</span>[<span class="number">0</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;bh&#x27;</span>: <span class="string">&#x27;xxxxxxxxxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xykh&#x27;</span>: <span class="string">&#x27;xxxxxxxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;twfw&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;jkm&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;sfzx&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;sfgl&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;szsf&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;szds&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;szxq&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sfcg&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;cgdd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;gldd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;jzyy&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bllb&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;sfjctr&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;jcrysm&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xgjcjlsj&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xgjcjldd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;xgjcjlsm&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;zcwd&#x27;</span>: <span class="number">0.0</span>,</span><br><span class="line">    <span class="string">&#x27;zwwd&#x27;</span>: <span class="number">0.0</span>,</span><br><span class="line">    <span class="string">&#x27;wswd&#x27;</span>: <span class="number">0.0</span>,</span><br><span class="line">    <span class="string">&#x27;sbr&#x27;</span>: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sjd&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;initLng&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;initLat&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;dwfs&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;   <span class="comment">##= 这个就是抓取的Post包的data，更新自己的数据信息</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://appservice.lzu.edu.cn/dailyReportAll/api/grtbMrsb/submit&#x27;</span>  <span class="comment">##提交信息时候的php</span></span><br><span class="line">key = <span class="string">&#x27;Server酱的key&#x27;</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s = requests.session()</span><br><span class="line">    response = s.post(url=url, headers=headers, data=data)</span><br><span class="line">    html = response.text</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://sc.ftqq.com/%s.send?text=登录页访问超时，打卡失败&#x27;</span> % key</span><br><span class="line">    requests.get(url)</span><br><span class="line"><span class="keyword">if</span> json.loads(response.text)[<span class="string">&#x27;message&#x27;</span>] == <span class="string">&#x27;成功&#x27;</span>:</span><br><span class="line">    <span class="comment">#url = &#x27;https://sc.ftqq.com/%s.send?text=自动打卡成功&#x27; % key</span></span><br><span class="line">    <span class="comment">#requests.get(url)</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://sc.ftqq.com/%s.send?text=自动打卡失败&#x27;</span> % key</span><br><span class="line">    requests.get(url)</span><br></pre></td></tr></table></figure>
+
+<p>最后就是用<a href="https://blog.csdn.net/weixin_43229819/article/details/106398615">Windows任务计划程定时调用执行Python脚本</a></p>
+<p>还用了<a href="https://blog.csdn.net/weixin_43745169/article/details/103792025?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163737383016780366595912%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163737383016780366595912&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-103792025.first_rank_v2_pc_rank_v29&utm_term=server%E9%85%B1&spm=1018.2226.3001.4187">Server酱</a>来提示打卡成功和打卡失败，over！</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
